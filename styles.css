@@ -29,13 +29,14 @@ h1 {
 }
 
 #search-bar {
-  width: calc(100% - 40px); /* Чтобы уменьшить отступы и убрать горизонтальную прокрутку */
+  width: calc(100% - 40px);
   padding: 10px;
-  margin: 10px 20px; /* Делаем отступы симметричными */
+  margin: 10px auto; /* Центрируем элемент */
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #2c2c2c;
   color: #fff;
+  display: block; /* Чтобы занять всю ширину */
 }
 
 .reset-btn {
@@ -57,7 +58,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  margin: 10px auto 20px auto;
 }
 
 .filter-btn {
@@ -77,7 +78,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10px 20px;
+  margin: 10px auto;
+  justify-content: center; /* Центрируем категории */
 }
 
 .categories span {
