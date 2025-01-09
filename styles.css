@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -54,6 +55,7 @@ h1 {
   background-color: #d32f2f;
 }
 
+/* Стили кнопок фильтров (Все, iOS, Android) */
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -74,6 +76,7 @@ h1 {
   background-color: #4caf50;
 }
 
+/* Стили категорий */
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -94,6 +97,7 @@ h1 {
   background-color: #4caf50;
 }
 
+/* Стили списка приложений */
 .app-list {
   padding: 20px;
 }
@@ -133,6 +137,31 @@ h1 {
   color: #bbb;
 }
 
+/* Стили для кнопок типа файла и лейбла */
+.app-meta-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.app-meta {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.app-type {
+  background-color: #4caf50; /* Зелёный цвет для типа файла */
+}
+
+.app-label {
+  background-color: #ff9800; /* Оранжевый цвет для меток */
+}
+
+/* Стили кнопки скачивания */
 button {
   padding: 10px 15px;
   border: none;
@@ -140,6 +169,7 @@ button {
   background-color: #4caf50;
   color: #fff;
   cursor: pointer;
+  margin-left: auto; /* Сдвигаем кнопку в крайний правый угол */
 }
 
 button:hover {
