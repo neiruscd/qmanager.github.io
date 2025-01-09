@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Instagram | Regram | H...",
+    "version": "V349 | 1.0-b11",
+    "description": "Лучшая модификация Instagram с дополнительными функциями и возможностями.",
+    "icon": "https://example.com/icons/regram-icon.png",
+    "downloadLink": "https://example.com/regram"
+  },
+  {
+    "name": "Instagram | Rocket | Pro",
+    "version": "V348 | 3.8.29",
+    "description": "Приложение Instagram с дополнительными функциями, такими как скачивание фото и сторис.",
+    "icon": "https://example.com/icons/rocket-icon.png",
+    "downloadLink": "https://example.com/rocket"
+  }
+]
