@@ -16,21 +16,16 @@ header {
   align-items: center;
 }
 
-.time {
-  font-size: 14px;
-  color: #bbb;
+h1 {
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
 }
 
 .donate-link {
   color: #4caf50;
   text-decoration: none;
   font-size: 14px;
-}
-
-h1 {
-  font-size: 20px;
-  margin: 0;
-  text-align: center;
 }
 
 #search-bar {
@@ -58,27 +53,8 @@ h1 {
   cursor: pointer;
 }
 
-.categories span:hover {
-  background-color: #4caf50;
-}
-
-.file-type-tabs {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.file-type-tabs button {
-  background-color: #2c2c2c;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.file-type-tabs button.active {
+.categories span:hover,
+.categories span.active {
   background-color: #4caf50;
 }
 
