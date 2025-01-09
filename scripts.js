@@ -17,8 +17,7 @@ fetch('apps.json')
         const matchesType = currentType === 'all' || app.type === currentType;
         const matchesCategory =
           currentCategory === 'all' || app.category === currentCategory;
-        const matchesSearch =
-          app.name.toLowerCase().includes(searchTerm);
+        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
         return matchesType && matchesCategory && matchesSearch;
       });
 
@@ -41,11 +40,21 @@ fetch('apps.json')
 
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
+        if (app.label) {
+          const labelSpan = document.createElement('span');
+          labelSpan.textContent =
+            app.label === 'new'
+              ? '🔥 Новинка'
+              : app.label === 'update'
+              ? '🔄 Обновление'
+              : '';
+          appTitle.appendChild(labelSpan);
+        }
         appDetails.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
-        appVersion.textContent = app.version;
+        appVersion.textContent =currentCategory === 'all' || app.category === 
         appDetails.appendChild(appVersion);
 
         const appDescription = document.createElement('p');
@@ -65,7 +74,8 @@ fetch('apps.json')
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        currentType = button.id === 'show-all' ? 'all' : button.id === 'show-ipa' ? 'ipa' : 'apk';
+        currentType =
+          button.id === 'show-all' ? 'all' : button.id === 'show-ipa' ? 'ipa' : 'apk';
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         displayApps();
