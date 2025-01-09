@@ -30,7 +30,6 @@ fetch('apps.json')
         const appDiv = document.createElement('div');
         appDiv.classList.add('app');
 
-        // Иконка приложения
         const appIcon = document.createElement('img');
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
@@ -39,7 +38,6 @@ fetch('apps.json')
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
 
-        // Название приложения с лейблом
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
 
@@ -58,23 +56,18 @@ fetch('apps.json')
 
         appDetails.appendChild(appTitle);
 
-        // Версия приложения и тип файла
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
-        appVersion.textContent =egory && matchesSearch;
-      });
-
-      if (filteredApps.length 
+        appVersion.textContent =.name.toLowerCase().includes(searchTerm);
+        return matchesT
         appDetails.appendChild(appVersion);
 
-        // Описание
         const appDescription = document.createElement('p');
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
 
         appDiv.appendChild(appDetails);
 
-        // Кнопка скачивания
         const downloadButton = document.createElement('button');
         downloadButton.textContent = 'Скачать';
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
@@ -84,7 +77,6 @@ fetch('apps.json')
       });
     }
 
-    // Фильтр по типу файла (Все, iOS, Android)
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         currentType =
@@ -95,7 +87,6 @@ fetch('apps.json')
       });
     });
 
-    // Фильтр по категории (#Social, #Music и т.д.)
     categoryElements.forEach(category => {
       category.addEventListener('click', () => {
         currentCategory = category.dataset.category;
@@ -105,7 +96,6 @@ fetch('apps.json')
       });
     });
 
-    // Сброс фильтров
     resetButton.addEventListener('click', () => {
       currentType = 'all';
       currentCategory = 'all';
@@ -116,10 +106,8 @@ fetch('apps.json')
       displayApps();
     });
 
-    // Поиск
     searchBar.addEventListener('input', displayApps);
 
-    // Изначально отображаем все приложения
     displayApps();
   })
   .catch(error => console.error('Ошибка при загрузке приложений:', error));
