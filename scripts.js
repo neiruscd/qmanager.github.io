@@ -3,19 +3,19 @@ fetch('apps.json')
   .then(response => response.json())
   .then(data => {
     const appList = document.getElementById('app-list');
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const categoryElements = document.querySelectorAll('.category');
-    let currentFilter = { type: 'all', category: 'all' }; // Текущий фильтр
+    let currentType = 'all'; // По умолчанию показываем все типы
+    let currentCategory = 'all'; // По умолчанию показываем все категории
 
     // Функция отображения приложений
-    function displayApps(filter) {
+    function displayApps() {
       appList.innerHTML = ''; // Очищаем список приложений
 
       const filteredApps = data.filter(app => {
-        const matchesType =
-          filter.type === 'all' || app.type === filter.type;
+        const matchesType = currentType === 'all' || app.type === currentType;
         const matchesCategory =
-          filter.category === 'all' || app.category === filter.category;
-
+          currentCategory === 'all' || app.category === currentCategory;
         return matchesType && matchesCategory;
       });
 
@@ -29,7 +29,7 @@ fetch('apps.json')
         appDiv.classList.add('app');
 
         const appIcon = document.createElement('img');
-        appIcon.src = app.icon;
+        appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
         appDiv.appendChild(appIcon);
 
@@ -60,79 +60,35 @@ fetch('apps.json')
       });
     }
 
-    // Обработчик клика на хэштег
-    categoryElements.forEach(categoryElement => {
-      categoryElement.addEventListener('click', () => {
-        const type = categoryElement.dataset.type || 'all';
-        const category = categoryElement.dataset.category || 'all';
+    // Обработчик для кнопок iOS и Android
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        currentType = button.id === 'show-ipa' ? 'ipa' : 'apk';
 
-        currentFilter = { type, category };
+        // Убираем активный класс у всех кнопок
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Добавляем активный класс нажатой кнопке
+        button.classList.add('active');
 
-        // Убираем активный класс у всех хэштегов
-        categoryElements.forEach(el => el.classList.remove('active'));
-        // Добавляем активный класс текущему хэштегу
-        categoryElement.classList.add('active');
-
-        displayApps(currentFilter);
+        displayApps();
       });
     });
 
-    // Поиск приложений
-    const searchBar = document.getElementById('search-bar');
-    searchBar.addEventListener('input', e => {
-      const searchString = e.target.value.toLowerCase();
+    // Обработчик для хэштегов
+    categoryElements.forEach(category => {
+      category.addEventListener('click', () => {
+        currentCategory = category.dataset.category;
 
-      const filteredApps = data.filter(app => {
-        const matchesType =
-          currentFilter.type === 'all' || app.type === currentFilter.type;
-        const matchesCategory =
-          currentFilter.category === 'all' || app.category === currentFilter.category;
-        const matchesSearch =
-          app.name.toLowerCase().includes(searchString) ||
-          app.description.toLowerCase().includes(searchString);
+        // Убираем активный класс у всех категорий
+        categoryElements.forEach(cat => cat.classList.remove('active'));
+        // Добавляем активный класс нажатому хэштегу
+        category.classList.add('active');
 
-        return matchesType && matchesCategory && matchesSearch;
-      });
-
-      appList.innerHTML = '';
-      filteredApps.forEach(app => {
-        const appDiv = document.createElement('div');
-        appDiv.classList.add('app');
-
-        const appIcon = document.createElement('img');
-        appIcon.src = app.icon;
-        appIcon.alt =active'));
-        /
-        appDiv.appendChild(appIcon);
-
-        const appDetails = document.createElement('div');
-        appDetails.classList.add('app-details');
-
-        const appTitle = document.createElement('h2');
-        appTitle.textContent = app.name;
-        appDetails.appendChild(appTitle);
-
-        const appVersion = document.createElement('p');
-        appVersion.classList.add('version');
-        appVersion.textContent = app.version;
-        appDetails.appendChild(appVersion);
-
-        const appDescription = document.createElement('p');
-        appDescription.textContent = app.description;
-        appDetails.appendChild(appDescription);
-
-        appDiv.appendChild(appDetails);
-
-        const downloadButton = document.createElement('button');
-        downloadButton.textContent = 'Скачать';
-        downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
-        appDiv.appendChild(downloadButton);
-
-        appList.appendChild(appDiv);
+        displayApps();
       });
     });
 
     // Изначально отображаем все приложения
-    displayApps(currentFilter);
+    displayApps();
   })
   .catch(error => console.error('Ошибка при загрузке приложений:', error));
