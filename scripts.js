@@ -17,7 +17,8 @@ fetch('apps.json')
         const matchesType = currentType === 'all' || app.type === currentType;
         const matchesCategory =
           currentCategory === 'all' || app.category === currentCategory;
-        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
+        const matchesSearch =
+          app.name.toLowerCase().includes(searchTerm);
         return matchesType && matchesCategory && matchesSearch;
       });
 
@@ -44,40 +45,13 @@ fetch('apps.json')
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
-        appVersion.textContent =ll';
-    let currentCatego
+        appVersion.textContent = app.version;
         appDetails.appendChild(appVersion);
 
         const appDescription = document.createElement('p');
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
 
-        // Блок для отображения типа файла и лейбла
-        const appMetaContainer = document.createElement('div');
-        appMetaContainer.classList.add('app-meta-container');
-
-        // Тип файла (как кнопка)
-        const appType = document.createElement('span');
-        appType.classList.add('app-meta', 'app-type');
-        appType.textContent =HTML = '';
-
-      const filteredApps = d
-        appMetaContainer.appendChild(appType);
-
-        // Лейбл (новинка или обновление, если есть)
-        if (app.label) {
-          const appLabel = document.createElement('span');
-          appLabel.classList.add('app-meta', 'app-label');
-          appLabel.textContent =
-            app.label === 'new'
-              ? '🔥 Новинка'
-              : app.label === 'update'
-              ? '🔄 Обновление'
-              : '';
-          appMetaContainer.appendChild(appLabel);
-        }
-
-        appDetails.appendChild(appMetaContainer);
         appDiv.appendChild(appDetails);
 
         const downloadButton = document.createElement('button');
@@ -91,8 +65,7 @@ fetch('apps.json')
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        currentType =
-          button.id === 'show-all' ? 'all' : button.id === 'show-ipa' ? 'ipa' : 'apk';
+        currentType = button.id === 'show-all' ? 'all' : button.id === 'show-ipa' ? 'ipa' : 'apk';
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         displayApps();
@@ -112,7 +85,7 @@ fetch('apps.json')
       currentType = 'all';
       currentCategory = 'all';
       searchBar.value = '';
-filterButtons.forEach(btn => btn.classList.remove('active'));
+      filterButtons.forEach(btn => btn.classList.remove('active'));
       document.getElementById('show-all').classList.add('active');
       categoryElements.forEach(cat => cat.classList.remove('active'));
       displayApps();
