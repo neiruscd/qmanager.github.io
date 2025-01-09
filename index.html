@@ -8,26 +8,23 @@
 <body>
   <header>
     <div class="header">
-      <span id="time" class="time"></span>
       <h1>QManager REPO</h1>
       <a href="#" class="donate-link">Пожертвовать</a>
     </div>
     <input type="text" id="search-bar" placeholder="Поиск приложений">
     <div id="categories" class="categories">
-      <span>#Social</span>
-      <span>#Music</span>
-      <span>#Video</span>
-      <span>#Games</span>
-      <span>#Tools</span>
-      <!-- Добавьте другие категории -->
+      <span class="category" data-type="all">Все</span>
+      <span class="category" data-type="ipa">iOS</span>
+      <span class="category" data-type="apk">Android</span>
+      <span class="category" data-category="#Social">#Social</span>
+      <span class="category" data-category="#Music">#Music</span>
+      <span class="category" data-category="#Video">#Video</span>
+      <span class="category" data-category="#Games">#Games</span>
+      <span class="category" data-category="#Tools">#Tools</span>
     </div>
   </header>
 
   <main>
-    <div class="file-type-tabs">
-      <button id="show-ipa" class="active">iOS (IPA)</button>
-      <button id="show-apk">Android (APK)</button>
-    </div>
     <section id="app-list" class="app-list">
       <!-- Приложения будут загружаться динамически -->
     </section>
