@@ -60,7 +60,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 10px auto 20px auto;
+  margin: 20px auto;
 }
 
 .filter-btn {
