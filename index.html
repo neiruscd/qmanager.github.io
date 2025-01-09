@@ -2,20 +2,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QMAanager REPO</title>
+  <title>QManager REPO</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="header">
+      <span id="time" class="time"></span>
+      <h1>QManager REPO</h1>
+      <a href="#" class="donate-link">Пожертвовать</a>
     </div>
-    <h1>QManager REPO</h1>
     <input type="text" id="search-bar" placeholder="Поиск приложений">
+    <div id="categories" class="categories">
+      <span>#Social</span>
+      <span>#Music</span>
+      <span>#Video</span>
+      <span>#Games</span>
+      <span>#Tools</span>
+      <!-- Добавьте другие категории -->
+    </div>
   </header>
 
   <main>
+    <div class="file-type-tabs">
+      <button id="show-ipa" class="active">iOS (IPA)</button>
+      <button id="show-apk">Android (APK)</button>
+    </div>
     <section id="app-list" class="app-list">
-      <!-- Сюда динамически добавятся приложения -->
+      <!-- Приложения будут загружаться динамически -->
     </section>
   </main>
 
