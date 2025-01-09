@@ -2,33 +2,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Repository</title>
+  <title>iApps Store</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>App Repository</h1>
-    <input type="text" placeholder="Поиск..." id="search-bar">
+    <div class="header">
+      <span class="time">23:27</span>
+      <span class="battery">🔋</span>
+    </div>
+    <h1>iApps Store</h1>
+    <input type="text" id="search-bar" placeholder="Поиск приложений">
   </header>
+
   <main>
-    <section id="categories">
-      <h2>Категории</h2>
-      <ul>
-        <li>#Social</li>
-        <li>#Music</li>
-        <li>#Video</li>
-        <!-- Добавьте остальные категории -->
-      </ul>
-    </section>
-    <section id="apps">
-      <h2>Приложения</h2>
-      <div class="app">
-        <h3>Instagram | Rocket | Pro</h3>
-        <p>Приложение с дополнительными функциями.</p>
-        <button>Скачать</button>
-      </div>
-      <!-- Добавьте другие приложения -->
+    <section id="app-list" class="app-list">
+      <!-- Сюда динамически добавятся приложения -->
     </section>
   </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
