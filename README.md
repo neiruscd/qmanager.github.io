@@ -8,8 +8,6 @@
 <body>
   <header>
     <div class="header">
-      <span class="time">23:27</span>
-      <span class="battery">🔋</span>
     </div>
     <h1>iApps Store</h1>
     <input type="text" id="search-bar" placeholder="Поиск приложений">
