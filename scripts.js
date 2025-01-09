@@ -1,22 +1,25 @@
-// Загружаем JSON с приложениями
 fetch('apps.json')
   .then(response => response.json())
   .then(data => {
     const appList = document.getElementById('app-list');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const categoryElements = document.querySelectorAll('.category');
-    let currentType = 'all'; // По умолчанию показываем все типы
-    let currentCategory = 'all'; // По умолчанию показываем все категории
+    const resetButton = document.getElementById('reset-filters');
+    const searchBar = document.getElementById('search-bar');
+    let currentType = 'all';
+    let currentCategory = 'all';
 
-    // Функция отображения приложений
     function displayApps() {
-      appList.innerHTML = ''; // Очищаем список приложений
+      const searchTerm = searchBar.value.toLowerCase();
+      appList.innerHTML = '';
 
       const filteredApps = data.filter(app => {
         const matchesType = currentType === 'all' || app.type === currentType;
         const matchesCategory =
           currentCategory === 'all' || app.category === currentCategory;
-        return matchesType && matchesCategory;
+        const matchesSearch =
+          app.name.toLowerCase().includes(searchTerm);
+        return matchesType && matchesCategory && matchesSearch;
       });
 
       if (filteredApps.length === 0) {
@@ -60,35 +63,36 @@ fetch('apps.json')
       });
     }
 
-    // Обработчик для кнопок iOS и Android
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        currentType = button.id === 'show-ipa' ? 'ipa' : 'apk';
-
-        // Убираем активный класс у всех кнопок
+        currentType = button.id === 'show-all' ? 'all' : button.id === 'show-ipa' ? 'ipa' : 'apk';
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Добавляем активный класс нажатой кнопке
         button.classList.add('active');
-
         displayApps();
       });
     });
 
-    // Обработчик для хэштегов
     categoryElements.forEach(category => {
       category.addEventListener('click', () => {
         currentCategory = category.dataset.category;
-
-        // Убираем активный класс у всех категорий
         categoryElements.forEach(cat => cat.classList.remove('active'));
-        // Добавляем активный класс нажатому хэштегу
         category.classList.add('active');
-
         displayApps();
       });
     });
 
-    // Изначально отображаем все приложения
+    resetButton.addEventListener('click', () => {
+      currentType = 'all';
+      currentCategory = 'all';
+      searchBar.value = '';
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById('show-all').classList.add('active');
+      categoryElements.forEach(cat => cat.classList.remove('active'));
+      displayApps();
+    });
+
+    searchBar.addEventListener('input', displayApps);
+
     displayApps();
   })
   .catch(error => console.error('Ошибка при загрузке приложений:', error));
