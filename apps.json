@@ -1,20 +1,22 @@
 [
   {
-    "name": "тест",
+    "name": "Instagram | Regram | H...",
     "version": "V349 | 1.0-b11",
-    "description": "описание",
+    "description": "Лучшая модификация Instagram с дополнительными функциями и возможностями.",
     "icon": "https://example.com/icons/regram-icon.png",
     "downloadLink": "https://example.com/regram.ipa",
     "type": "ipa",
-    "category": "#Social"
+    "category": "#Social",
+    "label": "new"
   },
   {
-    "name": "ТЕСТ",
+    "name": "Instagram | Rocket | Pro",
     "version": "V348 | 3.8.29",
-    "description": "описание",
+    "description": "Приложение Instagram с дополнительными функциями.",
     "icon": "https://example.com/icons/rocket-icon.png",
     "downloadLink": "https://example.com/rocket.apk",
     "type": "apk",
-    "category": "#Social"
+    "category": "#Social",
+    "label": "update"
   }
 ]
