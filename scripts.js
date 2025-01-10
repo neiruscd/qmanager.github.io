@@ -33,9 +33,6 @@ fetch('apps.json')
 
         const appHeader = document.createElement('div');
         appHeader.classList.add('app-header');
-
-        const titleContainer = document.createElement('div');
-        titleContainer.classList.add('title-container');
         
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
@@ -50,16 +47,10 @@ fetch('apps.json')
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
         appDetails.appendChild(appHeader);
-        appDetails.appendChild(titleContainer);
 
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
         appHeader.appendChild(appTitle);
-        
-        const appVersion = document.createElement('p');
-        appVersion.classList.add('version');
-        appVersion.textContent = app.version;
-        appDetails.appendChild(appVersion);
 
         const appDescription = document.createElement('p');
         appDescription.textContent = app.description;
