@@ -174,5 +174,16 @@
     "category": "#Music",
     "label": "",
     "author": "xC3FFF0E"
+  },
+  {
+    "name": "VK X",
+    "version": "v8.4.2 [73000]",
+    "description": "Очень красивый и функциональный плеер для ВКонтакте.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/",
+    "downloadLink": "https://modsfire.com/95tV3yrZ7LEN4X9",
+    "type": "apk",
+    "category": "#Music",
+    "label": "",
+    "author": ""
   }
 ]
