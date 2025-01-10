@@ -33,10 +33,6 @@ fetch('apps.json')
 
         const appHeader = document.createElement('div');
         appHeader.classList.add('app-header');
-
-        const appTitle = document.createElement('h2');
-        appTitle.textContent = app.name;
-        appHeader.appendChild(appTitle);
         
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
@@ -46,6 +42,10 @@ fetch('apps.json')
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
         appHeader.appendChild(appIcon);
+
+        const appTitle = document.createElement('h2');
+        appTitle.textContent = app.name;
+        appHeader.appendChild(appTitle);
 
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
