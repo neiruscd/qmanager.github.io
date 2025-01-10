@@ -66,7 +66,7 @@
     "author": "ReVanced Team"
   },
   {
-    "name": "YouTube Revanced",
+    "name": "YouTube ReVanced",
     "version": "v19.47.53 | v5.8.1 | NonRoot ",
     "description": "Популярная модификация YouTube \nНет рекламы\nПропуск рекламы в самом видео\nИ прочее.",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/30277337.png",
@@ -86,5 +86,49 @@
     "category": "#Tools",
     "label": "",
     "author": "ReVanced Team"
+   },
+   {
+    "name": "HDrezka App",
+    "version": "v2.2.5",
+    "description": "приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях. \nПоддержка Android TV / Mobile",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/HdRezka.jpg",
+    "downloadLink": "https://ify.ac/1Uhm",
+    "type": "apk",
+    "category": "#Video",
+    "label": "New",
+    "author": "HDrezka"
+   },
+   {
+    "name": "HDrezka iOS",
+    "version": "v1.5.2 [540]",
+    "description": "приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/HdRezkaIOS.jpg",
+    "downloadLink": "https://ify.ac/1Uhp",
+    "type": "ipa",
+    "category": "#Video",
+    "label": "New",
+    "author": "HDrezka"
+   },
+   {
+    "name": "KinoPub iOS/iPadOS",
+    "version": "v1b87 от 02.12.2023г",
+    "description": "приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/kInoPub.jpg",
+    "downloadLink": "https://ify.ac/1Uhr",
+    "type": "ipa",
+    "category": "#Video",
+    "label": "",
+    "author": "KinoPub"
+   },
+   {
+    "name": "KinoPub",
+    "version": "v1.33",
+    "description": "приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/kInoPub.jpg",
+    "downloadLink": "https://kpdl.link/k.apk",
+    "type": "apk",
+    "category": "#Video",
+    "label": "",
+    "author": "KinoPub"
    }
 ]
