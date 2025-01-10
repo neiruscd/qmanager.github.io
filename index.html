@@ -43,7 +43,8 @@
   <!-- Основной контент -->
   <main>
     <section id="app-list" class="app-list">
-      <!-- Приложения будут загружаться динамически -->
+      <!-- Пример приложения с эмодзи -->
+      <p>Привет, это пример приложения с эмодзи: 😊 🚀 🎧</p>
     </section>
   </main>
 
@@ -52,10 +53,13 @@
   <script>
     // Ждём загрузки DOM перед запуском Twemoji
     document.addEventListener("DOMContentLoaded", () => {
-      twemoji.parse(document.body, {
-        folder: 'svg',
-        ext: '.svg'
-      });
+      const appList = document.getElementById("app-list");
+      if (appList) {
+        twemoji.parse(appList, {
+          folder: 'svg',
+          ext: '.svg'
+        });
+      }
     });
   </script>
 
