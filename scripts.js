@@ -31,18 +31,22 @@ fetch('apps.json')
         const appDiv = document.createElement('div');
         appDiv.classList.add('app');
 
+        const appHeader = document.createElement('div');
+        appHeader.classList.add('app-header');
+
         const appIcon = document.createElement('img');
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
-        appDiv.appendChild(appIcon);
+        appHeader.appendChild(appIcon);
 
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
+        appDetails.appendChild(appHeader);
 
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
-        appDetails.appendChild(appTitle);
-
+        appHeader.appendChild(appTitle);
+        
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
