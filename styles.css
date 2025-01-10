@@ -167,22 +167,22 @@ h1 {
 }
 
 button {
-  padding: 12px 20px;
+  padding: 6px 12px; /* Уменьшаем внутренние отступы */
   border: none;
-  border-radius: 8px; /* Сделаем кнопки чуть более скругленными */
+  border-radius: 6px; /* Умеренное скругление */
   background: linear-gradient(45deg, #4caf50, #81c784); /* Градиентный фон */
   color: #fff; /* Белый текст */
-  font-size: 14px; /* Чуть больше текста */
-  font-weight: bold; /* Сделаем текст жирным */
+  font-size: 12px; /* Уменьшаем размер текста */
+  font-weight: bold; /* Оставляем жирным */
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легкая тень */
-  transition: all 0.3s ease; /* Анимация при наведении */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); /* Легкая тень */
+  transition: all 0.2s ease-in-out; /* Быстрая анимация */
 }
 
 button:hover {
-  background: linear-gradient(45deg, #43a047, #66bb6a); /* Более насыщенный градиент при наведении */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
-  transform: translateY(-2px); /* Легкий эффект поднятия */
+  background: linear-gradient(45deg, #43a047, #66bb6a); /* Более насыщенный градиент */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Немного увеличиваем тень */
+  transform: translateY(-1px); /* Легкий эффект поднятия */
 }
 
 /* Контейнер для карточек */
