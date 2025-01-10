@@ -127,6 +127,13 @@ h1 {
   margin-bottom: 15px;
 }
 
+/* Анимация при наведении на приложение */
+.app:hover {
+  transform: scale(1.02); /* Небольшое увеличение */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+}
+
 /* Контейнер для заголовка и иконки */
 .app-header {
   display: flex;
