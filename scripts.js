@@ -37,7 +37,6 @@ fetch('apps.json')
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
-        titleContainer.appendChild(appVersion);
         
         const appIcon = document.createElement('img');
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
