@@ -6,6 +6,20 @@ body {
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
+h1, h2 {
+  font-weight: 500; /* Полужирный для заголовков */
+  letter-spacing: 0.5px; /* Лёгкое межбуквенное пространство */
+}
+
+h2 {
+  font-size: 18px; /* Размер заголовков приложений */
+}
+
+p, .app-description, .version {
+  font-weight: 400; /* Нормальный вес текста */
+  line-height: 1.6; /* Увеличиваем интервал между строками */
+}
+
 header {
   background-color: #1c1c1c;
   padding: 10px 20px;
