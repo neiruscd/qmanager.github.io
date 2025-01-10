@@ -117,21 +117,24 @@ h1 {
   animation-fill-mode: both; /* Сохраняем конечное состояние */
 }
 
+/* Карточка приложения */
 .app {
-  display: flex; /* Уже есть: используется для горизонтального выравнивания */
-  flex-direction: row; /* Убедитесь, что элементы расположены в строку */
-  align-items: center; /* Выровнять элементы по вертикали */
-  background-color: #1e1e1e;
-  border-radius: 10px;
+  display: flex; /* Горизонтальное выравнивание */
+  flex-direction: row; /* Расположить элементы в строку */
+  align-items: center; /* Центрируем элементы по вертикали */
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(45, 45, 45, 0.8)); /* Темный градиент */
+  border-radius: 15px; /* Скругленные углы */
+  backdrop-filter: blur(10px); /* Эффект размытия */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Мягкая тень */
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
 }
 
-/* Анимация при наведении на приложение */
+/* Эффект при наведении */
 .app:hover {
-  transform: scale(1.02); /* Небольшое увеличение */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+  transform: scale(1.02); /* Легкое увеличение */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Увеличенная тень */
 }
 
 /* Контейнер для заголовка и иконки */
@@ -185,13 +188,16 @@ h1 {
   color: #fff;
 }
 
-/* Стили для описания приложения */
+/* Подложка для описания приложения */
 .app-details p {
-  word-wrap: break-word; /* Позволяет переносить длинные слова */
-  white-space: pre-line; /* Сохраняет переносы строк в тексте */
-  font-size: 14px; /* Уменьшаем текст для более аккуратного вида */
-  line-height: 1.4; /* Добавляем немного пространства между строками */
-  margin: 5px 0; /* Отступы сверху и снизу */
+  background: rgba(0, 0, 0, 0.4); /* Полупрозрачная подложка */
+  padding: 8px 12px; /* Внутренние отступы */
+  border-radius: 8px; /* Скругленные углы */
+  color: #ddd; /* Чуть светлее текст */
+  font-size: 14px; /* Размер текста */
+  line-height: 1.5; /* Межстрочный интервал */
+  margin-top: 5px; /* Отступ сверху */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
 }
 
 .app-details .version {
