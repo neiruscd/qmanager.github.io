@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- Подключение шрифта Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Метаданные -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Заголовок -->
   <title>🎄QManager REPO</title>
+
+  <!-- Подключение основного стиля -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,6 +44,17 @@
     </section>
   </main>
 
+  <!-- Подключение скрипта Twemoji -->
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+  <script>
+    // Автоматическая замена всех эмодзи на SVG от Twemoji
+    twemoji.parse(document.body, {
+      folder: 'svg',
+      ext: '.svg'
+    });
+  </script>
+
+  <!-- Ваш основной скрипт -->
   <script src="scripts.js"></script>
 </body>
 </html>
