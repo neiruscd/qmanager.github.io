@@ -1,13 +1,14 @@
 [
   {
-    "name": "Instagram | Regram | H...",
-    "version": "V349 | 1.0-b11",
-    "description": "Лучшая модификация Instagram с дополнительными функциями и возможностями.",
+    "name": "VTlite",
+    "version": "5.56.1 (4838) | 1.1.6 ",
+    "description": "Очень быстрая и функциональная модификация официального приложения ВКонтакте \n\n Преемник старому VTosters который больше не поддерживается",
     "icon": "https://example.com/icons/regram-icon.png",
-    "downloadLink": "https://example.com/regram.ipa",
-    "type": "ipa",
+    "downloadLink": "https://github.com/vtosters/lite/releases/latest/download/VTLite.apk",
+    "type": "apk",
     "category": "#Social",
-    "label": "new"
+    "label": "new",
+    "author": ""
   },
   {
     "name": "Instagram | Rocket | Pro",
@@ -17,6 +18,7 @@
     "downloadLink": "https://example.com/rocket.apk",
     "type": "apk",
     "category": "#Social",
-    "label": "update"
+    "label": "update",
+    "author": "Jane Smith"
   }
 ]
