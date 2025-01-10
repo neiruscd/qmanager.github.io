@@ -141,5 +141,16 @@
     "category": "#Video",
     "label": "",
     "author": "KinoPub"
+   },
+   {
+    "name": "Sapphire Shine",
+    "version": "v1.1.0",
+    "description": "Красивый плеер для души от YTKAB0BP",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/сапфир.jpg",
+    "downloadLink": "https://ify.ac/1Ui1",
+    "type": "apk",
+    "category": "#Music",
+    "label": "New",
+    "author": "tg:@ytkasring2"
    }
 ]
