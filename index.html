@@ -43,8 +43,7 @@
   <!-- Основной контент -->
   <main>
     <section id="app-list" class="app-list">
-      <!-- Пример приложения с эмодзи -->
-      <p id="test-emoji">Привет, это пример приложения с эмодзи: 😊 🚀 🎧</p>
+      <!-- Контейнер для динамически добавляемого контента -->
     </section>
   </main>
 
@@ -52,19 +51,21 @@
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" async defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Обработка только нужных элементов
       const appList = document.getElementById("app-list");
+
+      // Пример добавления контента с эмодзи через JS
+      const dynamicContent = `
+        <p>Привет, это пример с эмодзи 😊 🚀 🎧</p>
+        <p>Другое сообщение: 🔧 🖥️ 📱</p>
+      `;
+      appList.innerHTML = dynamicContent;
+
+      // Применяем Twemoji к добавленному контенту
       if (appList) {
         twemoji.parse(appList, {
-          folder: "svg",
-          ext: ".svg"
+          folder: 'svg',
+          ext: '.svg'
         });
-      }
-
-      // Для проверки
-      const testEmoji = document.getElementById("test-emoji");
-      if (testEmoji) {
-        console.log("Twemoji обработка:", twemoji.parse(testEmoji).outerHTML);
       }
     });
   </script>
