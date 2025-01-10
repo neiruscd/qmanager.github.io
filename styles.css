@@ -199,29 +199,46 @@ h1 {
 /* Общие стили для карточек */
 .app-meta {
   display: inline-block;
-  padding: 3px 8px; /* Уменьшаем внутренние отступы */
-  border-radius: 12px; /* Уменьшаем скругление */
-  font-size: 10px; /* Уменьшаем размер текста */
+  padding: 5px 10px; /* Умеренные внутренние отступы */
+  border-radius: 15px; /* Больше скругление */
+  font-size: 12px; /* Оптимальный размер текста */
   font-weight: bold;
   color: #fff;
-  background-color: #2c2c2c; /* Основной цвет карточки */
-  border: 1px solid #444; /* Окантовка */
+  margin: 5px 5px 0 0; /* Отступы между карточками */
+  text-align: center;
+  border: 2px solid transparent; /* Добавляем контур для стиля */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
 
 /* Карточка: Тип файла */
-.app-meta.app-type {
-  background-color: #4caf50; /* Зеленый цвет */
+.app-meta.app-type.ipa {
+  background: linear-gradient(45deg, #4caf50, #81c784); /* Зеленый градиент */
+  border-color: #4caf50; /* Обводка в тон */
+}
+
+.app-meta.app-type.apk {
+  background: linear-gradient(45deg, #f44336, #e57373); /* Красный градиент */
+  border-color: #f44336; /* Обводка в тон */
 }
 
 /* Карточка: Автор */
 .app-meta.app-author {
-  background-color: #2196f3; /* Синий цвет */
+  background: linear-gradient(45deg, #2196f3, #64b5f6); /* Синий градиент */
+  border-color: #2196f3;
 }
 
-/* Карточка: Новинка или Обновление */
-.app-meta.app-label {
-  background-color: #ff9800; /* Оранжевый цвет */
+/* Карточка: Новинка */
+.app-meta.app-label.new {
+  background: linear-gradient(45deg, #ff9800, #ffb74d); /* Оранжевый градиент */
+  border-color: #ff9800;
 }
+
+/* Обновление */
+.app-meta.app-label.update {
+  background: linear-gradient(45deg, #3f51b5, #7986cb); /* Синий-фиолетовый градиент */
+  border-color: #3f51b5;
+}
+
 /* Контейнер для заголовка и версии */
 .title-container {
   display: flex;
