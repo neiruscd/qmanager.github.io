@@ -71,7 +71,7 @@ fetch('apps.json')
         appMetaContainer.classList.add('app-meta-container');
 
         const appType = document.createElement('span');
-        appType.classList.add('app-meta', 'app-type.ipa', 'app-type.apk');
+        appType.classList.add('app-meta', 'app-type', app-type);
         appType.textContent = `Тип файла: ${app.type.toUpperCase()}`;
         appMetaContainer.appendChild(appType);
 
