@@ -41,12 +41,13 @@ h1 {
 
 .reset-btn {
   display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin: 8px auto;
+  padding: 8px 16px; /* Уменьшаем размер кнопки */
   border: none;
   border-radius: 5px;
   background-color: #f44336;
   color: #fff;
+  font-size: 12px; /* Чуть меньше текста */
   cursor: pointer;
 }
 
@@ -166,23 +167,23 @@ h1 {
   color: #bbb;
 }
 
-button {
-  padding: 6px 12px; /* Уменьшаем внутренние отступы */
+.download-btn {
+  padding: 6px 12px;
   border: none;
-  border-radius: 6px; /* Умеренное скругление */
-  background: linear-gradient(45deg, #4caf50, #81c784); /* Градиентный фон */
-  color: #fff; /* Белый текст */
-  font-size: 12px; /* Уменьшаем размер текста */
-  font-weight: bold; /* Оставляем жирным */
+  border-radius: 6px;
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); /* Легкая тень */
-  transition: all 0.2s ease-in-out; /* Быстрая анимация */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-  background: linear-gradient(45deg, #43a047, #66bb6a); /* Более насыщенный градиент */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Немного увеличиваем тень */
-  transform: translateY(-1px); /* Легкий эффект поднятия */
+.download-btn:hover {
+  background: linear-gradient(45deg, #43a047, #66bb6a);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 /* Контейнер для карточек */
