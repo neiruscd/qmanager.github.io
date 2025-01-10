@@ -43,13 +43,22 @@ fetch('apps.json')
         appIcon.alt = `${app.name} icon`;
         appHeader.appendChild(appIcon);
 
+        const titleContainer = document.createElement('div');
+        titleContainer.classList.add('title-container');
+        
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
         appHeader.appendChild(appTitle);
 
+        const appVersion = document.createElement('p');
+        appVersion.classList.add('version');
+        appVersion.textContent = app.version;
+        titleContainer.appendChild(appVersion);
+
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
         appDetails.appendChild(appHeader);
+        appDetails.appendChild(titleContainer);
 
         const appDescription = document.createElement('p');
         appDescription.textContent = app.description;
