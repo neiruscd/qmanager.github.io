@@ -64,6 +64,7 @@ fetch('apps.json')
         // appDetails.appendChild(titleContainer);
         
         const appDescription = document.createElement('p');
+        appDescription.classList.add('app-description'); // Добавляем уникальный класс
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
 
