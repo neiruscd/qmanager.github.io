@@ -13,7 +13,7 @@
   {
     "name": "TikTok Mod",
     "version": "v37.9.3",
-    "description": "Популярный мод тик ток, которым пользуется свыше 10 миллионов. \n\n[!]Нужно установить так же TikTok Plugin, без него работать мод не будет!",
+    "description": "Популярный мод тик ток, которым пользуется свыше 10 миллионов человек. \n\n[!] Нужно установить так же TikTok Plugin, без него работать мод не будет!",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/sOla31RSAH0LrFb",
     "type": "apk",
@@ -24,7 +24,7 @@
   {
     "name": "TikTok Plugin",
     "version": "v1.63",
-    "description": "Тот самый плагин, без которого TikTok Mod не будет работать! ",
+    "description": "Дополнение, без которого TikTok Mod не будет работать! ",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/Mt3uSlW80GaG96k",
     "type": "apk",
@@ -46,7 +46,7 @@
   {
     "name": "Sova V RE",
     "version": "6.12 (6073) | v1.2.1",
-    "description": "Клиент ВКонтакте для Android, который является реинкарнацией VK Sova V. Модификация официального клиента ВКонтакте, основанная на версии 6.12 (6073). \n Приложение поддерживает кэш аудиозаписей, различные стили оформления, скачивание музыки в mp3 и ещё много других интересных функций. \n Имеется частичный оффлайн.",
+    "description": "Клиент ВКонтакте для Android, который является реинкарнацией VK Sova V. Модификация официального клиента ВКонтакте, основанная на версии 6.12 (6073). \n\n[+] Приложение поддерживает кэш аудиозаписей \n[+] Различные стили оформления \n[+] Скачивание музыки в mp3 и ещё много других интересных функций. \n[!] Имеется частичный оффлайн.",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/Sova.jpg",
     "downloadLink": "https://modsfire.com/Zxm6PqeEug0cNwO",
     "type": "apk",
@@ -68,7 +68,7 @@
   {
     "name": "YouTube ReVanced",
     "version": "v19.47.53 | v5.8.1 | NonRoot ",
-    "description": "Популярная модификация YouTube \nНет рекламы\nПропуск рекламы в самом видео\nИ прочее.",
+    "description": "Популярная модификация YouTube \n[+] Отсутствует реклама \n[+] Пропуск рекламы в самом видео. И прочее.",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/30277337.png",
     "downloadLink": "https://ify.ac/1UhG",
     "type": "apk",
@@ -90,7 +90,7 @@
    {
     "name": "HDrezka App",
     "version": "v2.2.5",
-    "description": "приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях. \nПоддержка Android TV / Mobile",
+    "description": "Приложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях. \nПоддержка Android TV / Mobile",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/HdRezka.jpg",
     "downloadLink": "https://ify.ac/1Uhm",
     "type": "apk",
