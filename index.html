@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Подключение шрифта Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Метаданные -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Заголовок -->
   <title>🎄QManager REPO</title>
-
-  <!-- Подключение стилей -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Заголовок -->
   <header>
     <div class="header">
       <h1>🎄QManager REPO</h1>
@@ -33,44 +24,18 @@
     <button id="reset-filters" class="reset-btn">Сбросить фильтры</button>
   </header>
 
-  <!-- Фильтры -->
   <div class="filter-buttons">
     <button id="show-all" class="filter-btn active">Все</button>
     <button id="show-ipa" class="filter-btn">iOS (IPA)</button>
     <button id="show-apk" class="filter-btn">Android (APK)</button>
   </div>
 
-  <!-- Основной контент -->
   <main>
     <section id="app-list" class="app-list">
-      <!-- Контейнер для динамически добавляемого контента -->
+      <!-- Приложения будут загружаться динамически -->
     </section>
   </main>
 
-  <!-- Подключение Twemoji -->
-  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" async defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const appList = document.getElementById("app-list");
-
-      // Пример добавления контента с эмодзи через JS
-      const dynamicContent = `
-        <p>Привет, это пример с эмодзи 😊 🚀 🎧</p>
-        <p>Другое сообщение: 🔧 🖥️ 📱</p>
-      `;
-      appList.innerHTML = dynamicContent;
-
-      // Применяем Twemoji к добавленному контенту
-      if (appList) {
-        twemoji.parse(appList, {
-          folder: 'svg',
-          ext: '.svg'
-        });
-      }
-    });
-  </script>
-
-  <!-- Основной скрипт -->
   <script src="scripts.js"></script>
 </body>
 </html>
