@@ -130,5 +130,16 @@
     "category": "#Video",
     "label": "",
     "author": "KinoPub"
+   },
+   {
+    "name": "KinoPub BETA",
+    "version": "v?",
+    "description": "Если последняя версия KinoPub при старте висит на загрузке контента, не видно код активации, не стартует с ошибкой подключения или SSL или с ошибкой активации \n - сначала перезагружаем устройство и роутер \n- потом без удаления пробуем бета версию \n\nприложение для онлайн просмотра кино и сериалов. \nБольшая база, скачивание, комментарии, вход в аккаунт, закладки, истории, фильтры, поиск, оповещения о новых сериях.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/kInoPub.jpg",
+    "downloadLink": "https://kpdl.link/beta.apk",
+    "type": "apk",
+    "category": "#Video",
+    "label": "",
+    "author": "KinoPub"
    }
 ]
