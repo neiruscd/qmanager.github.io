@@ -11,10 +11,11 @@
   <!-- Заголовок -->
   <title>🎄QManager REPO</title>
 
-  <!-- Подключение основного стиля -->
+  <!-- Подключение стилей -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Заголовок -->
   <header>
     <div class="header">
       <h1>🎄QManager REPO</h1>
@@ -32,29 +33,33 @@
     <button id="reset-filters" class="reset-btn">Сбросить фильтры</button>
   </header>
 
+  <!-- Фильтры -->
   <div class="filter-buttons">
     <button id="show-all" class="filter-btn active">Все</button>
     <button id="show-ipa" class="filter-btn">iOS (IPA)</button>
     <button id="show-apk" class="filter-btn">Android (APK)</button>
   </div>
 
+  <!-- Основной контент -->
   <main>
     <section id="app-list" class="app-list">
       <!-- Приложения будут загружаться динамически -->
     </section>
   </main>
 
-  <!-- Подключение скрипта Twemoji -->
-  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+  <!-- Подключение Twemoji -->
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" async defer></script>
   <script>
-    // Автоматическая замена всех эмодзи на SVG от Twemoji
-    twemoji.parse(document.body, {
-      folder: 'svg',
-      ext: '.svg'
+    // Ждём загрузки DOM перед запуском Twemoji
+    document.addEventListener("DOMContentLoaded", () => {
+      twemoji.parse(document.body, {
+        folder: 'svg',
+        ext: '.svg'
+      });
     });
   </script>
 
-  <!-- Ваш основной скрипт -->
+  <!-- Основной скрипт -->
   <script src="scripts.js"></script>
 </body>
 </html>
