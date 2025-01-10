@@ -2,7 +2,7 @@
    {
     "name": "BHTikTok++",
     "version": "v37.8.0 | v1.9.3",
-    "description": "Популярный мод тик ток на айфон!",
+    "description": "Популярный мод TikTok, на айфон!",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktokbh.png",
     "downloadLink": "https://ify.ac/1Ufm",
     "type": "ipa",
@@ -42,5 +42,16 @@
     "category": "#Social",
     "label": "",
     "author": "gdlbo"
+  }, 
+  {
+    "name": "xManager | Spotify Mod | Premium.",
+    "version": "",
+    "description": "Приложение-Менеджер версий Spotify Mod от xC3FFF0E, для удобного управления и обновления модификаций. \nFree Premium",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/IMG_3650.png",
+    "downloadLink": "",
+    "type": "apk",
+    "category": "#Music",
+    "label": "https://github.com/xManager-App/xManager/releases/latest/download/xManager.apk",
+    "author": "xC3FFF0E"
   }
 ]
