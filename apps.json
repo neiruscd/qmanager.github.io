@@ -10,7 +10,7 @@
     "label": "update",
     "author": "tg:@BHTikTokPlusPlus"
   },
-   {
+  {
     "name": "TikTok Mod",
     "version": "v37.9.3",
     "description": "Популярный мод тик ток, которым пользуется свыше 10 миллионов \n я не считал. \n\n p.s нужно установить так же TikTok Plugin, без него работать мод не будет!!! ",
@@ -86,5 +86,5 @@
     "category": "#Tools",
     "label": "",
     "author": "ReVanced Team"
-   },
+   }
 ]
