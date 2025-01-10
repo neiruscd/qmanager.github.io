@@ -48,10 +48,6 @@ fetch('apps.json')
         appDetails.classList.add('app-details');
         appDetails.appendChild(appHeader);
 
-        const appTitle = document.createElement('h2');
-        appTitle.textContent = app.name;
-        appHeader.appendChild(appTitle);
-
         const appDescription = document.createElement('p');
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
