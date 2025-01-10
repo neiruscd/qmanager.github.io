@@ -208,14 +208,14 @@ button:hover {
 /* Контейнер для заголовка и версии */
 .title-container {
   display: flex;
-  flex-direction: column; /* Располагаем заголовок и версию вертикально */
+  flex-direction: row; /* Располагаем заголовок и версию вертикально */
   margin-bottom: 10px; /* Отступ снизу */
 }
 
 /* Заголовок приложения */
 .title-container h2 {
   font-size: 16px;
-  margin: 3; /* Убираем лишние отступы */
+  margin: 0; /* Убираем лишние отступы */
   color: #fff;
 }
 
