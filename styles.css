@@ -208,7 +208,7 @@ button:hover {
 /* Контейнер для заголовка и версии */
 .title-container {
   display: flex;
-  flex-direction: row; /* Располагаем заголовок и версию вертикально */
+  flex-direction: column; /* Располагаем заголовок и версию вертикально */
   margin-bottom: 10px; /* Отступ снизу */
 }
 
