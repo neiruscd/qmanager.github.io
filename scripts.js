@@ -109,8 +109,10 @@ fetch('apps.json')
 
         const downloadButton = document.createElement('button');
         downloadButton.textContent = 'Скачать';
+        downloadButton.classList.add('download-btn');
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
-        appDiv.appendChild(downloadButton);
+        appHeader.appendChild(downloadButton);
+        
 
         appList.appendChild(appDiv);
       });
