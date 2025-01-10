@@ -164,4 +164,15 @@
     "label": "new",
     "author": "SyboGames"
    }
+   {,
+    "name": "xManager | Spotify Mod | Premium.",
+    "version": "v5.8",
+    "description": "Приложение-Менеджер версий Spotify Mod от xC3FFF0E, для удобного управления и обновления модификаций. \nFree Premium",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/IMG_3650.png",
+    "downloadLink": "https://github.com/xManager-App/xManager/releases/latest/download/xManager.apk",
+    "type": "apk",
+    "category": "#Music",
+    "label": "",
+    "author": "xC3FFF0E"
+  }
 ]
