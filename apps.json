@@ -1,7 +1,18 @@
 [
    {
+    "name": "BHTikTok++",
+    "version": "v37.8.0 | v1.9.3",
+    "description": "Популярный мод тик ток на айфон!",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktokbh.png",
+    "downloadLink": "https://ify.ac/1Ufm",
+    "type": "ipa",
+    "category": "#Social",
+    "label": "update",
+    "author": "tg:@BHTikTokPlusPlus"
+  },
+   {
     "name": "TikTok Mod",
-    "version": "37.9.3",
+    "version": "v37.9.3",
     "description": "Популярный мод тик ток, которым пользуется свыше 10 миллионов \n я не считал. \n\n p.s нужно установить так же TikTok Plugin, без него работать мод не будет!!! ",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/sOla31RSAH0LrFb",
@@ -12,7 +23,7 @@
   },
   {
     "name": "TikTok Plugin",
-    "version": "1.63",
+    "version": "v1.63",
     "description": "Тот самый плагин, без которого TikTok Mod не будет работать! ",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/Mt3uSlW80GaG96k",
@@ -23,7 +34,7 @@
   },
   {
     "name": "VTlite",
-    "version": "5.56.1 (4838) | 1.1.6 ",
+    "version": "v5.56.1 (4838) | v1.1.6 ",
     "description": "Очень быстрая и функциональная модификация официального приложения ВКонтакте \n\n Преемник старому VTosters который больше не поддерживается",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/HE5cWdH_Roc.png",
     "downloadLink": "https://github.com/vtosters/lite/releases/latest/download/VTLite.apk",
