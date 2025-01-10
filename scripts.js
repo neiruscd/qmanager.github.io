@@ -91,7 +91,7 @@ fetch('apps.json')
 
         if (app.label) {
           const appLabel = document.createElement('span');
-          appLabel.classList.add('app-meta', 'app-label');
+          appLabel.classList.add('app-meta', 'app-label' app.label);
           appLabel.textContent =
             app.label === 'new'
             ? '🔥 Новинка'
