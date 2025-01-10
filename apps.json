@@ -6,7 +6,7 @@
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktokbh.png",
     "downloadLink": "https://ify.ac/1Ufm",
     "type": "ipa",
-    "category": "#Social",
+    "category": "#Video",
     "label": "update",
     "author": "tg:@BHTikTokPlusPlus"
   },
@@ -17,7 +17,7 @@
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/sOla31RSAH0LrFb",
     "type": "apk",
-    "category": "#Social",
+    "category": "#Video",
     "label": "update",
     "author": "tg:@TikTokModCloud"
   },
@@ -28,7 +28,7 @@
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://modsfire.com/Mt3uSlW80GaG96k",
     "type": "apk",
-    "category": "#Social",
+    "category": "#Video",
     "label": "update",
     "author": "tg:@TikTokModCloud"
   },
@@ -50,7 +50,7 @@
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/IMG_3650.png",
     "downloadLink": "https://github.com/xManager-App/xManager/releases/latest/download/xManager.apk",
     "type": "apk",
-    "category": "#Music",
+    "category": "#Music, #Tools",
     "label": "",
     "author": "xC3FFF0E"
   }
