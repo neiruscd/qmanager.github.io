@@ -33,6 +33,10 @@ fetch('apps.json')
 
         const appHeader = document.createElement('div');
         appHeader.classList.add('app-header');
+
+        const appTitle = document.createElement('h2');
+        appTitle.textContent = app.name;
+        appHeader.appendChild(appTitle);
         
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
