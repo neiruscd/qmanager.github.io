@@ -112,9 +112,10 @@ h1 {
 /* Контейнер для заголовка и иконки */
 .app-header {
   display: flex;
-  align-items: center; /* Выровнять иконку и текст по вертикали */
-  gap: 10px; /* Расстояние между иконкой и текстом */
-  margin-bottom: 10px; /* Отступ снизу */
+  align-items: center; /* Выравниваем по вертикали */
+  justify-content: space-between; /* Заголовок слева, кнопка справа */
+  gap: 10px; /* Расстояние между элементами */
+  margin-bottom: 10px;
 }
 
 .app-header img {
