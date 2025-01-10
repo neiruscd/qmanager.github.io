@@ -146,32 +146,37 @@ button:hover {
   background-color: #45a049;
 }
 
+/* Контейнер для карточек */
 .app-meta-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 5px; /* Уменьшаем расстояние между карточками */
+  margin-top: 5px; /* Уменьшаем отступ сверху */
 }
 
+/* Общие стили для карточек */
 .app-meta {
   display: inline-block;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 12px;
+  padding: 3px 8px; /* Уменьшаем внутренние отступы */
+  border-radius: 12px; /* Уменьшаем скругление */
+  font-size: 10px; /* Уменьшаем размер текста */
   font-weight: bold;
   color: #fff;
   background-color: #2c2c2c; /* Основной цвет карточки */
   border: 1px solid #444; /* Окантовка */
 }
 
+/* Карточка: Тип файла */
 .app-meta.app-type {
-  background-color: #4caf50; /* Зеленый цвет для типа файла */
+  background-color: #4caf50; /* Зеленый цвет */
 }
 
+/* Карточка: Автор */
 .app-meta.app-author {
-  background-color: #2196f3; /* Синий цвет для автора */
+  background-color: #2196f3; /* Синий цвет */
 }
 
+/* Карточка: Новинка или Обновление */
 .app-meta.app-label {
-  background-color: #ff9800; /* Оранжевый цвет для лейблов */
+  background-color: #ff9800; /* Оранжевый цвет */
 }
