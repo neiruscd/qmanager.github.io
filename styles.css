@@ -178,6 +178,7 @@ h1 {
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease-in-out;
+  margin-left: auto; /* Отправляем кнопку вправо */
 }
 
 .download-btn:hover {
