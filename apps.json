@@ -44,14 +44,36 @@
     "author": "gdlbo"
   }, 
   {
-    "name": "xManager | Spotify Mod | Premium.",
-    "version": "v5.8",
-    "description": "Приложение-Менеджер версий Spotify Mod от xC3FFF0E, для удобного управления и обновления модификаций. \nFree Premium",
-    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/IMG_3650.png",
-    "downloadLink": "https://github.com/xManager-App/xManager/releases/latest/download/xManager.apk",
+    "name": "ReVanced GmsCore",
+    "version": "v0.3.1.4.240913",
+    "description": "Дополнение, без которого не работает YouTube ReVanced.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/12586614.png",
+    "downloadLink": "https://modsfire.com/bvQ8Jy7U5aUj8a9",
     "type": "apk",
-    "category": "#Music",
+    "category": "#Tools",
     "label": "",
-    "author": "xC3FFF0E"
-  }
+    "author": "ReVanced Team"
+  },
+  {
+    "name": "YouTube Revanced",
+    "version": "v19.47.53 | v5.8.1 | NonRoot ",
+    "description": "Популярная модификация YouTube \nНет рекламы\nПропуск рекламы в самом видео\nИ прочее.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/30277337.png",
+    "downloadLink": "https://ify.ac/1UhG",
+    "type": "apk",
+    "category": "#Video",
+    "label": "",
+    "author": "ReVanced Team"
+  },
+  {
+    "name": "ReVanced GmsCore | Версия для Huawei",
+    "version": "v0.3.1.4.240913",
+    "description": "Дополнение, без которого не работает YouTube ReVanced.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/12586614.png",
+    "downloadLink": "https://modsfire.com/bvQ8Jy7U5aUj8a9",
+    "type": "apk",
+    "category": "#Tools",
+    "label": "",
+    "author": "ReVanced Team"
+   },
 ]
