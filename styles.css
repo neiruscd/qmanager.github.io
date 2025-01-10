@@ -199,26 +199,27 @@ h1 {
 /* Общие стили для карточек */
 .app-meta {
   display: inline-block;
-  padding: 5px 10px; /* Умеренные внутренние отступы */
-  border-radius: 15px; /* Больше скругление */
-  font-size: 12px; /* Оптимальный размер текста */
+  padding: 3px 8px; /* Уменьшаем внутренние отступы */
+  border-radius: 10px; /* Снижаем скругление */
+  font-size: 10px; /* Уменьшаем текст */
   font-weight: bold;
   color: #fff;
-  margin: 5px 5px 0 0; /* Отступы между карточками */
+  margin: 3px 3px 0 0; /* Уменьшаем расстояние между карточками */
   text-align: center;
-  border: 2px solid transparent; /* Добавляем контур для стиля */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  text-transform: uppercase; /* Преобразуем текст в заглавные буквы */
+  border: 1px solid transparent; /* Тонкая граница */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
 
 /* Карточка: Тип файла */
 .app-meta.app-type.ipa {
   background: linear-gradient(45deg, #4caf50, #81c784); /* Зеленый градиент */
-  border-color: #4caf50; /* Обводка в тон */
+  border-color: #4caf50; /* Тонкая граница в тон */
 }
 
 .app-meta.app-type.apk {
   background: linear-gradient(45deg, #f44336, #e57373); /* Красный градиент */
-  border-color: #f44336; /* Обводка в тон */
+  border-color: #f44336; /* Тонкая граница в тон */
 }
 
 /* Карточка: Автор */
@@ -235,7 +236,7 @@ h1 {
 
 /* Обновление */
 .app-meta.app-label.update {
-  background: linear-gradient(45deg, #3f51b5, #7986cb); /* Синий-фиолетовый градиент */
+  background: linear-gradient(45deg, #3f51b5, #7986cb); /* Фиолетовый градиент */
   border-color: #3f51b5;
 }
 
