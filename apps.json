@@ -42,7 +42,18 @@
     "category": "#Social",
     "label": "",
     "author": "gdlbo"
-  }, 
+  },
+  {
+    "name": "Sova V RE",
+    "version": "6.12 (6073) | v1.2.1",
+    "description": "Клиент ВКонтакте для Android, который является реинкарнацией VK Sova V. Модификация официального клиента ВКонтакте, основанная на версии 6.12 (6073). \n Приложение поддерживает кэш аудиозаписей, различные стили оформления, скачивание музыки в mp3 и ещё много других интересных функций. \n Имеется частичный оффлайн.",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/Sova.jpg",
+    "downloadLink": "https://modsfire.com/Zxm6PqeEug0cNwO",
+    "type": "apk",
+    "category": "#Social",
+    "label": "",
+    "author": "tg:@sovaV"
+  },
   {
     "name": "ReVanced GmsCore",
     "version": "v0.3.1.4.240913",
