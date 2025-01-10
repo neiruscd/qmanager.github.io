@@ -52,6 +52,44 @@ fetch('apps.json')
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
 
+        const appMetaContainer = document.createElement('div');
+        appMetaContainer.classList.add('app-meta-container');
+
+        const appType = document.createElement('span');
+        appType.classList.add('app-meta', 'app-type');
+        appType.textContent = `Тип файла: ${app.type.toUpperCase()}`;
+        appMetaContainer.appendChild(appType);
+
+        const appAuthor = document.createElement('span');
+        appAuthor.classList.add('app-meta', 'app-author');
+        if (app.author) {
+          const authorLink = document.createElement('a');
+          authorLink.href = `#`; // Здесь можно добавить ссылку, если нужно
+          authorLink.textContent = `Автор : ${app.author}`;
+          authorLink.style.textDecoration = 'none';
+          authorLink.style.color = 'inherit';
+          appAuthor.appendChild(authorLink);
+        } else {
+          appAuthor.textContent = `Автор : неизвестен`;
+        }
+          appMetaContainer.appendChild(appAuthor);
+
+        if (app.label) {
+          const appLabel = document.createElement('span');
+          appLabel.classList.add('app-meta', 'app-label');
+          appLabel.textContent =
+            app.label === 'new'
+            ? '🔥 Новинка'
+            : app.label === 'update'
+            ? '🔄 Обновление'
+            : '';
+          appMetaContainer.appendChild(appLabel);
+        }
+        
+        appDetails.appendChild(appMetaContainer);
+        
+// конец нового блока 
+        
         appDiv.appendChild(appDetails);
 
         const downloadButton = document.createElement('button');
