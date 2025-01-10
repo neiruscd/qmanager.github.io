@@ -215,7 +215,7 @@ button:hover {
 /* Заголовок приложения */
 .title-container h2 {
   font-size: 16px;
-  margin: 0; /* Убираем лишние отступы */
+  margin: 1; /* Убираем лишние отступы */
   color: #fff;
 }
 
