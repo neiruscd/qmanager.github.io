@@ -3,7 +3,7 @@
     "name": "VTlite",
     "version": "5.56.1 (4838) | 1.1.6 ",
     "description": "Очень быстрая и функциональная модификация официального приложения ВКонтакте \n\n Преемник старому VTosters который больше не поддерживается",
-    "icon": "https://example.com/icons/regram-icon.png",
+    "icon": "https://github.com/neiruscd/appicons/blob/b4afa5d636dd80cafc7ecafd4ce916d0278a1b95/HE5cWdH_Roc.jpg",
     "downloadLink": "https://github.com/vtosters/lite/releases/latest/download/VTLite.apk",
     "type": "apk",
     "category": "#Social",
