@@ -288,13 +288,6 @@ h1 {
   border-color: #3f51b5;
 }
 
-/* Анимация для заголовков */
-.title-container h2 {
-  animation: fadeIn 0.5s ease-in-out;
-  animation-delay: 0.2s; /* Небольшая задержка */
-  animation-fill-mode: both;
-}
-
 /* Контейнер для заголовка и версии */
 .title-container {
   display: flex;
