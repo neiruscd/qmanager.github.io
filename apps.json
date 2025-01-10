@@ -11,14 +11,25 @@
     "author": "gdlbo"
   },
   {
-    "name": "Instagram | Rocket | Pro",
-    "version": "V348 | 3.8.29",
-    "description": "Приложение Instagram с дополнительными функциями.",
-    "icon": "https://example.com/icons/rocket-icon.png",
+    "name": "TikTok Mod",
+    "version": "37.9.3",
+    "description": "Популярный мод тик ток, которым пользуется свыше 10 миллионов n/ я не считал. n/n/ p.s нужно установить так же TikTok Plugin, без него работать мод не будет!!! ",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
     "downloadLink": "https://example.com/rocket.apk",
     "type": "apk",
     "category": "#Social",
     "label": "update",
-    "author": "Jane Smith"
+    "author": "tg:@TikTokModCloud"
+  },
+    {
+    "name": "TikTok Plugin",
+    "version": "1.63",
+    "description": "Тот самый плагин, без которого TikTok Mod не будет работать! ",
+    "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/tiktok.png",
+    "downloadLink": "https://example.com/rocket.apk",
+    "type": "apk",
+    "category": "#Social",
+    "label": "update",
+    "author": "tg:@TikTokModCloud"
   }
 ]
