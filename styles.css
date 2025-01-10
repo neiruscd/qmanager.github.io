@@ -206,6 +206,23 @@ h1 {
   transform: translateY(-1px);
 }
 
+/* Анимация для карточек при их появлении */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px); /* Эффект сдвига */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.app-meta {
+  animation: slideIn 0.3s ease-in-out;
+  animation-fill-mode: both; /* Сохраняем конечное состояние */
+}
+
 /* Контейнер для карточек */
 .app-meta-container {
   display: flex;
