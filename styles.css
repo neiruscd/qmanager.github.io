@@ -99,6 +99,24 @@ h1 {
   padding: 20px;
 }
 
+/* Общий стиль для анимации появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Эффект подъёма */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Применяем анимацию ко всем приложениям при загрузке */
+.app {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: both; /* Сохраняем конечное состояние */
+}
+
 .app {
   display: flex; /* Уже есть: используется для горизонтального выравнивания */
   flex-direction: row; /* Убедитесь, что элементы расположены в строку */
