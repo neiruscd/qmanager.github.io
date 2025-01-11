@@ -87,11 +87,18 @@ const filteredApps = data.filter(app => {
         appMetaContainer.appendChild(appType);
 
 // Добавляем автора как обычный текст
-        const appAuthor = document.createElement('span');
-        appAuthor.classList.add('app-meta', 'app-author');
-        appAuthor.textContent = app.author ? `Автор: ${app.author}` : `Автор неизвестен`;
-        appMetaContainer.appendChild(appAuthor);
+       const appAuthor = document.createElement('span');
+       appAuthor.classList.add('app-meta', 'app-author');
 
+// Проверяем, указан ли автор
+       if (app.author) {
+         appAuthor.textContent = `Автор: ${app.author}`;
+       } else {
+         appAuthor.textContent = `Автор неизвестен`;
+         appAuthor.classList.add('unknown'); // Добавляем стиль для неизвестного автора
+       }
+
+       appMetaContainer.appendChild(appAuthor);
 
         if (app.label) {
           const appLabel = document.createElement('span');
