@@ -115,7 +115,7 @@ h1 {
 .glass-container {
   display: flex;
   align-items: center; /* Выравнивание по вертикали */
-  justify-content: flex-start; /* Элементы выравниваются слева */
+  justify-content: space-between; /* Пространство между заголовком/версией и кнопкой */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
@@ -124,6 +124,14 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin-bottom: 10px;
   gap: 10px; /* Расстояние между элементами */
+}
+
+/* Контейнер для текста (заголовок и версия) */
+.glass-text-container {
+  display: flex;
+  flex-direction: column; /* Элементы располагаются вертикально */
+  flex: 1; /* Занимает все доступное пространство */
+  overflow: hidden; /* Скрывает избыточный текст */
 }
 
 /* Применяем анимацию ко всем приложениям при загрузке */
@@ -193,11 +201,12 @@ h1 {
 }
 
 /* Заголовок приложения */
-.glass-container h2 {
-  font-size: 16px; /* Размер заголовка */
+.glass-text-container h2 {
+  font-size: 14px; /* Размер заголовка */
   font-weight: bold; /* Жирный текст */
   margin: 0; /* Убираем лишние отступы */
   color: #fff; /* Белый цвет текста */
+  word-wrap: break-word; /* Перенос текста на новую строку */
 }
 
 .app-details {
@@ -215,10 +224,11 @@ h1 {
 }
 
 /* Версия приложения */
-.glass-container .version {
+.glass-text-container .version {
   font-size: 12px; /* Размер текста версии */
   color: #bbb; /* Приглушенный цвет для версии */
-  margin-top: 2px;
+  margin-top: 2px; /* Небольшой отступ сверху */
+  word-wrap: break-word; /* Перенос текста на новую строку */
 }
 
 /* Подложка только для описания */
@@ -232,19 +242,20 @@ h1 {
   white-space: pre-line; /* Поддержка переноса строк */
 }
 
+/* Кнопка "Скачать" */
 .download-btn {
   background: linear-gradient(145deg, rgba(50, 50, 50, 0.8), rgba(30, 30, 30, 0.9)); /* Темное стекло */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
   border-radius: 8px;
   color: #fff;
   font-size: 12px;
-  padding: 10px 20px;
+  padding: 10px 16px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  margin-left: auto;
-  height: auto; /* Чтобы не ломало заголовок */
+  height: auto; /* Чтобы кнопка не "прыгала" */
+  flex-shrink: 0; /* Кнопка не сжимается */
 }
 
 .download-btn:hover {
