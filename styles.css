@@ -249,7 +249,7 @@ h1 {
 .app-meta-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px; /* Чуть больше расстояние между карточками */
+  gap: 6px; /* Расстояние между карточками */
   margin-top: 5px; /* Отступ сверху */
 }
 
@@ -258,16 +258,16 @@ h1 {
   animation: slideIn 0.3s ease-in-out;
   animation-fill-mode: both; /* Сохраняем конечное состояние */
   display: inline-block;
-  padding: 4px 10px; /* Немного увеличены внутренние отступы для читабельности */
+  padding: 4px 10px; /* Умеренные внутренние отступы */
   border-radius: 10px; /* Мягкие углы */
-  font-size: 11px; /* Чуть больше текста для лучшей читаемости */
-  font-weight: 600; /* Умеренно жирный текст */
-  color: #fff;
-  margin: 5px 5px 0 0; /* Отступы между карточками */
+  font-size: 11px; /* Чуть больше текста для читабельности */
+  font-weight: 600; /* Средний жирный текст */
+  color: #fff; /* Белый текст */
+  margin: 4px 4px 0 0; /* Отступы между карточками */
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Преобразуем текст в заглавные */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(25, 25, 25, 0.8)); /* Спокойный градиент */
+  background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(15, 15, 15, 0.9)); /* Темное стекло */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Легкая тень */
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -277,34 +277,34 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Более глубокая тень */
 }
 
-/* Тип файла iOS */
+/* Темно-зеленый для iOS */
 .app-meta.app-type.ipa {
-  background: linear-gradient(145deg, rgba(129, 202, 138, 0.9), rgba(105, 180, 120, 0.8)); /* Мягкий зеленый */
-  border-color: rgba(105, 180, 120, 0.8);
+  background: linear-gradient(145deg, rgba(20, 40, 20, 0.9), rgba(15, 30, 15, 0.8)); /* Темно-зеленый */
+  border-color: rgba(15, 30, 15, 0.8);
 }
 
-/* Тип файла Android */
+/* Темно-красный для Android */
 .app-meta.app-type.apk {
-  background: linear-gradient(145deg, rgba(239, 154, 154, 0.9), rgba(229, 115, 115, 0.8)); /* Мягкий красный */
-  border-color: rgba(229, 115, 115, 0.8);
+  background: linear-gradient(145deg, rgba(40, 20, 20, 0.9), rgba(30, 15, 15, 0.8)); /* Темно-красный */
+  border-color: rgba(30, 15, 15, 0.8);
 }
 
-/* Автор */
+/* Темно-синий для авторов */
 .app-meta.app-author {
-  background: linear-gradient(145deg, rgba(144, 202, 249, 0.9), rgba(100, 181, 246, 0.8)); /* Мягкий синий */
-  border-color: rgba(100, 181, 246, 0.8);
+  background: linear-gradient(145deg, rgba(20, 20, 40, 0.9), rgba(15, 15, 30, 0.8)); /* Темно-синий */
+  border-color: rgba(15, 15, 30, 0.8);
 }
 
-/* Новинка */
+/* Темно-оранжевый для новинок */
 .app-meta.app-label.new {
-  background: linear-gradient(145deg, rgba(255, 224, 130, 0.9), rgba(255, 183, 77, 0.8)); /* Мягкий оранжевый */
-  border-color: rgba(255, 183, 77, 0.8);
+  background: linear-gradient(145deg, rgba(40, 30, 20, 0.9), rgba(30, 20, 15, 0.8)); /* Темно-оранжевый */
+  border-color: rgba(30, 20, 15, 0.8);
 }
 
-/* Стиль для обновлений */
+/* Темно-фиолетовый для обновлений */
 .app-meta.app-label.update {
-  background: linear-gradient(145deg, rgba(179, 157, 219, 0.9), rgba(149, 117, 205, 0.8)); /* Мягкий фиолетовый */
-  border-color: rgba(149, 117, 205, 0.8);
+  background: linear-gradient(145deg, rgba(30, 20, 40, 0.9), rgba(20, 15, 30, 0.8)); /* Темно-фиолетовый */
+  border-color: rgba(20, 15, 30, 0.8);
 }
 
 /* Контейнер для заголовка и версии */
