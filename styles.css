@@ -208,23 +208,22 @@ h1 {
 }
 
 .download-btn {
-  padding: 6px 14px; /* Уменьшаем внутренние отступы */
-  border: none;
-  border-radius: 8px; /* Более мягкие углы */
-  background: linear-gradient(145deg, #4caf50, #81c784); /* Темный градиент */
-  color: #fff; /* Белый текст */
-  font-size: 12px; /* Чуть меньше текста */
-  font-weight: 500; /* Средний вес шрифта */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Мягкая тень */
-  transition: all 0.2s ease-in-out; /* Плавный переход для hover */
-  margin-left: auto; /* Отправляем кнопку вправо */
-  display: inline-block; /* Гарантируем, что кнопка остается в строке */
+  background: linear-gradient(145deg, rgba(50, 50, 50, 0.8), rgba(30, 30, 30, 0.9)); /* Темное стекло с градиентом */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px; /* Оптимальный размер текста */
+  padding: 10px 20px; /* Внутренние отступы */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Анимация */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Тень */
 }
 
 .download-btn:hover {
-  background: linear-gradient(145deg, #43a047, #66bb6a); /* Градиент при наведении */
-  transform: translateY(-2px); /* Легкий эффект поднятия */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Усиленная тень */
+  background: linear-gradient(145deg, rgba(70, 70, 70, 0.9), rgba(50, 50, 50, 1)); /* Градиент при наведении */
+  transform: scale(1.05); /* Легкое увеличение */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Усиленная тень */
 }
 
 /* Анимация для карточек при их появлении */
