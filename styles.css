@@ -218,6 +218,8 @@ h1 {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease; /* Анимация */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Тень */
+  margin-left: auto; /* Выравнивание кнопки вправо */
+  height: auto; /* Чтобы не ломало заголовок */
 }
 
 .download-btn:hover {
