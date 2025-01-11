@@ -63,6 +63,7 @@ fetch('apps.json')
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
         titleContainer.appendChild(appVersion);
+        textContainer.appendChild(appVersion);
         glassContainer.appendChild(appVersion);
 
         appHeader.appendChild(titleContainer);
