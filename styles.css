@@ -59,23 +59,23 @@ h1 {
 }
 
 #search-bar {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
-  background: rgba(40, 40, 40, 0.8);
-  color: #fff;
+  width: 100%; /* Растягивается на всю ширину */
+  padding: 10px 15px; /* Размеры */
   font-size: 14px;
-  margin-top: 15px; /* Отступ сверху */
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px); /* Эффект стекла */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+  border-radius: 20px; /* Закругленные углы */
+  background: rgba(30, 30, 30, 0.6); /* Темное стекло */
+  backdrop-filter: blur(10px); /* Эффект размытия */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3); /* Внутренние и внешние тени */
+  outline: none; /* Убираем рамку при фокусе */
+  transition: all 0.3s ease; /* Плавные переходы */
 }
 
 #search-bar:focus {
-  border-color: rgba(255, 255, 255, 0.5);
-  outline: none;
-  background: rgba(40, 40, 40, 0.9);
+  background: rgba(50, 50, 50, 0.7); /* Более яркий фон */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 #search-bar::placeholder {
@@ -83,24 +83,22 @@ h1 {
 }
 
 .reset-btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background: rgba(244, 67, 54, 0.8); /* Красный */
+  padding: 8px 16px; /* Размер кнопки */
+  font-size: 12px;
   color: #fff;
-  font-size: 14px;
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+  border-radius: 20px;
+  background: rgba(255, 69, 58, 0.6); /* Красный стеклянный фон */
+  backdrop-filter: blur(10px); /* Эффект размытия */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(255, 69, 58, 0.3); /* Красная тень */
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px); /* Эффект стекла */
-  -webkit-backdrop-filter: blur(10px); /* Для Safari */
 }
 
 .reset-btn:hover {
-  background: rgba(244, 67, 54, 1); /* Ярко-красный */
-  transform: scale(1.05);
+  background: rgba(255, 69, 58, 0.8); /* Ярче при наведении */
+  box-shadow: 0 6px 12px rgba(255, 69, 58, 0.4);
 }
 
 .filter-buttons {
@@ -114,17 +112,17 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px;
-  border-radius: 25px; /* Округлые кнопки */
-  font-size: 14px; /* Размер текста */
+  padding: 8px 16px; /* Размеры */
+  font-size: 12px;
+  font-weight: bold;
   color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: rgba(40, 40, 40, 0.7); /* Полупрозрачный фон */
-  backdrop-filter: blur(10px); /* Эффект стекла */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.6); /* Темное стекло */
+  backdrop-filter: blur(10px); /* Размытие */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
+  transition: all 0.3s ease; /* Плавный переход */
 }
 
 .filter-btn::before {
@@ -142,15 +140,14 @@ h1 {
 }
 
 .filter-btn:hover {
-  background: rgba(50, 50, 50, 0.8);
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  background: rgba(50, 50, 50, 0.8); /* Светлее при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .filter-btn.active {
-  background: rgba(70, 70, 70, 0.9);
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3), 0 4px 8px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
+  background: rgba(50, 50, 50, 0.7); /* Более заметный фон для активной кнопки */
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
 }
 
 #categories {
