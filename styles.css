@@ -1,23 +1,9 @@
 body {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   background-color: #121212;
   color: #fff;
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-}
-
-h1, h2 {
-  font-weight: 500; /* Полужирный для заголовков */
-  letter-spacing: 0.5px; /* Лёгкое межбуквенное пространство */
-}
-
-h2 {
-  font-size: 18px; /* Размер заголовков приложений */
-}
-
-p, .app-description, .version {
-  font-weight: 400; /* Нормальный вес текста */
-  line-height: 1.6; /* Увеличиваем интервал между строками */
 }
 
 header {
@@ -222,22 +208,23 @@ h1 {
 }
 
 .download-btn {
-  padding: 8px 16px;
+  padding: 6px 12px;
   border: none;
   border-radius: 6px;
   background: linear-gradient(45deg, #4caf50, #81c784);
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease-in-out;
+  margin-left: auto; /* Отправляем кнопку вправо */
 }
 
 .download-btn:hover {
   background: linear-gradient(45deg, #43a047, #66bb6a);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 /* Анимация для карточек при их появлении */
@@ -267,34 +254,46 @@ h1 {
 
 /* Общие стили для карточек */
 .app-meta {
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 12px;
+  display: inline-block;
+  padding: 3px 8px; /* Уменьшаем внутренние отступы */
+  border-radius: 10px; /* Снижаем скругление */
+  font-size: 10px; /* Уменьшаем текст */
   font-weight: bold;
   color: #fff;
+  margin: 3px 3px 0 0; /* Уменьшаем расстояние между карточками */
   text-align: center;
-  text-transform: uppercase;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase; /* Преобразуем текст в заглавные буквы */
+  border: 1px solid transparent; /* Тонкая граница */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
 
+/* Карточка: Тип файла */
 .app-meta.app-type.ipa {
-  background: linear-gradient(145deg, #4caf50, #81c784);
+  background: linear-gradient(45deg, #4caf50, #81c784); /* Зеленый градиент */
+  border-color: #4caf50; /* Тонкая граница в тон */
 }
 
 .app-meta.app-type.apk {
-  background: linear-gradient(145deg, #f44336, #e57373);
+  background: linear-gradient(45deg, #f44336, #e57373); /* Красный градиент */
+  border-color: #f44336; /* Тонкая граница в тон */
 }
 
+/* Карточка: Автор */
 .app-meta.app-author {
-  background: linear-gradient(145deg, #2196f3, #64b5f6);
+  background: linear-gradient(45deg, #2196f3, #64b5f6); /* Синий градиент */
+  border-color: #2196f3;
 }
 
+/* Карточка: Новинка */
 .app-meta.app-label.new {
-  background: linear-gradient(145deg, #ff9800, #ffb74d);
+  background: linear-gradient(45deg, #ff9800, #ffb74d); /* Оранжевый градиент */
+  border-color: #ff9800;
 }
 
+/* Обновление */
 .app-meta.app-label.update {
-  background: linear-gradient(145deg, #3f51b5, #7986cb);
+  background: linear-gradient(45deg, #3f51b5, #7986cb); /* Фиолетовый градиент */
+  border-color: #3f51b5;
 }
 
 /* Контейнер для заголовка и версии */
