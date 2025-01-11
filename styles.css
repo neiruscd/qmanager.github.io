@@ -253,56 +253,56 @@ h1 {
 
 /* Общие стили для карточек */
 .app-meta {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 500;
-  color: #fff;
-  margin: 4px 4px 0 0;
-  text-align: center;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(20, 20, 20, 0.7); /* Темное стекло */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    padding: 2px 6px; /* Уменьшенные отступы */
+    border-radius: 8px; /* Мягкие углы */
+    font-size: 10px; /* Уменьшенный текст */
+    font-weight: bold;
+    color: #fff; /* Белый текст */
+    margin: 4px 4px 0 0; /* Отступы между карточками */
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+    background: rgba(25, 25, 25, 0.6); /* Прозрачный фон */
+    backdrop-filter: blur(6px); /* Эффект размытия */
+    -webkit-backdrop-filter: blur(6px); /* Для Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Легкая тень */
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .app-meta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px); /* Легкое поднятие */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
 }
 
-/* Темно-зеленый для iOS */
+/* Темные цвета для каждого типа */
 .app-meta.app-type.ipa {
-  background: linear-gradient(145deg, rgba(20, 40, 20, 0.7), rgba(15, 30, 15, 0.6)); /* Темно-зеленый с прозрачностью */
-  border-color: rgba(15, 30, 15, 0.8);
+    background: linear-gradient(145deg, rgba(20, 40, 20, 0.7), rgba(15, 30, 15, 0.6)); /* Темно-зеленый */
+    border-color: rgba(15, 30, 15, 0.8);
 }
 
 /* Темно-красный для Android */
 .app-meta.app-type.apk {
-  background: linear-gradient(145deg, rgba(40, 20, 20, 0.7), rgba(30, 15, 15, 0.6)); /* Темно-красный с прозрачностью */
-  border-color: rgba(30, 15, 15, 0.8);
+    background: linear-gradient(145deg, rgba(40, 20, 20, 0.7), rgba(30, 15, 15, 0.6)); /* Темно-красный */
+    border-color: rgba(30, 15, 15, 0.8);
 }
 
 /* Темно-синий для авторов */
 .app-meta.app-author {
-  background: linear-gradient(145deg, rgba(20, 20, 40, 0.9), rgba(15, 15, 30, 0.8)); /* Темно-синий */
-  border-color: rgba(15, 15, 30, 0.8);
+    background: linear-gradient(145deg, rgba(20, 20, 40, 0.7), rgba(15, 15, 30, 0.6)); /* Темно-синий */
+    border-color: rgba(15, 15, 30, 0.8);
 }
 
 /* Темно-оранжевый для новинок */
 .app-meta.app-label.new {
-  background: linear-gradient(145deg, rgba(40, 30, 20, 0.7), rgba(30, 20, 15, 0.6)); /* Темно-оранжевый с прозрачностью */
-  border-color: rgba(30, 20, 15, 0.8);
+    background: linear-gradient(145deg, rgba(40, 30, 20, 0.7), rgba(30, 20, 15, 0.6)); /* Темно-оранжевый */
+    border-color: rgba(30, 20, 15, 0.8);
 }
 
 /* Темно-фиолетовый для обновлений */
 .app-meta.app-label.update {
-  background: linear-gradient(145deg, rgba(30, 20, 40, 0.7), rgba(20, 15, 30, 0.6)); /* Темно-фиолетовый с прозрачностью */
-  border-color: rgba(20, 15, 30, 0.8);
+    background: linear-gradient(145deg, rgba(30, 20, 40, 0.7), rgba(20, 15, 30, 0.6)); /* Темно-фиолетовый */
+    border-color: rgba(20, 15, 30, 0.8);
 }
 
 /* Контейнер для заголовка и версии */
