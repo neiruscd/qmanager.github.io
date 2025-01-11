@@ -160,27 +160,29 @@ h1 {
 }
 
 .category {
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 20px;
-  background: rgba(40, 40, 40, 0.8); /* Темное стекло */
-  backdrop-filter: blur(10px); /* Эффект размытия */
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(40, 40, 40, 0.7); /* Темное стекло */
+  backdrop-filter: blur(8px); /* Эффект размытия */
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
   font-size: 12px;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /* Легкая тень */
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая граница */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тень */
 }
 
 .category:hover {
-  background: rgba(60, 60, 60, 0.9); /* Ярче при наведении */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  background: rgba(60, 60, 60, 0.8); /* Подсветка при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .category.active {
-  background: rgba(80, 80, 80, 0.9); /* Подсветка для активного состояния */
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(80, 80, 80, 0.9), rgba(50, 50, 50, 0.8)); /* Темное стекло */
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3), 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .categories span {
