@@ -140,7 +140,7 @@ h1 {
 /* Контейнер для заголовка и иконки */
 .app-header {
   display: flex;
-  align-items: center; /* Выравниваем по вертикали */
+  align-items: center; /* Центрируем элементы по вертикали */
   justify-content: space-between; /* Заголовок слева, кнопка справа */
   gap: 10px; /* Расстояние между элементами */
   margin-bottom: 10px;
