@@ -13,13 +13,17 @@ fetch('apps.json')
       const searchTerm = searchBar.value.toLowerCase();
       appList.innerHTML = '';
 
-      const filteredApps = data.filter(app => {
-        const matchesType = currentType === 'all' || app.type === currentType;
-        const matchesCategory =
-          currentCategory === 'all' || app.category === currentCategory;
-        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
-        return matchesType && matchesCategory && matchesSearch;
-      });
+const filteredApps = data.filter(app => {
+  const matchesType = currentType === 'all' || app.type === currentType;
+
+  // Проверяем все активные категории
+  const activeCategories = currentCategory.split(',');
+  const matchesCategory =
+    currentCategory === 'all' || activeCategories.some(cat => app.category.includes(cat));
+
+  const matchesSearch = app.name.toLowerCase().includes(searchTerm);
+  return matchesType && matchesCategory && matchesSearch;
+});
 
       if (filteredApps.length === 0) {
         appList.innerHTML = '<p>Приложений не найдено</p>';
@@ -121,14 +125,28 @@ fetch('apps.json')
       });
     });
 
-    categoryElements.forEach(category => {
-      category.addEventListener('click', () => {
-        currentCategory = category.dataset.category;
-        categoryElements.forEach(cat => cat.classList.remove('active'));
-        category.classList.add('active');
-        displayApps();
-      });
-    });
+categoryElements.forEach(category => {
+  category.addEventListener('click', () => {
+    // Если категория активна, убираем ее, иначе добавляем
+    const categoryValue = category.dataset.category;
+    if (category.classList.contains('active')) {
+      category.classList.remove('active');
+      // Убираем категорию из текущего списка
+      currentCategory = currentCategory
+        .split(',')
+        .filter(cat => cat !== categoryValue)
+        .join(',');
+    } else {
+      category.classList.add('active');
+      // Добавляем категорию в текущий список
+      currentCategory = currentCategory === 'all' 
+        ? categoryValue 
+        : `${currentCategory},${categoryValue}`;
+    }
+
+    displayApps(); // Обновляем список приложений
+  });
+});
 
     resetButton.addEventListener('click', () => {
       currentType = 'all';
