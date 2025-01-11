@@ -201,7 +201,7 @@ h1 {
 }
 
 .glass-text-container h2 {
-  font-size: 14px; /* Размер заголовка */
+  font-size: 15px; /* Размер заголовка */
   font-weight: bold; /* Жирный текст */
   margin: 0; /* Убираем лишние отступы */
   color: #fff; /* Белый цвет текста */
@@ -223,7 +223,7 @@ h1 {
 
 /* Версия приложения */
 .glass-text-container .version {
-  font-size: 12px; /* Размер текста версии */
+  font-size: 14px; /* Размер текста версии */
   color: #bbb; /* Приглушенный цвет для версии */
   margin-top: 2px;
 }
