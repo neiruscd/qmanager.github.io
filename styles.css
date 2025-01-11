@@ -69,7 +69,7 @@ h1 {
   justify-content: center;
   padding: 6px 12px; /* Уменьшенные внутренние отступы */
   border-radius: 20px; /* Округлые кнопки */
-  font-size: 12px; /* Уменьшенный размер текста */
+  font-size: 13px; /* Уменьшенный размер текста */
   font-weight: bold;
   color: #fff;
   cursor: pointer;
@@ -316,7 +316,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 6px; /* Расстояние между карточками */
-  margin-top: 5px; /* Отступ сверху */
+  margin-top: 0px; /* Отступ сверху */
 }
 
 /* Общие стили для карточек */
