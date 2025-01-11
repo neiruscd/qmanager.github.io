@@ -119,22 +119,21 @@ h1 {
 
 /* Карточка приложения */
 .app {
-  background: linear-gradient(145deg, rgba(30, 30, 30, 0.7), rgba(45, 45, 45, 0.8)); /* Темное стекло с градиентом */
+  background: rgba(30, 30, 30, 0.6); /* Полупрозрачное темное стекло */
   border-radius: 15px; /* Скругленные углы */
-  backdrop-filter: blur(12px); /* Эффект размытия */
-  -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Внешняя тень */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Легкая тень */
   padding: 15px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInScale 0.5s ease-in-out; /* Анимация появления */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая полупрозрачная граница */
+  backdrop-filter: blur(8px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(8px); /* Для Safari */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
 }
 
 /* Эффект при наведении */
 .app:hover {
-  transform: scale(1.02); /* Легкое увеличение */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Усиленная тень */
+  transform: translateY(-2px); /* Легкий подъем */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Усиленная тень */
 }
 
 /* Контейнер для заголовка и иконки */
