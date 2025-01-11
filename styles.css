@@ -11,32 +11,60 @@ header {
   padding: 10px 20px;
 }
 
-.header {
+header {
+  background: rgba(30, 30, 30, 0.8); /* Тёмный полупрозрачный фон */
+  backdrop-filter: blur(10px); /* Размытие для эффекта стекла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Лёгкая нижняя граница */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: space-between; /* Размещаем элементы по краям */
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Лёгкая тень для текста */
+  display: flex;
+  align-items: center; /* Для добавления иконки */
+  gap: 10px; /* Отступ между иконкой и текстом */
 }
 
 .donate-link {
-  color: #4caf50;
+  color: #4caf50; /* Зелёный цвет для акцента */
   text-decoration: none;
   font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.7);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.donate-link:hover {
+  background: rgba(50, 50, 50, 0.8);
+  transform: scale(1.05); /* Лёгкое увеличение при наведении */
+  color: #fff;
 }
 
 #search-bar {
-  width: calc(100% - 40px);
+  flex: 1; /* Растягиваем строку поиска */
+  margin: 0 20px;
   padding: 10px;
-  margin: 10px auto; /* Центрируем элемент */
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: #2c2c2c;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background-color: rgba(30, 30, 30, 0.8);
   color: #fff;
-  display: block; /* Чтобы занять всю ширину */
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#search-bar:focus {
+  background-color: rgba(50, 50, 50, 0.9);
+  outline: none;
 }
 
 .reset-btn {
