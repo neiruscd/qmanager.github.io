@@ -33,6 +33,9 @@ fetch('apps.json')
 
         const appHeader = document.createElement('div');
         appHeader.classList.add('app-header');
+
+        const glassContainer = document.createElement('div');
+        glassContainer.classList.add('glass-container');
         
         // const appVersion = document.createElement('p');
         // appVersion.classList.add('version');
@@ -42,19 +45,23 @@ fetch('apps.json')
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
         appHeader.appendChild(appIcon);
+        glassContainer.appendChild(appIcon);
 
         const titleContainer = document.createElement('div');
         titleContainer.classList.add('title-container')
+        appDiv.appendChild(glassContainer);
         
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
         // appHeader.appendChild(appTitle);
         titleContainer.appendChild(appTitle);
+        glassContainer.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
         titleContainer.appendChild(appVersion);
+        glassContainer.appendChild(appVersion);
 
         appHeader.appendChild(titleContainer);
 
@@ -109,6 +116,7 @@ fetch('apps.json')
         downloadButton.classList.add('download-btn');
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
         appHeader.appendChild(downloadButton);
+        glassContainer.appendChild(downloadButton);
         
 
         appList.appendChild(appDiv);
