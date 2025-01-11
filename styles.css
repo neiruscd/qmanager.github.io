@@ -397,38 +397,38 @@ h1 {
 }
 
 .app-meta:hover {
-    transform: translateY(-2px); /* Легкое поднятие */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
+  transform: translateY(-2px); /* Легкое поднятие */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); /* Усиленное свечение */
 }
 
-/* Темные цвета для каждого типа */
+/* Стиль для "Тип файла: IPA" */
 .app-meta.app-type.ipa {
-    background: linear-gradient(145deg, rgba(20, 40, 20, 0.7), rgba(15, 30, 15, 0.6)); /* Темно-зеленый */
-    border-color: rgba(15, 30, 15, 0.8);
+  background: linear-gradient(145deg, rgba(50, 150, 50, 0.8), rgba(40, 120, 40, 0.7)); /* Зелёный градиент */
+  border-color: rgba(40, 120, 40, 0.8);
 }
 
-/* Темно-красный для Android */
+/* Стиль для "Тип файла: APK" */
 .app-meta.app-type.apk {
-    background: linear-gradient(145deg, rgba(40, 20, 20, 0.7), rgba(30, 15, 15, 0.6)); /* Темно-красный */
-    border-color: rgba(30, 15, 15, 0.8);
+  background: linear-gradient(145deg, rgba(200, 50, 50, 0.8), rgba(180, 40, 40, 0.7)); /* Красный градиент */
+  border-color: rgba(180, 40, 40, 0.8);
 }
 
-/* Темно-синий для авторов */
+/* Стиль для "Автор" */
 .app-meta.app-author {
-    background: linear-gradient(145deg, rgba(20, 20, 40, 0.7), rgba(15, 15, 30, 0.6)); /* Темно-синий */
-    border-color: rgba(15, 15, 30, 0.8);
+  background: linear-gradient(145deg, rgba(60, 100, 200, 0.8), rgba(40, 80, 180, 0.7)); /* Синий градиент */
+  border-color: rgba(40, 80, 180, 0.8);
 }
 
-/* Темно-оранжевый для новинок */
+/* Стиль для "Новинка" */
 .app-meta.app-label.new {
-    background: linear-gradient(145deg, rgba(40, 30, 20, 0.7), rgba(30, 20, 15, 0.6)); /* Темно-оранжевый */
-    border-color: rgba(30, 20, 15, 0.8);
+  background: linear-gradient(145deg, rgba(255, 100, 50, 0.8), rgba(240, 80, 40, 0.7)); /* Оранжевый градиент */
+  border-color: rgba(240, 80, 40, 0.8);
 }
 
-/* Темно-фиолетовый для обновлений */
+/* Стиль для "Обновление" */
 .app-meta.app-label.update {
-    background: linear-gradient(145deg, rgba(30, 20, 40, 0.7), rgba(20, 15, 30, 0.6)); /* Темно-фиолетовый */
-    border-color: rgba(20, 15, 30, 0.8);
+  background: linear-gradient(145deg, rgba(100, 50, 150, 0.8), rgba(80, 40, 130, 0.7)); /* Фиолетовый градиент */
+  border-color: rgba(80, 40, 130, 0.8);
 }
 
 /* Контейнер для заголовка и версии */
