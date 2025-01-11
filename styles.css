@@ -115,6 +115,7 @@ h1 {
 .glass-container {
   display: flex;
   align-items: center; /* Выравнивание по вертикали */
+  justify-content: flex-start; /* Элементы выравниваются слева */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
@@ -122,12 +123,22 @@ h1 {
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin-bottom: 10px;
+  gap: 10px; /* Расстояние между элементами */
 }
 
 /* Применяем анимацию ко всем приложениям при загрузке */
 .app {
   animation: fadeIn 0.5s ease-in-out;
   animation-fill-mode: both; /* Сохраняем конечное состояние */
+  background: rgba(30, 30, 30, 0.6); /* Полупрозрачное темное стекло */
+  border-radius: 15px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Легкая тень */
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая полупрозрачная граница */
+  backdrop-filter: blur(8px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(8px); /* Для Safari */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
 }
 
 /* Карточка приложения */
@@ -153,7 +164,7 @@ h1 {
 .app-header {
   display: flex;
   align-items: center; /* Центрируем элементы по вертикали */
-  justify-content: space-between; /* Заголовок слева, кнопка справа */
+  justify-content: flex-start; /* Выравниваем элементы слева */
   gap: 10px; /* Расстояние между элементами */
   margin-bottom: 10px;
 }
@@ -164,10 +175,11 @@ h1 {
   animation-fill-mode: both;
 }
 
-.app-header img {
+/* Иконка приложения */
+.glass-container img {
   width: 50px;
   height: 50px;
-  border-radius: 10px; /* Скругленные углы */
+  border-radius: 10px; /* Скругление углов */
   object-fit: cover; /* Убедиться, что изображение не искажено */
 }
 
@@ -182,7 +194,7 @@ h1 {
 
 /* Заголовок приложения */
 .glass-container h2 {
-  font-size: 14px; /* Размер заголовка */
+  font-size: 16px; /* Размер заголовка */
   font-weight: bold; /* Жирный текст */
   margin: 0; /* Убираем лишние отступы */
   color: #fff; /* Белый цвет текста */
@@ -202,6 +214,7 @@ h1 {
   margin-bottom: 5px;
 }
 
+/* Версия приложения */
 .glass-container .version {
   font-size: 12px; /* Размер текста версии */
   color: #bbb; /* Приглушенный цвет для версии */
