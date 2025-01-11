@@ -15,9 +15,9 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Расстояние между элементами */
+  gap: 10px; /* Уменьшаем расстояние между элементами */
   background: rgba(30, 30, 30, 0.9); /* Тёмный фон */
-  padding: 20px;
+  padding: 15px 20px; /* Уменьшаем внутренние отступы */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Линия под шапкой */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -51,9 +51,15 @@ h1 {
   color: #fff;
 }
 
+.header-search {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Меньший отступ */
+}
+
 #search-bar {
   width: 100%;
-  padding: 10px 15px;
+  padding: 8px 12px; /* Уменьшаем высоту поля */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   background: rgba(40, 40, 40, 0.8);
@@ -66,17 +72,19 @@ h1 {
 }
 
 .reset-btn {
-  align-self: flex-end;
-  padding: 8px 16px;
+  align-self: flex-end; /* Выравнивание справа */
+  padding: 6px 12px; /* Компактная кнопка */
   border: none;
   border-radius: 8px;
   background: #f44336;
   color: #fff;
+  font-size: 12px; /* Уменьшенный текст */
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .reset-btn:hover {
-  background-color: #d32f2f;
+  background: #d32f2f;
 }
 
 .filter-buttons {
@@ -134,7 +142,7 @@ h1 {
 #categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px; /* Уменьшаем расстояние между категориями */
   justify-content: flex-start;
 }
 
@@ -145,6 +153,7 @@ h1 {
   color: #fff;
   font-size: 12px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .category:hover {
