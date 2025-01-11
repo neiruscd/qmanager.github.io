@@ -184,11 +184,11 @@ h1 {
 }
 
 /* Заголовок приложения */
-.app-details h2 {
-  font-size: 18px;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень текста */
-  margin: 0 0 5px 0; /* Отступы */
+.glass-container h2 {
+  font-size: 18px; /* Размер заголовка */
+  font-weight: bold; /* Жирный текст */
+  margin: 0; /* Убираем лишние отступы */
+  color: #fff; /* Белый цвет текста */
 }
 
 .app-details {
@@ -205,9 +205,11 @@ h1 {
   margin-bottom: 5px;
 }
 
-.app-details .version {
-  font-size: 12px;
-  color: #bbb;
+.glass-container .version {
+  font-size: 14px; /* Оптимальный размер версии */
+  font-weight: 400; /* Обычный текст */
+  color: #ccc; /* Светло-серый цвет */
+  margin-top: 5px; /* Отступ сверху */
 }
 
 /* Подложка только для описания */
