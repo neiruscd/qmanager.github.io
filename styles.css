@@ -115,7 +115,6 @@ h1 {
 .glass-container {
   display: flex;
   align-items: center; /* Выравнивание по вертикали */
-  justify-content: space-between; /* Заголовок и версия слева, кнопка справа */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
@@ -123,17 +122,18 @@ h1 {
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin-bottom: 10px;
+  justify-content: space-between; /* Разделяем текст и кнопку */
 }
-
 
 /* Контейнер для текста (заголовок и версия) */
 .glass-text-container {
   display: flex;
-  flex-direction: column; /* Заголовок над версией */
-  justify-content: center; /* Выравнивание по вертикали */
-  margin-left: 10px; /* Расстояние между иконкой и текстом */
-  text-align: left; /* Текст выровнен по левому краю */
+  flex-direction: column; /* Заголовок и версия выстраиваются вертикально */
+  justify-content: center; /* Центрирование по вертикали относительно кнопки */
+  margin-left: 10px; /* Отступ от иконки */
+  flex: 1; /* Занимает оставшееся пространство */
 }
+
 /* Применяем анимацию ко всем приложениям при загрузке */
 .app {
   animation: fadeIn 0.5s ease-in-out;
