@@ -114,12 +114,11 @@ h1 {
 /* Светлая стеклянная подложка */
 .glass-container {
   display: flex;
-  align-items: center; /* Выравнивание по центру вертикально */
-  justify-content: space-between; /* Равномерное распределение элементов */
+  align-items: center; /* Выравнивание по вертикали */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
-  backdrop-filter: blur(10px); /* Размытие для эффекта стекла */
+  backdrop-filter: blur(10px); /* Эффект стекла */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin-bottom: 10px;
@@ -204,10 +203,9 @@ h1 {
 }
 
 .glass-container .version {
-  font-size: 8px; /* Оптимальный размер версии */
-  font-weight: 400; /* Обычный текст */
-  color: #ccc; /* Светло-серый цвет */
-  margin-top: 5px; /* Отступ сверху */
+  font-size: 12px; /* Размер текста версии */
+  color: #bbb; /* Приглушенный цвет для версии */
+  margin-top: 2px;
 }
 
 /* Подложка только для описания */
