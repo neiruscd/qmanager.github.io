@@ -119,21 +119,23 @@ h1 {
 
 /* Карточка приложения */
 .app {
-  background: rgba(30, 30, 30, 0.6); /* Полупрозрачное темное стекло */
-  border-radius: 15px; /* Скругленные углы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Легкая тень */
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая полупрозрачная граница */
-  backdrop-filter: blur(8px); /* Эффект стекла */
-  -webkit-backdrop-filter: blur(8px); /* Для Safari */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(145deg, rgba(30, 30, 30, 0.7), rgba(45, 45, 45, 0.8)); /* Темное стекло */
+    backdrop-filter: blur(10px); /* Эффект размытия */
+    -webkit-backdrop-filter: blur(10px); /* Для Safari */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Внешняя тень */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Эффект при наведении */
 .app:hover {
-  transform: translateY(-2px); /* Легкий подъем */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Усиленная тень */
+    transform: scale(1.02); /* Легкое увеличение */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Усиленная тень */
 }
 
 /* Контейнер для заголовка и иконки */
@@ -152,12 +154,12 @@ h1 {
 }
 
 .app-header img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px; /* Скругленные углы */
-  object-fit: cover; /* Убедиться, что изображение не искажено */
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Скругленные углы у иконки */
+    object-fit: cover; /* Обрезка изображения */
+    margin-right: 10px;
 }
-
 /* Иконка приложения */
 .app img {
   width: 50px;
