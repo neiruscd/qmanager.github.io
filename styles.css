@@ -57,8 +57,8 @@ h1 {
 
 .filter-buttons {
   display: flex;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
   margin: 10px 0;
 }
 
@@ -66,27 +66,30 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px; /* Округлая форма */
-  background: rgba(30, 30, 30, 0.6); /* Темное стекло */
-  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px; /* Округлая форма */
   font-size: 14px;
+  font-weight: bold;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px); /* Эффект стекла */
-  -webkit-backdrop-filter: blur(8px); /* Для Safari */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Тень */
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  background: rgba(30, 30, 30, 0.5); /* Полупрозрачное стекло */
+  backdrop-filter: blur(10px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Легкая тень */
 }
 
 .filter-btn:hover {
-  background: rgba(50, 50, 50, 0.8); /* Подсветка при наведении */
-  transform: scale(1.05); /* Увеличение */
+  background: rgba(50, 50, 50, 0.7); /* Подсветка при наведении */
+  transform: scale(1.05); /* Легкое увеличение */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Усиленная тень */
 }
 
 .filter-btn.active {
-  background: rgba(70, 70, 70, 1); /* Активное состояние */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Усиленная тень */
+  background: linear-gradient(145deg, rgba(70, 70, 70, 0.8), rgba(50, 50, 50, 0.9));
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 6px 12px rgba(0, 0, 0, 0.6);
+  transform: scale(1.1); /* Более яркое выделение активного элемента */
 }
 
 .categories {
