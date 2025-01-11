@@ -17,8 +17,7 @@ fetch('apps.json')
         const matchesType = currentType === 'all' || app.type === currentType;
         const matchesCategory =
           currentCategory === 'all' || app.category === currentCategory;
-        const matchesSearch =
-          app.name.toLowerCase().includes(searchTerm);
+        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
         return matchesType && matchesCategory && matchesSearch;
       });
 
@@ -31,27 +30,22 @@ fetch('apps.json')
         const appDiv = document.createElement('div');
         appDiv.classList.add('app');
 
-        const appHeader = document.createElement('div');
-        appHeader.classList.add('app-header');
-
+        // Создаем стеклянный контейнер
         const glassContainer = document.createElement('div');
         glassContainer.classList.add('glass-container');
-        
-        // const appVersion = document.createElement('p');
-        // appVersion.classList.add('version');
-        // appVersion.textContent = app.version;
-        
+
+        // Иконка приложения
         const appIcon = document.createElement('img');
         appIcon.src = app.icon || 'https://via.placeholder.com/50';
         appIcon.alt = `${app.name} icon`;
         glassContainer.appendChild(appIcon);
 
+        // Контейнер для текста (заголовок и версия)
         const textContainer = document.createElement('div');
         textContainer.classList.add('glass-text-container');
-        
+
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
-        // appHeader.appendChild(appTitle);
         textContainer.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
@@ -59,17 +53,26 @@ fetch('apps.json')
         appVersion.textContent = app.version;
         textContainer.appendChild(appVersion);
 
+        glassContainer.appendChild(textContainer);
+
+        // Кнопка скачать
+        const downloadButton = document.createElement('button');
+        downloadButton.textContent = 'Скачать';
+        downloadButton.classList.add('download-btn');
+        downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
+        glassContainer.appendChild(downloadButton);
+
+        // Добавляем стеклянный контейнер в карточку
+        appDiv.appendChild(glassContainer);
+
+        // Подробности приложения
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
-        appDetails.appendChild(appHeader);
-        // appDetails.appendChild(titleContainer);
-        
+
         const appDescription = document.createElement('p');
-        appDescription.classList.add('app-description'); // Добавляем уникальный класс
+        appDescription.classList.add('app-description');
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
-
-        appDiv.appendChild(glassContainer);
 
         const appMetaContainer = document.createElement('div');
         appMetaContainer.classList.add('app-meta-container');
@@ -83,7 +86,7 @@ fetch('apps.json')
         appAuthor.classList.add('app-meta', 'app-author');
         if (app.author) {
           const authorLink = document.createElement('a');
-          authorLink.href = `#`; // Здесь можно добавить ссылку, если нужно
+          authorLink.href = '#';
           authorLink.textContent = `Автор : ${app.author}`;
           authorLink.style.textDecoration = 'none';
           authorLink.style.color = 'inherit';
@@ -91,27 +94,20 @@ fetch('apps.json')
         } else {
           appAuthor.textContent = `Автор : неизвестен`;
         }
-          appMetaContainer.appendChild(appAuthor);
+        appMetaContainer.appendChild(appAuthor);
 
         if (app.label) {
           const appLabel = document.createElement('span');
-          appLabel.classList.add('app-meta', 'app-label' , app.label);
+          appLabel.classList.add('app-meta', 'app-label', app.label);
           appLabel.textContent =
             app.label === 'new' ? '🔥 Новинка' : app.label === 'update' ? '🔄 Обновление' : '';
           appMetaContainer.appendChild(appLabel);
         }
-        
+
         appDetails.appendChild(appMetaContainer);
-// конец нового блока 
-        
         appDiv.appendChild(appDetails);
 
-        const downloadButton = document.createElement('button');
-        downloadButton.textContent = 'Скачать';
-        downloadButton.classList.add('download-btn');
-        downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
-        glassContainer.appendChild(downloadButton);
-
+        // Добавляем карточку приложения в список
         appList.appendChild(appDiv);
       });
     }
