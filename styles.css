@@ -128,7 +128,8 @@ h1 {
 }
 
 .app-list {
-  padding: 5px;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 /* Общий стиль для анимации появления */
