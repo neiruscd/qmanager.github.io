@@ -111,6 +111,22 @@ h1 {
   }
 }
 
+/* Светлая стеклянная подложка */
+.glass-container {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(240, 240, 240, 0.1));
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Для Safari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая внешняя тень */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Располагаем элементы вертикально */
+  align-items: center; /* Центрируем элементы */
+  gap: 10px; /* Расстояние между элементами */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонкая светлая граница */
+  margin-bottom: 20px;
+}
+
 /* Применяем анимацию ко всем приложениям при загрузке */
 .app {
   animation: fadeIn 0.5s ease-in-out;
@@ -134,19 +150,6 @@ h1 {
 .app:hover {
   transform: translateY(-2px); /* Легкий подъем */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Усиленная тень */
-}
-
-.app-header-container {
-  background: rgba(30, 30, 30, 0.6); /* Полупрозрачное стекло */
-  border-radius: 12px; /* Скругленные углы */
-  padding: 10px; /* Внутренние отступы */
-  display: flex; /* Горизонтальное выравнивание */
-  align-items: center; /* Выравнивание по центру */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тень */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
-  backdrop-filter: blur(8px); /* Размытие */
-  -webkit-backdrop-filter: blur(8px); /* Для Safari */
-  gap: 10px; /* Промежуток между элементами */
 }
 
 /* Контейнер для заголовка и иконки */
