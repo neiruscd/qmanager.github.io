@@ -55,16 +55,12 @@ fetch('apps.json')
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
         // appHeader.appendChild(appTitle);
-        titleContainer.appendChild(appTitle);
         textContainer.appendChild(appTitle);
-        glassContainer.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
-        titleContainer.appendChild(appVersion);
         textContainer.appendChild(appVersion);
-        glassContainer.appendChild(appVersion);
 
         appHeader.appendChild(titleContainer);
 
@@ -119,7 +115,6 @@ fetch('apps.json')
         downloadButton.textContent = 'Скачать';
         downloadButton.classList.add('download-btn');
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
-        appHeader.appendChild(downloadButton);
         glassContainer.appendChild(downloadButton);
 
         appList.appendChild(appDiv);
