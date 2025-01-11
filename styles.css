@@ -169,9 +169,10 @@ h1 {
 
 /* Заголовок приложения */
 .app-details h2 {
-  font-size: 16px;
-  margin: 0; /* Убираем лишние отступы */
+  font-size: 18px;
   color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень текста */
+  margin: 0 0 5px 0; /* Отступы */
 }
 
 .app-details {
@@ -195,13 +196,11 @@ h1 {
 
 /* Подложка только для описания */
 .app-description {
-  background: rgba(0, 0, 0, 0.4); /* Полупрозрачная подложка */
-  padding: 8px 12px; /* Внутренние отступы */
-  border-radius: 8px; /* Скругленные углы */
-  color: #ddd; /* Чуть светлее текст */
-  font-size: 14px; /* Размер текста */
-  line-height: 1.5; /* Межстрочный интервал */
-  margin-top: 5px; /* Отступ сверху */
+  background: rgba(0, 0, 0, 0.5); /* Темное стекло */
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #ddd;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
   white-space: pre-line; /* Поддержка переноса строк */
 }
