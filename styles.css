@@ -208,22 +208,25 @@ h1 {
 }
 
 .download-btn {
-  padding: 5px 12px; /* Чуть увеличенные внутренние отступы */
-  border: 1px solid #4caf50; /* Тонкая зеленая окантовка */
-  border-radius: 6px;
-  background: linear-gradient(145deg, #1c1c1c, #2c2c2c); /* Темный градиент */
+  padding: 6px 10px; /* Уменьшенные внутренние отступы */
+  border: 1px solid #4caf50; /* Тонкая зеленая рамка */
+  border-radius: 5px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* Темный градиент */
   color: #fff;
   font-size: 12px; /* Уменьшенный размер текста */
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Легкая тень */
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+  margin-left: auto; /* Отправляем кнопку вправо */
+  max-width: 100px; /* Ограничение ширины кнопки */
+  text-align: center; /* Центровка текста */
 }
 
 .download-btn:hover {
-  background: linear-gradient(145deg, #2c2c2c, #3c3c3c); /* Светлый темный градиент */
+  background: linear-gradient(145deg, #2a2a2a, #363636); /* Светлый темный градиент */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Увеличенная тень */
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* Поднимается при наведении */
 }
 
 /* Анимация для карточек при их появлении */
