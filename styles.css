@@ -53,17 +53,20 @@ h1 {
 
 .header-search {
   display: flex;
-  flex-direction: column;
-  gap: 5px; /* Меньший отступ */
+  gap: 10px; /* Расстояние между элементами */
+  align-items: center; /* Центрируем элементы по вертикали */
+  flex-wrap: wrap; /* Разрешаем перенос элементов, если экран узкий */
 }
 
 #search-bar {
-  width: 100%;
-  padding: 8px 12px; /* Уменьшаем высоту поля */
+  flex-grow: 1; /* Занимает всё доступное пространство */
+  max-width: 100%; /* Не выходит за границы контейнера */
+  padding: 10px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   background: rgba(40, 40, 40, 0.8);
   color: #fff;
+  box-sizing: border-box; /* Учитываем padding внутри ширины */
 }
 
 #search-bar:focus {
