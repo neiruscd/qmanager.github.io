@@ -212,7 +212,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
   border-radius: 8px;
   color: #fff;
-  font-size: 14px; /* Оптимальный размер текста */
+  font-size: 12px; /* Оптимальный размер текста */
   padding: 10px 20px; /* Внутренние отступы */
   font-weight: bold;
   cursor: pointer;
