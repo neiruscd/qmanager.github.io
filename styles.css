@@ -59,7 +59,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 8px; /* Расстояние между кнопками */
-  margin: 20px 0 5px; /* Пространство сверху и снизу */
+  margin: 20px 0 1px; /* Пространство сверху и снизу */
 }
 
 .filter-btn {
