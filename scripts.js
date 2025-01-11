@@ -49,7 +49,6 @@ fetch('apps.json')
 
         const titleContainer = document.createElement('div');
         titleContainer.classList.add('title-container')
-        appDiv.appendChild(glassContainer);
         
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
@@ -106,7 +105,6 @@ fetch('apps.json')
         }
         
         appDetails.appendChild(appMetaContainer);
-        
 // конец нового блока 
         
         appDiv.appendChild(appDetails);
@@ -117,7 +115,8 @@ fetch('apps.json')
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
         appHeader.appendChild(downloadButton);
         glassContainer.appendChild(downloadButton);
-        
+
+        appDiv.appendChild(glassContainer);
 
         appList.appendChild(appDiv);
       });
