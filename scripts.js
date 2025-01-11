@@ -86,19 +86,12 @@ const filteredApps = data.filter(app => {
         appType.textContent = `Тип файла: ${app.type.toUpperCase()}`;
         appMetaContainer.appendChild(appType);
 
+// Добавляем автора как обычный текст
         const appAuthor = document.createElement('span');
         appAuthor.classList.add('app-meta', 'app-author');
-        if (app.author) {
-          const authorLink = document.createElement('a');
-          authorLink.href = '#';
-          authorLink.textContent = `Автор : ${app.author}`;
-          authorLink.style.textDecoration = 'none';
-          authorLink.style.color = 'inherit';
-          appAuthor.appendChild(authorLink);
-        } else {
-          appAuthor.textContent = `Автор : неизвестен`;
-        }
+        appAuthor.textContent = app.author ? `Автор: ${app.author}` : `Автор неизвестен`;
         appMetaContainer.appendChild(appAuthor);
+
 
         if (app.label) {
           const appLabel = document.createElement('span');
