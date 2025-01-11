@@ -222,23 +222,22 @@ h1 {
 }
 
 .download-btn {
-  padding: 6px 12px;
+  padding: 8px 16px;
   border: none;
   border-radius: 6px;
   background: linear-gradient(45deg, #4caf50, #81c784);
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease-in-out;
-  margin-left: auto; /* Отправляем кнопку вправо */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .download-btn:hover {
   background: linear-gradient(45deg, #43a047, #66bb6a);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 /* Анимация для карточек при их появлении */
