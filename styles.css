@@ -162,19 +162,17 @@ h1 {
 .category {
   padding: 6px 12px;
   border-radius: 20px;
-  background: rgba(40, 40, 40, 0.7); /* Темное стекло */
-  backdrop-filter: blur(8px); /* Эффект размытия */
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(40, 40, 40, 0.7);
   color: #fff;
   font-size: 12px;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /* Легкая тень */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
 
 .category:hover {
-  background: rgba(60, 60, 60, 0.8); /* Подсветка при наведении */
+  background: rgba(60, 60, 60, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
