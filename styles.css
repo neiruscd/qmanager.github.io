@@ -388,6 +388,7 @@ h1 {
 .app-meta:hover {
   transform: translateY(-2px); /* Легкое поднятие */
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); /* Усиленное свечение */
+  cursor: pointer; /* Указатель мыши */
 }
 
 /* Стиль для "Тип файла: IPA" */
@@ -407,6 +408,17 @@ h1 {
   background: linear-gradient(145deg, rgba(70, 130, 180, 0.8), rgba(50, 100, 150, 0.7)); /* Голубой стиль */
   border-color: rgba(50, 100, 150, 0.8);
   box-shadow: 0 4px 10px rgba(50, 100, 150, 0.4); /* Легкая голубая тень */
+}
+
+.app-meta.app-author.unknown {
+  background: linear-gradient(145deg, rgba(40, 40, 40, 0.8), rgba(20, 20, 20, 0.7)); /* Темный градиент */
+  border-color: rgba(60, 60, 60, 0.8);
+  color: rgba(200, 200, 200, 0.8); /* Серый текст */
+  box-shadow: 0 4px 10px rgba(60, 60, 60, 0.4); /* Легкая темная тень */
+}
+
+.app-meta.app-author.unknown:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3); /* Слабое свечение */
 }
 
 /* Стиль для "Новинка" */
