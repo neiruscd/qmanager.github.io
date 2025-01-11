@@ -48,17 +48,22 @@ fetch('apps.json')
 
         const titleContainer = document.createElement('div');
         titleContainer.classList.add('title-container')
+
+        const textContainer = document.createElement('div');
+        textContainer.classList.add('glass-text-container');
         
         const appTitle = document.createElement('h2');
         appTitle.textContent = app.name;
         // appHeader.appendChild(appTitle);
         titleContainer.appendChild(appTitle);
         glassContainer.appendChild(appTitle);
+        textContainer.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
         titleContainer.appendChild(appVersion);
+        textContainer.appendChild(appTitle);
         glassContainer.appendChild(appVersion);
 
         appHeader.appendChild(titleContainer);
