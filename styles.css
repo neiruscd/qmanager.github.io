@@ -147,7 +147,7 @@ h1 {
 /* Светлая стеклянная подложка */
 .glass-container {
   display: flex;
-  align-items: center; /* Выравнивание по вертикали */
+  align-items: center; /* Центрируем по вертикали */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
@@ -155,16 +155,17 @@ h1 {
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin-bottom: 10px;
-  justify-content: space-between; /* Разделяем текст и кнопку */
+  justify-content: space-between; /* Отодвигаем кнопку от текста */
 }
 
 /* Контейнер для текста (заголовок и версия) */
 .glass-text-container {
   display: flex;
-  flex-direction: column; /* Заголовок и версия выстраиваются вертикально */
-  justify-content: center; /* Центрирование по вертикали относительно кнопки */
+  flex-direction: column; /* Текст располагается вертикально */
+  justify-content: flex-start; /* Текст выравнивается ближе к верхнему краю */
   margin-left: 10px; /* Отступ от иконки */
   flex: 1; /* Занимает оставшееся пространство */
+  margin-top: 5px; /* Добавляем отступ сверху, чтобы опустить текст */
 }
 
 /* Применяем анимацию ко всем приложениям при загрузке */
@@ -238,6 +239,7 @@ h1 {
   font-weight: bold; /* Жирный текст */
   margin: 0; /* Убираем лишние отступы */
   color: #fff; /* Белый цвет текста */
+  line-height: 1.2; /* Уменьшаем межстрочный интервал */
 }
 
 .app-details {
@@ -256,9 +258,10 @@ h1 {
 
 /* Версия приложения */
 .glass-text-container .version {
-  font-size: 14px; /* Размер текста версии */
-  color: #bbb; /* Приглушенный цвет для версии */
-  margin-top: 2px;
+  font-size: 13px; /* Размер текста версии */
+  color: #bbb; /* Приглушенный цвет */
+  margin: 0; /* Убираем лишние отступы */
+  margin-top: 5px; /* Небольшой отступ между названием и версией */
 }
 
 /* Подложка только для описания */
