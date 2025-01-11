@@ -56,8 +56,8 @@ fetch('apps.json')
         appTitle.textContent = app.name;
         // appHeader.appendChild(appTitle);
         titleContainer.appendChild(appTitle);
-        glassContainer.appendChild(appTitle);
         textContainer.appendChild(appTitle);
+        glassContainer.appendChild(appTitle);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
