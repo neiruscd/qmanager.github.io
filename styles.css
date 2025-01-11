@@ -256,53 +256,53 @@ h1 {
 /* Общие стили для карточек */
 .app-meta {
   display: inline-block;
-  padding: 4px 10px; /* Немного увеличиваем внутренние отступы */
-  border-radius: 12px; /* Более сглаженные углы */
-  font-size: 12px; /* Чуть увеличиваем размер текста */
+  padding: 2px 6px; /* Уменьшенные внутренние отступы */
+  border-radius: 8px; /* Мягкие углы */
+  font-size: 10px; /* Уменьшенный размер текста */
   font-weight: bold;
   color: #fff;
   margin: 4px 4px 0 0; /* Отступы между карточками */
   text-align: center;
-  text-transform: uppercase; /* Заглавные буквы */
-  border: 1px solid transparent; /* Убираем явные границы */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
-  background: linear-gradient(145deg, rgba(50, 50, 50, 0.9), rgba(30, 30, 30, 0.8)); /* Темное стекло */
-  backdrop-filter: blur(5px); /* Эффект размытия стекла */
-  transition: all 0.3s ease-in-out; /* Добавляем плавный переход для эффектов */
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(25, 25, 25, 0.8)); /* Спокойный градиент */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .app-meta:hover {
-  transform: translateY(-2px); /* Поднимаем карточку */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
+  transform: translateY(-2px); /* Поднимается при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
 }
 
-/* Карточка: Тип файла */
+/* Тип файла iOS */
 .app-meta.app-type.ipa {
-  background: linear-gradient(145deg, rgba(76, 175, 80, 0.9), rgba(129, 199, 132, 0.8)); /* Зеленый градиент для iOS */
-  border-color: rgba(76, 175, 80, 0.8); /* Легкая граница */
+  background: linear-gradient(145deg, #a5d6a7, #81c784); /* Мягкий зеленый */
+  border-color: #81c784;
 }
 
+/* Тип файла Android */
 .app-meta.app-type.apk {
-  background: linear-gradient(145deg, rgba(244, 67, 54, 0.9), rgba(229, 115, 115, 0.8)); /* Красный градиент для Android */
-  border-color: rgba(244, 67, 54, 0.8);
+  background: linear-gradient(145deg, #ef9a9a, #e57373); /* Мягкий красный */
+  border-color: #e57373;
 }
 
-/* Карточка: Автор */
+/* Автор */
 .app-meta.app-author {
-  background: linear-gradient(145deg, rgba(33, 150, 243, 0.9), rgba(100, 181, 246, 0.8)); /* Синий градиент */
-  border-color: rgba(33, 150, 243, 0.8);
+  background: linear-gradient(145deg, #90caf9, #64b5f6); /* Мягкий синий */
+  border-color: #64b5f6;
 }
 
-/* Карточка: Новинка */
+/* Новинка */
 .app-meta.app-label.new {
-  background: linear-gradient(145deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.8)); /* Оранжевый градиент */
-  border-color: rgba(255, 152, 0, 0.8);
+  background: linear-gradient(145deg, #ffe082, #ffb74d); /* Мягкий оранжевый */
+  border-color: #ffb74d;
 }
 
 /* Обновление */
 .app-meta.app-label.update {
-  background: linear-gradient(145deg, rgba(63, 81, 181, 0.9), rgba(121, 134, 203, 0.8)); /* Фиолетовый градиент */
-  border-color: rgba(63, 81, 181, 0.8);
+  background: linear-gradient(145deg, #b39ddb, #9575cd); /* Мягкий фиолетовый */
+  border-color: #9575cd;
 }
 
 /* Контейнер для заголовка и версии */
