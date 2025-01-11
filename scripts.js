@@ -46,9 +46,6 @@ fetch('apps.json')
         appIcon.alt = `${app.name} icon`;
         glassContainer.appendChild(appIcon);
 
-        const titleContainer = document.createElement('div');
-        titleContainer.classList.add('title-container')
-
         const textContainer = document.createElement('div');
         textContainer.classList.add('glass-text-container');
         
@@ -61,8 +58,6 @@ fetch('apps.json')
         appVersion.classList.add('version');
         appVersion.textContent = app.version;
         textContainer.appendChild(appVersion);
-
-        appHeader.appendChild(titleContainer);
 
         const appDetails = document.createElement('div');
         appDetails.classList.add('app-details');
