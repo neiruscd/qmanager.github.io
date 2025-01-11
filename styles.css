@@ -113,18 +113,18 @@ h1 {
 
 /* Светлая стеклянная подложка */
 .glass-container {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(240, 240, 240, 0.1));
-  border-radius: 15px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая внешняя тень */
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Располагаем элементы вертикально */
-  align-items: center; /* Центрируем элементы */
-  gap: 10px; /* Расстояние между элементами */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонкая светлая граница */
-  margin-bottom: 20px;
+  display: flex; /* Горизонтальное расположение */
+  flex-direction: row; /* Элементы располагаются в строку */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: space-between; /* Пространство между элементами */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(240, 240, 240, 0.1)); /* Стеклянный градиент */
+  border-radius: 15px; /* Скругленные углы */
+  backdrop-filter: blur(10px); /* Эффект размытия */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
+  padding: 10px 20px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу */
 }
 
 /* Применяем анимацию ко всем приложениям при загрузке */
