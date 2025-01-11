@@ -113,18 +113,16 @@ h1 {
 
 /* Светлая стеклянная подложка */
 .glass-container {
-  display: flex; /* Горизонтальное расположение */
-  flex-direction: row; /* Элементы располагаются в строку */
-  align-items: center; /* Вертикальное центрирование */
-  justify-content: space-between; /* Пространство между элементами */
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(240, 240, 240, 0.1)); /* Стеклянный градиент */
-  border-radius: 15px; /* Скругленные углы */
-  backdrop-filter: blur(10px); /* Эффект размытия */
+  display: flex;
+  align-items: center; /* Выравнивание по центру вертикально */
+  justify-content: space-between; /* Равномерное распределение элементов */
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
+  backdrop-filter: blur(10px); /* Размытие для эффекта стекла */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
-  padding: 10px 20px; /* Внутренние отступы */
-  margin-bottom: 15px; /* Отступ снизу */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
+  margin-bottom: 10px;
 }
 
 /* Применяем анимацию ко всем приложениям при загрузке */
