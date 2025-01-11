@@ -53,6 +53,7 @@ fetch('apps.json')
         appTitle.textContent = app.name;
         // appHeader.appendChild(appTitle);
         titleContainer.appendChild(appTitle);
+        glassContainer.appendChild(titleContainer);
 
         const appVersion = document.createElement('p');
         appVersion.classList.add('version');
@@ -71,6 +72,8 @@ fetch('apps.json')
         appDescription.classList.add('app-description'); // Добавляем уникальный класс
         appDescription.textContent = app.description;
         appDetails.appendChild(appDescription);
+
+        appDiv.appendChild(glassContainer);
 
         const appMetaContainer = document.createElement('div');
         appMetaContainer.classList.add('app-meta-container');
@@ -113,8 +116,6 @@ fetch('apps.json')
         downloadButton.onclick = () => window.open(app.downloadLink, '_blank');
         appHeader.appendChild(downloadButton);
         glassContainer.appendChild(downloadButton);
-
-        appDiv.appendChild(glassContainer);
 
         appList.appendChild(appDiv);
       });
