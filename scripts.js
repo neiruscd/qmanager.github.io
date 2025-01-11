@@ -16,12 +16,12 @@ fetch('apps.json')
 const filteredApps = data.filter(app => {
   const matchesType = currentType === 'all' || app.type === currentType;
 
-  // Проверяем все активные категории
-  const activeCategories = currentCategory.split(',');
+  // Проверяем, входит ли категория в список категорий приложения
   const matchesCategory =
-    currentCategory === 'all' || activeCategories.some(cat => app.category.includes(cat));
+    currentCategory === 'all' || app.category.split(',').includes(currentCategory);
 
   const matchesSearch = app.name.toLowerCase().includes(searchTerm);
+
   return matchesType && matchesCategory && matchesSearch;
 });
 
@@ -127,21 +127,18 @@ const filteredApps = data.filter(app => {
 
 categoryElements.forEach(category => {
   category.addEventListener('click', () => {
-    // Если категория активна, убираем ее, иначе добавляем
-    const categoryValue = category.dataset.category;
-    if (category.classList.contains('active')) {
-      category.classList.remove('active');
-      // Убираем категорию из текущего списка
-      currentCategory = currentCategory
-        .split(',')
-        .filter(cat => cat !== categoryValue)
-        .join(',');
-    } else {
-      category.classList.add('active');
-      // Добавляем категорию в текущий список
-      currentCategory = currentCategory === 'all' 
-        ? categoryValue 
-        : `${currentCategory},${categoryValue}`;
+    // Убираем активность со всех категорий
+    categoryElements.forEach(cat => cat.classList.remove('active'));
+
+    // Устанавливаем активность только на выбранной категории
+    category.classList.add('active');
+
+    // Обновляем текущую категорию
+    currentCategory = category.dataset.category;
+
+    // Если выбрана "все", сбрасываем категорию
+    if (currentCategory === 'all') {
+      currentCategory = 'all';
     }
 
     displayApps(); // Обновляем список приложений
