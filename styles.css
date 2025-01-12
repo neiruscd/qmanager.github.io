@@ -1,16 +1,17 @@
 /* Базовые стили для body */
+/* Базовые стили для body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  min-height: 100vh; /* Минимальная высота экрана */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #000; /* Черный базовый фон */
+  background: #000;
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
   overflow-y: auto; /* Включаем вертикальную прокрутку */
-  position: relative; /* Для вспышек и других эффектов */
+  position: relative; /* Для позиционирования вспышек */
   color: #fff;
-  box-sizing: border-box; /* Учитываем padding и border в размерах */
+  box-sizing: border-box;
 }
 
 /* Универсальный сброс для всех элементов */
@@ -20,17 +21,33 @@ body {
   box-sizing: border-box;
 }
 
-/* Жестко ограничиваем ширину всех элементов на странице */
-html, body {
-  width: 100%; /* Строго на ширину экрана */
-  max-width: 100vw; /* Запрещаем элементы выходить за границы экрана */
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+header {
+  position: relative; /* Создаем слой для вспышек */
+  z-index: 10; /* Поверх вспышек */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(30, 30, 30, 0.7); /* Темный прозрачный фон */
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
 }
 
-/* Контейнеры */
-header, main, .app-list, .header, .switch-container {
-  max-width: 100%; /* Элементы остаются в рамках */
-  overflow-x: hidden; /* Никакой горизонтальной прокрутки */
+.header-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Вспышки находятся позади содержимого header */
+  overflow: hidden; /* Обрезаем вспышки за пределами header */
+  pointer-events: none; /* Не мешаем кликам */
 }
 
 /* Вспышки */
@@ -64,31 +81,60 @@ header, main, .app-list, .header, .switch-container {
 
 .glow {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   animation: glowEffect 30s infinite alternate;
   filter: blur(50px);
   pointer-events: none;
-  z-index: 1; /* Меньше, чем header */
 }
 
 .glow-1 {
-  top: -20%;
-  left: -30%;
+  top: 10%;
+  left: 20%;
   animation-delay: 0s;
 }
 
 .glow-2 {
-  top: 40%;
-  left: 120%;
+  top: 50%;
+  left: 60%;
   animation-delay: 10s;
 }
 
 .glow-3 {
-  top: 120%;
-  left: 50%;
+  top: 70%;
+  left: 30%;
   animation-delay: 20s;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donate-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.7);
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 20; /* Поверх вспышек */
+}
+
+.donate-link:hover {
+  background: rgba(50, 50, 50, 0.8);
+  transform: scale(1.05);
+  color: #fff;
 }
 
 /* Адаптация для телефонов */
@@ -98,73 +144,6 @@ header, main, .app-list, .header, .switch-container {
     height: 200px;
     filter: blur(30px);
   }
-}
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7); /* Полупрозрачный текст */
-  background: rgba(0, 0, 0, 0.5); /* Темное стекло */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Уменьшаем расстояние между элементами */
-  background: rgba(30, 30, 30, 0.7); /* Темный фон с большей прозрачностью */
-  padding: 15px 20px; /* Внутренние отступы */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Линия под шапкой */
-  backdrop-filter: blur(12px); /* Сильное размытие */
-  -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
-  width: 100%; /* Полная ширина */
-  position: sticky; /* Header фиксируется вверху */
-  top: 0; /* Фиксация к верхнему краю */
-  z-index: 10; /* Над всеми элементами */
-  overflow: hidden; /* Отключаем скрытие содержимого */
-  box-sizing: border-box; /* Учитываем padding и border */
-}
-
-h1 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень для текста */
-  display: flex;
-  align-items: center; /* Для иконки */
-  gap: 10px; /* Отступ между иконкой и текстом */
-}
-
-.donate-link {
-  color: #4caf50; /* Зеленый акцент */
-  text-decoration: none;
-  font-size: 12px;
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  background: rgba(30, 30, 30, 0.7);
-  transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 100; /* Всегда поверх других элементов */
-  position: relative; /* Убираем проблемы с наложением */
-  max-width: fit-content; /* Минимальная ширина */
-}
-
-.donate-link:hover {
-  background: rgba(50, 50, 50, 0.8);
-  transform: scale(1.05); /* Легкое увеличение */
-  color: #fff;
 }
 
 .header-search {
