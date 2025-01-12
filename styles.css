@@ -1,5 +1,4 @@
 /* Базовые стили для body */
-/* Базовые стили для body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -94,25 +93,7 @@ header {
   animation: glowEffect 30s infinite alternate;
   filter: blur(50px);
   pointer-events: none; /* Исключаем вспышки из событий */
-  z-index: -1; /* Перемещаем вспышки на задний план */
-}
-
-.glow-1 {
-  top: 10%;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.glow-2 {
-  top: 50%;
-  left: 60%;
-  animation-delay: 10s;
-}
-
-.glow-3 {
-  top: 70%;
-  left: 30%;
-  animation-delay: 20s;
+  z-index: -0; /* Перемещаем вспышки на задний план */
 }
 
 /* Адаптация для телефонов */
