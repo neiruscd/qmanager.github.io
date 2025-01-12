@@ -469,14 +469,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px; /* Увеличенная ширина */
-  height: 32px; /* Тоньше */
-  background: rgba(20, 20, 20, 0.85); /* Приятный стеклянный фон */
-  backdrop-filter: blur(10px); /* Размытие */
+  width: 340px; /* Увеличенная ширина */
+  height: 36px; /* Немного увеличенная высота */
+  background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
+  backdrop-filter: blur(12px); /* Размытие */
   border-radius: 20px; /* Скругленные углы */
-  padding: 2px; /* Тонкие внутренние отступы */
+  padding: 3px; /* Внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Стеклянный эффект */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Эффект стекла */
   margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
@@ -490,29 +490,32 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 14px; /* Чуть увеличенный шрифт */
-  font-weight: 500; /* Полужирный вес текста */
-  line-height: 30px; /* Выравнивание текста по вертикали */
+  font-size: 13px; /* Чуть уменьшенный шрифт */
+  font-weight: 500;
+  line-height: 32px; /* Выравнивание текста */
   cursor: pointer;
-  color: #ddd; /* Мягкий цвет текста */
+  color: #ddd;
   z-index: 2; /* Над подсветкой */
   position: relative;
-  transition: color 0.3s ease; /* Плавный переход цвета текста */
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Убираем перенос текста */
+  overflow: hidden; /* Скрытие текста, если не помещается */
+  text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
   width: 50%; /* Половина ширины переключателя */
-  height: calc(100% - 4px); /* Учитываем внутренние отступы */
-  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный синий градиент */
-  border-radius: 16px; /* Скругленные углы подсветки */
+  height: calc(100% - 6px); /* Учитываем внутренние отступы */
+  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
+  border-radius: 16px;
   z-index: 1;
-  top: 2px; /* Учитываем внутренний отступ */
+  top: 3px;
   left: 0;
-  transform: translateX(0); /* Начальное положение */
-  transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
-  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2); /* Легкий эффект свечения */
+  transform: translateX(0);
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* Анимация при переключении */
