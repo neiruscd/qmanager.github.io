@@ -470,20 +470,39 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 340px; /* Увеличенная ширина */
-  height: 36px; /* Немного увеличенная высота */
+  height: 36px; /* Увеличенная высота */
   background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
   backdrop-filter: blur(12px); /* Размытие */
   border-radius: 20px; /* Скругленные углы */
-  padding: 3px; /* Внутренние отступы */
+  padding: 2px; /* Уменьшенный отступ */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Эффект стекла */
   margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
 
-/* Радио-кнопки скрыты */
-.toggle-input {
-  display: none;
+/* Подсветка активной кнопки */
+.toggle-highlight {
+  position: absolute;
+  width: calc(50% - 4px); /* Подсветка занимает ровно половину с учётом отступов */
+  height: calc(100% - 4px); /* Учитываем внутренние отступы */
+  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
+  border-radius: 16px;
+  z-index: 1;
+  top: 2px; /* Позиционирование точно по центру */
+  left: 2px; /* Начальная позиция */
+  transform: translateX(0);
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Анимация при переключении */
+#categories-toggle:checked ~ .toggle-highlight {
+  transform: translateX(0); /* Начальная позиция для "Категории" */
+}
+
+#labels-toggle:checked ~ .toggle-highlight {
+  transform: translateX(calc(100% - 8px)); /* Полный переход с учётом ширины */
 }
 
 /* Метки для опций */
@@ -497,33 +516,11 @@ h1 {
   color: #ddd;
   z-index: 2; /* Над подсветкой */
   position: relative;
-  transition: color 0.3s ease;
   white-space: nowrap; /* Убираем перенос текста */
   overflow: hidden; /* Скрытие текста, если не помещается */
   text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
-}
-
-.toggle-highlight {
-  position: absolute;
-  width: calc(50% - 4px); /* Уменьшил отступы для лучшего покрытия */
-  height: calc(100% - 4px); /* Уменьшил вертикальные отступы */
-  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
-  border-radius: 14px; /* Уменьшил радиус */
-  z-index: 1;
-  top: 2px; /* Уменьшил верхний отступ */
-  left: 2px; /* Уменьшил левый отступ */
-  transform: translateX(0);
-  transition: transform 0.3s ease, background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
-}
-
-/* Анимация при переключении */
-#categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0); /* Начальная позиция для "Категории" */
-}
-
-#labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 8px)); /* Уменьшил ширину для второй кнопки */
+  padding: 0 8px; /* Добавляем отступы для текста внутри */
+  transition: color 0.3s ease;
 }
 
 /* Активный цвет текста */
