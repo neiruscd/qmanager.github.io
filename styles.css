@@ -156,7 +156,7 @@ h1 {
   border-radius: 20px;
   background: rgba(30, 30, 30, 0.7);
   transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 20; /* Всегда поверх других элементов */
+  z-index: 100; /* Всегда поверх других элементов */
   position: relative; /* Убираем проблемы с наложением */
   max-width: fit-content; /* Минимальная ширина */
 }
