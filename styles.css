@@ -132,7 +132,7 @@ header {
   position: sticky; /* Header фиксируется вверху */
   top: 0; /* Фиксация к верхнему краю */
   z-index: 10; /* Над всеми элементами */
-  overflow: visible; /* Отключаем скрытие содержимого */
+  overflow: hidden; /* Отключаем скрытие содержимого */
   box-sizing: border-box; /* Учитываем padding и border */
 }
 
