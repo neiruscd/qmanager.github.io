@@ -28,61 +28,6 @@ fetch('apps.json')
     }
     });
 
-    // Функция для генерации случайного числа в заданном диапазоне
-function getRandom(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-// Функция для генерации случайного цвета
-function getRandomColor() {
-  const colors = [
-    "rgba(30, 60, 100, 0.5)",
-    "rgba(100, 50, 150, 0.6)",
-    "rgba(50, 150, 100, 0.7)",
-    "rgba(150, 50, 50, 0.6)"
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
-
-// Функция для создания вспышки
-function createGlow() {
-  const glow = document.createElement("div");
-  glow.classList.add("glow");
-
-  // Генерация случайного размера
-  const size = getRandom(200, 500);
-  glow.style.width = `${size}px`;
-  glow.style.height = `${size}px`;
-
-  // Генерация случайной позиции
-  glow.style.top = `${getRandom(-30, 120)}%`; // Позиция по вертикали
-  glow.style.left = `${getRandom(-30, 130)}%`; // Позиция по горизонтали
-
-  // Установка случайного цвета
-  glow.style.backgroundColor = getRandomColor();
-
-  // Установка случайной скорости анимации
-  const duration = getRandom(25, 50);
-  glow.style.animationDuration = `${duration}s`;
-
-  return glow;
-}
-
-// Функция для добавления вспышек в DOM
-function initGlows() {
-  const header = document.querySelector("header");
-
-  // Количество вспышек
-  const glowCount = 5;
-
-  for (let i = 0; i < glowCount; i++) {
-    const glow = createGlow();
-    header.appendChild(glow);
-  }
-}
-
-// Инициализация вспышек при загрузке страницы
-window.onload = initGlows;
 
     function displayApps() {
       const searchTerm = searchBar.value.toLowerCase();
