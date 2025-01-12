@@ -469,14 +469,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px; /* Увеличенная ширина */
-  height: 45px; /* Оптимальная высота */
-  background: rgba(30, 30, 30, 0.8); /* Тёмный стеклянный фон */
-  backdrop-filter: blur(10px); /* Размытие */
-  border-radius: 25px; /* Закругление */
-  padding: 2px; /* Уменьшенные внутренние отступы */
+  width: 340px; /* Увеличенная ширина */
+  height: 36px; /* Немного увеличенная высота */
+  background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
+  backdrop-filter: blur(12px); /* Размытие */
+  border-radius: 20px; /* Скругленные углы */
+  padding: 3px; /* Внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Эффект стекла */
   margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
@@ -490,29 +490,32 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 14px; /* Читаемый шрифт */
+  font-size: 13px; /* Чуть уменьшенный шрифт */
   font-weight: 500;
-  line-height: 41px; /* Центровка текста */
+  line-height: 32px; /* Выравнивание текста */
   cursor: pointer;
-  color: #fff;
-  z-index: 2;
+  color: #ddd;
+  z-index: 2; /* Над подсветкой */
   position: relative;
   transition: color 0.3s ease;
+  white-space: nowrap; /* Убираем перенос текста */
+  overflow: hidden; /* Скрытие текста, если не помещается */
+  text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: 50%; /* Половина ширины контейнера */
-  height: calc(100% - 4px); /* Учитываем внутренние отступы */
-  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
-  border-radius: 22px; /* Скругление */
+  width: 50%; /* Половина ширины переключателя */
+  height: calc(100% - 6px); /* Учитываем внутренние отступы */
+  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
+  border-radius: 16px;
   z-index: 1;
-  top: 2px; /* Внутренние отступы сверху */
+  top: 3px;
   left: 0;
-  transform: translateX(0); /* Начальное положение */
-  transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
-  box-shadow: 0 4px 10px rgba(100, 149, 237, 0.5); /* Эффект свечения */
+  transform: translateX(0);
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* Анимация при переключении */
@@ -521,14 +524,14 @@ h1 {
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(120px); /* Подстраиваем положение для "Новинки и Обновления" */
+  transform: translateX(100%);
 }
 
 /* Активный цвет текста */
 #categories-toggle:checked + .toggle-label {
-  color: #000; /* Темный текст для активной кнопки */
+  color: #000;
 }
 
 #labels-toggle:checked + .toggle-label {
-  color: #000; /* Темный текст для активной кнопки */
+  color: #000;
 }
