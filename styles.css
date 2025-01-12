@@ -471,11 +471,12 @@ h1 {
   align-items: center;
   width: 340px; /* Ширина переключателя */
   height: 36px; /* Высота переключателя */
-  background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
-  backdrop-filter: blur(12px); /* Размытие */
+  background: rgba(30, 30, 30, 0.7); /* Темный стеклянный фон */
+  backdrop-filter: blur(10px); /* Размытие для эффекта стекла */
   border-radius: 20px; /* Скругленные углы */
   padding: 3px; /* Внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(255, 255, 255, 0.1); /* Эффект стекла */
   margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
@@ -493,27 +494,28 @@ h1 {
   font-weight: 500;
   line-height: 32px;
   cursor: pointer;
-  color: #ddd;
+  color: rgba(255, 255, 255, 0.8); /* Серый текст */
   z-index: 2;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 10px; /* Добавление отступов внутри текста */
+  padding: 0 10px; /* Отступ внутри текста */
   transition: color 0.3s ease;
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 6px); /* Половина ширины переключателя минус отступы */
+  width: calc(50% - 6px); /* Половина ширины переключателя с учетом отступов */
   height: calc(100% - 6px); /* Высота с учетом отступов */
-  background: rgba(72, 118, 255, 0.9); /* Синий фон активной кнопки */
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный серый */
   border-radius: 16px;
   top: 3px;
-  left: 3px; /* Отступ от черной окантовки */
+  left: 3px; /* Отступ для соответствия границе */
   transform: translateX(0);
-  transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* Анимация при переключении */
@@ -528,5 +530,5 @@ h1 {
 /* Активный цвет текста */
 #categories-toggle:checked + .toggle-label,
 #labels-toggle:checked + .toggle-label {
-  color: #000; /* Черный цвет текста для активной кнопки */
+  color: rgba(255, 255, 255, 1); /* Белый текст для активной кнопки */
 }
