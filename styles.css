@@ -1,5 +1,4 @@
 /* Базовые стили для body */
-/* Базовые стили для body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -42,7 +41,7 @@ header {
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
-  position: sticky;
+  position: relative;
   top: 0;
   box-sizing: border-box;
 }
