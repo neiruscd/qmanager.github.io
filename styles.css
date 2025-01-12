@@ -1,24 +1,68 @@
-/* Фон с анимацией */
+/* Основной фон с градиентами и частичками */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(145deg, #000000, #001f3f, #000000); /* Темный переливающийся градиент */
-  background-size: 400% 400%; /* Увеличиваем размер, чтобы градиент двигался плавно */
-  animation: gradientAnimation 20s ease infinite; /* Анимация с длительным эффектом */
-  color: #fff; /* Цвет текста */
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  background: linear-gradient(145deg, #000000, #001f3f, #0a0a0a); /* Темные оттенки */
+  color: #fff;
+  overflow-x: hidden;
+  position: relative; /* Для размещения псевдоэлементов */
+  height: 100vh; /* Занимает всю высоту экрана */
 }
 
-/* Анимация градиента */
-@keyframes gradientAnimation {
+/* Анимированный эффект размытия */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 0, 100, 0.2), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(0, 100, 255, 0.2), transparent 60%),
+              radial-gradient(circle at 50% 50%, rgba(100, 255, 0, 0.1), transparent 70%);
+  filter: blur(80px); /* Размытие для плавного свечения */
+  animation: gradientMove 30s infinite ease-in-out; /* Плавное движение */
+  z-index: -2; /* Размещаем за основным контентом */
+}
+
+/* Частички света */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 80%);
+  background-size: 5% 5%; /* Размер частиц */
+  animation: sparkleMove 60s linear infinite; /* Плавное движение частиц */
+  z-index: -1; /* Размещаем перед слоем размытия */
+  opacity: 0.2; /* Прозрачность частиц */
+}
+
+/* Анимация движения градиентов */
+@keyframes gradientMove {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(0) translateY(0);
   }
   50% {
-    background-position: 100% 50%;
+    transform: translateX(-50px) translateY(50px);
   }
   100% {
-    background-position: 0% 50%;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Анимация движения частиц */
+@keyframes sparkleMove {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100px 200px;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
