@@ -12,21 +12,21 @@ fetch('apps.json')
     let currentType = 'all';
     let currentCategory = 'all';
 
-categoriesToggle.addEventListener('change', () => {
-  if (categoriesToggle.checked) {
-    currentCategory = 'all'; // Показываем все категории
-    currentLabel = null; // Сбрасываем лейблы
-    displayApps();
-  }
-});
+   categoriesToggle.addEventListener('change', () => {
+     if (categoriesToggle.checked) {
+       currentCategory = 'all'; // Показываем все категории
+       currentLabel = null; // Сбрасываем лейблы
+       displayApps();
+       }
+     });
 
-labelsToggle.addEventListener('change', () => {
-  if (labelsToggle.checked) {
-    currentCategory = 'all'; // Убираем категории
-    currentLabel = 'new,update'; // Показываем новинки и обновления
+    labelsToggle.addEventListener('change', () => {
+     if (labelsToggle.checked) {
+      currentCategory = 'all'; // Убираем категории
+      currentLabel = 'new,update'; // Показываем новинки и обновления
     displayApps();
-  }
-});
+    }
+    });
 
 
     function displayApps() {
