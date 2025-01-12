@@ -463,19 +463,20 @@ h1 {
   margin: 0; /* Убираем отступы */
 }
 
+/* Общий контейнер переключателя */
 .switch-container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 300px; /* Ширина переключателя */
-  background: rgba(30, 30, 30, 0.6); /* Стеклянный фон */
-  backdrop-filter: blur(8px); /* Размытие */
+  background: rgba(30, 30, 30, 0.8); /* Стеклянный фон */
+  backdrop-filter: blur(10px); /* Размытие */
   border-radius: 25px;
   padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая граница */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  margin: 10px auto; /* Центрируем */
+  margin: 15px auto; /* Центрируем */
 }
 
 /* Радио-кнопки скрыты */
@@ -488,25 +489,32 @@ h1 {
   flex: 1;
   text-align: center;
   font-size: 14px;
+  font-weight: bold;
   padding: 10px 0;
   cursor: pointer;
   color: #fff;
   z-index: 2; /* Чтобы быть поверх подсветки */
+  position: relative;
+  transition: color 0.3s ease; /* Плавный переход цвета текста */
 }
 
+/* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
   width: 50%; /* Половина контейнера */
   height: calc(100% - 10px); /* Учитываем отступы */
-  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Синий градиент */
+  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
   border-radius: 20px;
   z-index: 1;
-  transition: transform 0.3s ease;
+  top: 5px;
+  left: 0;
+  transform: translateX(0); /* Начальное положение */
+  transition: transform 0.4s ease, background 0.3s ease; /* Плавное перемещение и смена фона */
 }
 
-/* Перемещение подсветки */
+/* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0); /* Начальное положение */
+  transform: translateX(0); /* Положение для "Категории" */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
