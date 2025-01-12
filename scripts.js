@@ -12,21 +12,21 @@ fetch('apps.json')
     let currentType = 'all';
     let currentCategory = 'all';
 
-    toggleCategories.addEventListener('click', () => {
-    toggleCategories.classList.add('active');
-    toggleLabels.classList.remove('active');
-    currentCategory = 'all'; // Оставляем только категорию
+toggleCategories.addEventListener('change', () => {
+  if (toggleCategories.checked) {
+    currentCategory = 'all';
     currentLabel = null; // Убираем фильтр по лейблу
     displayApps();
-    });
+  }
+});
 
-    toggleLabels.addEventListener('click', () => {
-    toggleLabels.classList.add('active');
-    toggleCategories.classList.remove('active');
+toggleLabels.addEventListener('change', () => {
+  if (toggleLabels.checked) {
     currentCategory = 'all'; // Убираем категорию
     currentLabel = 'new,update'; // Устанавливаем фильтр по лейблу
     displayApps();
-    });
+  }
+});
 
 
     function displayApps() {
