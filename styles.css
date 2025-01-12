@@ -467,30 +467,36 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
-.toggle-btn {
+.toggle-option {
+  position: relative;
   padding: 10px 20px;
-  font-size: 14px;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
   background: rgba(30, 30, 30, 0.6);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.toggle-btn:hover {
-  background: rgba(50, 50, 50, 0.8);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+.toggle-option:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
 }
 
-.toggle-btn.active {
-  background: rgba(100, 100, 100, 0.8);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+.toggle-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-option input[type="radio"]:checked + label {
+  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7));
+  border-color: rgba(72, 118, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(72, 118, 255, 0.5);
 }
