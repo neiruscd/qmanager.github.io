@@ -33,15 +33,14 @@
     <button id="show-apk" class="filter-btn">Android (APK)</button>
   </div>
 
-<div class="toggle-container">
-  <label class="toggle-option">
-    <input type="radio" name="toggle" id="toggle-categories" checked>
-    Категории
-  </label>
-  <label class="toggle-option">
-    <input type="radio" name="toggle" id="toggle-labels">
-    Новинки и Обновления
-  </label>
+<div class="switch-container">
+  <input type="radio" name="toggle" id="categories-toggle" class="toggle-input" checked>
+  <label for="categories-toggle" class="toggle-label">Категории</label>
+  
+  <input type="radio" name="toggle" id="labels-toggle" class="toggle-input">
+  <label for="labels-toggle" class="toggle-label">Новинки и Обновления</label>
+  
+  <div class="toggle-highlight"></div>
 </div>
   
   <main>
