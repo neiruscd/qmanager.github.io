@@ -520,11 +520,11 @@ h1 {
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0); /* Положение для "Категории" */
+  transform: translateX(4px); /* Учитываем отступ для категории */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(100%); /* Положение для "Новинки и Обновления" */
+  transform: translateX(calc(100% - 8px)); /* Учитываем отступ для новинок */
 }
 
 /* Активный цвет текста */
