@@ -12,18 +12,18 @@ fetch('apps.json')
     let currentType = 'all';
     let currentCategory = 'all';
 
-toggleCategories.addEventListener('change', () => {
-  if (toggleCategories.checked) {
-    currentCategory = 'all';
-    currentLabel = null; // Убираем фильтр по лейблу
+categoriesToggle.addEventListener('change', () => {
+  if (categoriesToggle.checked) {
+    currentCategory = 'all'; // Показываем все категории
+    currentLabel = null; // Сбрасываем лейблы
     displayApps();
   }
 });
 
-toggleLabels.addEventListener('change', () => {
-  if (toggleLabels.checked) {
-    currentCategory = 'all'; // Убираем категорию
-    currentLabel = 'new,update'; // Устанавливаем фильтр по лейблу
+labelsToggle.addEventListener('change', () => {
+  if (labelsToggle.checked) {
+    currentCategory = 'all'; // Убираем категории
+    currentLabel = 'new,update'; // Показываем новинки и обновления
     displayApps();
   }
 });
