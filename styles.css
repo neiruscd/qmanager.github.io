@@ -38,11 +38,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px; /* Уменьшаем расстояние между элементами */
-  background: rgba(30, 30, 30, 0.9); /* Тёмный фон */
-  padding: 15px 20px; /* Уменьшаем внутренние отступы */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Линия под шапкой */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(30, 30, 30, 0.7); /* Тёмный фон с большей прозрачностью */
+  padding: 15px 20px; /* Внутренние отступы */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Линия под шапкой с меньшей заметностью */
+  backdrop-filter: blur(12px); /* Более сильное размытие */
+  -webkit-backdrop-filter: blur(12px); /* Для Safari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень для создания эффекта объема */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
 }
 
 h1 {
