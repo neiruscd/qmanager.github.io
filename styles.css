@@ -469,16 +469,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 260px; /* Увеличенная ширина */
-  height: 40px; /* Оптимальная высота */
-  background: rgba(30, 30, 30, 0.9); /* Тёмный стеклянный фон */
+  width: 300px; /* Увеличенная ширина */
+  height: 45px; /* Оптимальная высота */
+  background: rgba(30, 30, 30, 0.8); /* Тёмный стеклянный фон */
   backdrop-filter: blur(10px); /* Размытие */
-  border-radius: 20px; /* Закругление */
-  padding: 3px; /* Внутренние отступы */
+  border-radius: 25px; /* Закругление */
+  padding: 2px; /* Уменьшенные внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Лёгкая тень */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
   margin: 15px auto; /* Центрирование */
-  overflow: hidden; /* Скрытие лишнего */
+  overflow: hidden; /* Скрытие выходящих элементов */
 }
 
 /* Радио-кнопки скрыты */
@@ -491,28 +491,28 @@ h1 {
   flex: 1;
   text-align: center;
   font-size: 14px; /* Читаемый шрифт */
-  font-weight: 500; /* Полужирный текст */
-  line-height: 34px; /* Центровка текста */
+  font-weight: 500;
+  line-height: 41px; /* Центровка текста */
   cursor: pointer;
   color: #fff;
-  z-index: 2; /* Над подсветкой */
+  z-index: 2;
   position: relative;
-  transition: color 0.3s ease; /* Плавный переход цвета */
+  transition: color 0.3s ease;
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
   width: 50%; /* Половина ширины контейнера */
-  height: calc(100% - 8px); /* Учитываем внутренние отступы */
-  background: linear-gradient(145deg, rgba(70, 130, 180, 0.8), rgba(100, 149, 237, 0.9)); /* Градиент */
-  border-radius: 16px; /* Закругление */
+  height: calc(100% - 4px); /* Учитываем внутренние отступы */
+  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
+  border-radius: 22px; /* Скругление */
   z-index: 1;
-  top: 4px; /* Внутренние отступы сверху */
+  top: 2px; /* Внутренние отступы сверху */
   left: 0;
   transform: translateX(0); /* Начальное положение */
   transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
-  box-shadow: 0 6px 15px rgba(70, 130, 180, 0.6); /* Эффект свечения */
+  box-shadow: 0 4px 10px rgba(100, 149, 237, 0.5); /* Эффект свечения */
 }
 
 /* Анимация при переключении */
