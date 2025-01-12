@@ -136,24 +136,26 @@ h1 {
 }
 
 .donate-link {
-  color: #4caf50; /* Зеленый акцент */
-  text-decoration: none;
-  font-size: 12px;
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Прозрачная граница */
-  border-radius: 20px;
-  background: rgba(30, 30, 30, 0.7); /* Прозрачность кнопки */
-  transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 30; /* Гарантируем, что она поверх вспышек */
-  position: relative; /* Убираем проблемы с наложением */
-  cursor: pointer; /* Гарантируем отображение курсора */
-  pointer-events: auto; /* Обеспечиваем кликабельность */
+    color: #4caf50; /* Зеленый акцент */
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная граница */
+    border-radius: 20px;
+    background: rgba(30, 30, 30, 0.4); /* Полупрозрачный фон */
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    z-index: 100; /* Поверх вспышек */
+    position: relative; /* Контекст для z-index */
+    max-width: fit-content; /* Обрезаем лишнее */
+    backdrop-filter: blur(10px); /* Эффект размытия */
+    -webkit-backdrop-filter: blur(10px); /* Для Safari */
+    pointer-events: auto; /* Сохраняем кликабельность */
 }
 
 .donate-link:hover {
-  background: rgba(50, 50, 50, 0.8); /* Подсветка при наведении */
-  transform: scale(1.05); /* Лёгкое увеличение */
-  color: #fff;
+    background: rgba(50, 50, 50, 0.6); /* Увеличиваем непрозрачность при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+    color: #fff; /* Белый текст при наведении */
 }
 
 .header-search {
