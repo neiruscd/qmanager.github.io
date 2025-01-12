@@ -506,13 +506,13 @@ h1 {
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: 50%; /* Половина ширины переключателя */
-  height: calc(100% - 6px); /* Учитываем внутренние отступы */
+  width: calc(50% - 6px); /* Уменьшаем ширину, чтобы создать отступы */
+  height: calc(100% - 8px); /* Уменьшаем высоту для внутренних отступов */
   background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
-  border-radius: 16px;
+  border-radius: 16px; /* Закругление */
   z-index: 1;
-  top: 3px;
-  left: 0;
+  top: 4px; /* Отступ сверху */
+  left: 3px; /* Отступ слева */
   transform: translateX(0);
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
@@ -524,7 +524,7 @@ h1 {
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(100%);
+  transform: translateX(calc(100% - 6px)); /* Учитываем уменьшенную ширину и отступы */
 }
 
 /* Активный цвет текста */
