@@ -469,16 +469,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 340px; /* Увеличенная ширина */
-  height: 38px; /* Увеличенная высота */
-  background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
+  width: 260px; /* Увеличенная ширина */
+  height: 40px; /* Увеличенная высота */
+  background: rgba(30, 30, 30, 0.8); /* Прозрачный фон */
   backdrop-filter: blur(12px); /* Размытие */
-  border-radius: 20px; /* Скругленные углы */
-  padding: 3px; /* Внутренние отступы */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Эффект стекла */
-  margin: 15px auto; /* Центрирование */
-  overflow: hidden; /* Скрытие выходящих элементов */
+  border-radius: 25px; /* Закругленные края */
+  padding: 4px; /* Внутренний отступ */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Легкая граница */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень */
+  margin: 15px auto;
+  overflow: hidden; /* Скрываем выходящие элементы */
 }
 
 /* Радио-кнопки скрыты */
@@ -490,41 +490,37 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 13px; /* Чуть уменьшенный шрифт */
+  font-size: 14px; /* Увеличенный шрифт */
   font-weight: 500;
   line-height: 34px; /* Выравнивание текста */
   cursor: pointer;
-  color: #ddd;
-  z-index: 2; /* Над подсветкой */
+  color: #fff;
+  z-index: 2;
   position: relative;
   transition: color 0.3s ease;
-  white-space: nowrap; /* Убираем перенос текста */
-  overflow: hidden; /* Скрытие текста, если не помещается */
-  text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 6px); /* Уменьшенная ширина подсветки */
-  height: calc(100% - 8px); /* Уменьшенная высота подсветки */
-  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
-  border-radius: 16px;
+  width: 50%;
+  height: calc(100% - 8px); /* Уменьшаем высоту для отступов */
+  background: linear-gradient(145deg, rgba(72, 118, 255, 0.8), rgba(100, 149, 237, 0.7)); /* Новый градиент */
+  border-radius: 20px; /* Закругление */
   z-index: 1;
-  top: 4px; /* Отступ сверху */
-  left: 4px; /* Начальный отступ слева */
-  transform: translateX(0);
+  top: 4px; /* Добавляем отступ сверху */
+  left: 4px; /* Начальное положение */
+  transform: translateX(0); /* Положение по умолчанию */
   transition: transform 0.3s ease, background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(4px); /* Учитываем отступ для категории */
+  transform: translateX(0);
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 8px)); /* Учитываем отступ для новинок */
+  transform: translateX(120px); /* Подстраиваем положение для "Новинки и Обновления" */
 }
 
 /* Активный цвет текста */
