@@ -9,24 +9,22 @@ body {
     #000; /* Глубокий черный фон с градиентом */
   backdrop-filter: blur(10px); /* Эффект размытия */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  background-size: 200% 200%; /* Увеличенный размер фона */
-  animation: gradientAnimation 15s infinite alternate; /* Анимация */
+  background-size: 150% 150%; /* Умеренный размер фона */
+  animation: gradientAnimation 12s ease infinite alternate; /* Анимация */
   color: #fff;
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-  box-shadow: inset 0 0 80px rgba(72, 118, 255, 0.4),
-    0 0 120px rgba(72, 118, 255, 0.6); /* Тёмно-синее свечение */
 }
 
-/* Анимация для градиента */
+/* Анимация для фона */
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
     background-position: 50% 50%;
   }
+  50% {
+    background-position: 60% 60%;
+  }
   100% {
-    background-position: 100% 50%;
+    background-position: 70% 70%;
   }
 }
 
