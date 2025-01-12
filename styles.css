@@ -1,32 +1,39 @@
-/* Стили для body */
+/* Базовые стили для body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* Высота экрана */
   display: flex;
   flex-direction: column;
   background: #000;
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-  overflow-y: auto; /* Оставляем только вертикальную прокрутку */
-  position: relative; /* Для абсолютного позиционирования вспышек */
+  overflow-y: auto; /* Включаем только вертикальную прокрутку */
+  position: relative;
   color: #fff;
 }
 
-/* Универсальный сброс */
+/* Универсальный сброс для всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Ограничение ширины для всех контейнеров */
-html, body, main, header, .app-list, .header {
-  width: 100%;
-  max-width: 100vw; /* Элементы не выходят за границы экрана */
+/* Жестко ограничиваем ширину всех элементов на странице */
+html, body {
+  width: 100%; /* Строго на ширину экрана */
+  max-width: 100vw; /* Запрещаем элементы выходить за границы экрана */
+  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
-/* Анимация вспышек */
+/* Контейнеры */
+header, main, .app-list, .header, .switch-container {
+  max-width: 100%; /* Элементы остаются в рамках */
+  overflow-x: hidden; /* Никакой горизонтальной прокрутки */
+}
+
+/* Вспышки */
 @keyframes glowEffect {
   0% {
     opacity: 0;
@@ -55,7 +62,6 @@ html, body, main, header, .app-list, .header {
   }
 }
 
-/* Вспышки (glow) */
 .glow {
   position: absolute;
   width: 400px;
@@ -84,7 +90,7 @@ html, body, main, header, .app-list, .header {
   animation-delay: 20s;
 }
 
-/* Медиа-запрос для адаптации на телефонах */
+/* Адаптация для телефонов */
 @media (max-width: 768px) {
   .glow {
     width: 200px;
