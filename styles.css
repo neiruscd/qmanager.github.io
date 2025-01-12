@@ -70,7 +70,7 @@ header, main, .app-list, .header, .switch-container {
   animation: glowEffect 30s infinite alternate;
   filter: blur(50px);
   pointer-events: none;
-  z-index: 5; /* Меньше, чем header */
+  z-index: 1; /* Меньше, чем header */
 }
 
 .glow-1 {
