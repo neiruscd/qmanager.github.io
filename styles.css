@@ -506,13 +506,13 @@ h1 {
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 6px); /* Уменьшаем ширину с учетом отступов */
-  height: calc(100% - 8px); /* Учитываем внутренние отступы сверху и снизу */
+  width: calc(50% - 8px); /* Учитываем отступы от краёв */
+  height: calc(100% - 6px); /* Уменьшаем высоту для выравнивания */
   background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Градиент */
-  border-radius: 16px;
+  border-radius: 14px; /* Скругление внутри переключателя */
   z-index: 1;
-  top: 4px; /* Равномерный отступ сверху */
-  left: 3px; /* Начальный отступ слева */
+  top: 3px; /* Выравниваем отступ сверху */
+  left: 4px; /* Убираем заезд на границы */
   transform: translateX(0); /* Начальная позиция */
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
@@ -520,11 +520,11 @@ h1 {
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0); /* Положение для "Категории" */
+  transform: translateX(0); /* Для "Категории" подсветка слева */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 12px)); /* Учитываем общий отступ в 6px слева и справа */
+  transform: translateX(calc(100% - 16px)); /* Подсветка для правой кнопки (учитываем left + отступы) */
 }
 
 /* Активный цвет текста */
