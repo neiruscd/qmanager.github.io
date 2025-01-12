@@ -158,17 +158,9 @@ h1 {
 }
 
 .header-search {
-  display: flex;
-  gap: 10px; /* Расстояние между элементами */
-  align-items: center; /* Центрируем элементы по вертикали */
-  flex-wrap: wrap; /* Разрешаем перенос элементов, если экран узкий */
-  background: rgba(30, 30, 30, 0.5); /* Полупрозрачный фон */
-  backdrop-filter: blur(8px); /* Размытие */
-  -webkit-backdrop-filter: blur(8px); /* Для Safari */
-  padding: 10px; /* Внутренние отступы */
-  border-radius: 15px; /* Скруглённые углы */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
-  transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+  padding: 10px;
+  background: rgba(30, 30, 30, 0.5); /* Фон */
+  border-radius: 15px; /* Скругление */
 }
 
 .header-search:hover {
