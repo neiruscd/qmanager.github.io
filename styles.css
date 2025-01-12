@@ -469,15 +469,15 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px; /* Увеличенная ширина */
-  height: 30px; /* Слегка уменьшенная высота */
+  width: 300px; /* Увеличенная ширина */
+  height: 40px; /* Увеличенная высота */
   background: rgba(30, 30, 30, 0.8); /* Темный стеклянный фон */
-  backdrop-filter: blur(10px); /* Размытие */
-  border-radius: 18px; /* Скругление */
-  padding: 2px; /* Уменьшенные внутренние отступы */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Легкая тень */
-  margin: 10px auto; /* Уменьшенные внешние отступы */
+  backdrop-filter: blur(12px); /* Размытие */
+  border-radius: 20px; /* Скругление */
+  padding: 3px; /* Небольшие внутренние отступы */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Полупрозрачная граница */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(255, 255, 255, 0.1); /* Эффект стекла */
+  margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
 
@@ -490,9 +490,9 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 12px; /* Уменьшенный шрифт */
-  font-weight: 500; /* Более легкий вес шрифта */
-  line-height: 28px; /* Выравнивание текста по центру */
+  font-size: 14px; /* Увеличенный шрифт */
+  font-weight: 500; /* Полужирный вес */
+  line-height: 36px; /* Центрирование текста по вертикали */
   cursor: pointer;
   color: #fff;
   z-index: 2; /* Над подсветкой */
@@ -504,14 +504,15 @@ h1 {
 .toggle-highlight {
   position: absolute;
   width: 50%; /* Половина ширины переключателя */
-  height: calc(100% - 4px); /* Учитываем уменьшенные отступы */
-  background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
-  border-radius: 16px; /* Скругление под уменьшенный размер */
+  height: calc(100% - 6px); /* Сохраняем внутренние отступы */
+  background: linear-gradient(145deg, rgba(100, 149, 237, 0.9), rgba(72, 118, 255, 0.7)); /* Градиент стекла */
+  border-radius: 18px; /* Скругление под уменьшенный размер */
   z-index: 1;
-  top: 2px; /* Учитываем внутренний отступ */
+  top: 3px; /* Сохраняем отступ от верхней границы */
   left: 0;
   transform: translateX(0); /* Начальное положение */
   transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2); /* Улучшенное свечение */
 }
 
 /* Анимация при переключении */
