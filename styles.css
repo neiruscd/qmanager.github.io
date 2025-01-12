@@ -214,19 +214,19 @@ h1 {
 /* Светлая стеклянная подложка */
 .glass-container {
   display: flex;
-  align-items: center; /* Центрируем содержимое по вертикали */
+  align-items: center;
   padding: 12px; /* Внутренние отступы */
-  border-radius: 16px; /* Более скругленные углы */
-  background: rgba(40, 40, 40, 0.9); /* Прозрачный темный фон */
-  backdrop-filter: blur(12px); /* Эффект стекла с увеличенным размытием */
-  -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(255, 255, 255, 0.1); /* Сильная внешняя и внутренняя тень */
-  margin-bottom: 16px; /* Увеличенный отступ между карточками */
-  justify-content: space-between; /* Равномерное размещение внутри */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Светлая граница */
-  color: rgba(255, 255, 255, 0.95); /* Светлый текст */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анимация */
+  border-radius: 12px; /* Скругленные углы */
+  background: rgba(40, 40, 40, 0.9); /* Темно-серый цвет с небольшой прозрачностью */
+  backdrop-filter: blur(10px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Легкая объемная тень */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  margin-bottom: 12px; /* Отступ между карточками */
+  justify-content: space-between; /* Разделяем элементы */
+  transition: background 0.3s ease, transform 0.3s ease; /* Анимация */
 }
+
 
 /* Контейнер для текста (заголовок и версия) */
 .glass-text-container {
