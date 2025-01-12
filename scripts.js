@@ -6,8 +6,8 @@ fetch('apps.json')
     const categoryElements = document.querySelectorAll('.category');
     const resetButton = document.getElementById('reset-filters');
     const searchBar = document.getElementById('search-bar');
-    const toggleCategories = document.getElementById('toggle-categories');
-    const toggleLabels = document.getElementById('toggle-labels');
+    const categoriesToggle = document.getElementById('categories-toggle');
+    const labelsToggle = document.getElementById('labels-toggle');
     let currentLabel = null; // Переменная для фильтрации по лейблу
     let currentType = 'all';
     let currentCategory = 'all';
