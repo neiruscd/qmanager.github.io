@@ -462,3 +462,35 @@ h1 {
   color: #bbb; /* Слегка приглушенный цвет */
   margin: 0; /* Убираем отступы */
 }
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(50, 50, 50, 0.8);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.toggle-btn.active {
+  background: rgba(100, 100, 100, 0.8);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
