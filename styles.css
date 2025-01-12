@@ -192,15 +192,23 @@ h1 {
 /* Светлая стеклянная подложка */
 .glass-container {
   display: flex;
-  align-items: center; /* Центрируем по вертикали */
-  padding: 10px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1); /* Светлая подложка */
-  backdrop-filter: blur(10px); /* Эффект стекла */
-  -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
-  margin-bottom: 10px;
-  justify-content: space-between; /* Отодвигаем кнопку от текста */
+  align-items: center; /* Центрируем содержимое по вертикали */
+  padding: 15px; /* Увеличиваем внутренний отступ */
+  border-radius: 16px; /* Более выраженные закругления */
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(50, 50, 50, 0.9)); /* Темный градиентный фон */
+  backdrop-filter: blur(12px); /* Размытие для эффекта стекла */
+  -webkit-backdrop-filter: blur(12px); /* Для Safari */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.1); /* Глубокая тень + внутренняя подсветка */
+  margin-bottom: 15px; /* Отступы между карточками */
+  justify-content: space-between; /* Отодвигаем элементы друг от друга */
+  color: rgba(255, 255, 255, 0.9); /* Светлый текст */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анимация при наведении */
+}
+
+/* Эффект при наведении */
+.glass-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(255, 255, 255, 0.2); /* Усиление тени */
+  transform: translateY(-3px); /* Лёгкий подъём */
 }
 
 /* Контейнер для текста (заголовок и версия) */
