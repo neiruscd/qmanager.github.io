@@ -3,38 +3,75 @@ body {
   margin: 0;
   min-height: 100vh; /* Минимальная высота равна высоте экрана */
   display: flex;
-  flex-direction: column; /* Для работы с содержимым */
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(0, 10, 30, 0.95) 60%, /* Темно-синий центр */
-      rgba(10, 20, 50, 0.85) 100% /* Градиент к краям */
-    ),
-    #000; /* Базовый черный фон */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-size: 150% 150%;
-  animation: gradientAnimation 12s ease infinite alternate;
-  color: #fff;
+  flex-direction: column;
+  background: #000; /* Базовый черный фон */
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  position: relative; /* Для позиционирования вспышек */
+  color: #fff;
 }
 
-@keyframes gradientAnimation {
+@keyframes glowEffect {
   0% {
-    background-position: 50% 50%;
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: rgba(30, 60, 100, 0.5); /* Начальный цвет */
+  }
+  25% {
+    opacity: 0.6;
+    transform: scale(1.2);
+    background-color: rgba(100, 50, 150, 0.6); /* Второй цвет */
   }
   50% {
-    background-position: 55% 55%;
+    opacity: 0.8;
+    transform: scale(1.5);
+    background-color: rgba(50, 150, 100, 0.7); /* Третий цвет */
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(1.8);
+    background-color: rgba(150, 50, 50, 0.6); /* Четвертый цвет */
   }
   100% {
-    background-position: 60% 60%;
+    opacity: 0;
+    transform: scale(2);
+    background-color: rgba(30, 60, 100, 0.5); /* Исчезает */
   }
+}
+
+.glow {
+  position: absolute;
+  width: 300px; /* Размер вспышки */
+  height: 300px;
+  border-radius: 50%; /* Круглая форма */
+  animation: glowEffect 10s infinite alternate; /* Плавная анимация */
+  filter: blur(50px); /* Размытие */
+  pointer-events: none; /* Вспышки не влияют на взаимодействие */
+}
+
+.glow-1 {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s; /* Разные тайминги */
+}
+
+.glow-2 {
+  top: 50%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+.glow-3 {
+  top: 80%;
+  left: 20%;
+  animation-delay: 6s;
 }
 
 /* Медиа-запрос для адаптации на телефонах */
 @media (max-width: 768px) {
-  body {
-    background-size: 200% 200%; /* Увеличенный размер градиента для плавного эффекта */
-    animation: gradientAnimation 15s ease infinite alternate; /* Более плавная анимация */
+  .glow {
+    width: 200px;
+    height: 200px;
+    filter: blur(30px); /* Уменьшаем размытие */
   }
 }
 
