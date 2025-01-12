@@ -5,8 +5,8 @@ body {
   display: flex;
   flex-direction: column;
   background: #000; /* Базовый черный фон */
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-  overflow-y: auto; /* Включаем вертикальную прокрутку */
+  overflow-x: hidden; /* Полностью убираем горизонтальную прокрутку */
+  overflow-y: auto; /* Оставляем только вертикальную прокрутку */
   position: relative; /* Для позиционирования вспышек */
   color: #fff;
   box-sizing: border-box; /* Учитываем padding и border в размерах элементов */
@@ -69,13 +69,9 @@ body {
   animation-delay: 20s;
 }
 
-/* Медиа-запрос для адаптации на телефонах */
-@media (max-width: 768px) {
-  .glow {
-    width: 300px; /* Меньший размер вспышки */
-    height: 300px;
-    filter: blur(40px); /* Уменьшаем размытие */
-  }
+main {
+  width: 100%; /* Занимает всю ширину экрана */
+  overflow: hidden; /* Убираем любые горизонтальные прокрутки */
 }
 
 
