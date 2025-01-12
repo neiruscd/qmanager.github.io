@@ -44,6 +44,17 @@ body {
   align-items: center;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7); /* Полупрозрачный текст */
+  background: rgba(0, 0, 0, 0.5); /* Темное стекло */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 header {
   display: flex;
   flex-direction: column;
