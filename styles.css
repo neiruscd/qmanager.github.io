@@ -469,15 +469,15 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 240px; /* Уменьшенная ширина */
-  height: 35px; /* Уменьшенная высота */
-  background: rgba(30, 30, 30, 0.9); /* Более темный стеклянный фон */
+  width: 280px; /* Увеличенная ширина */
+  height: 30px; /* Слегка уменьшенная высота */
+  background: rgba(30, 30, 30, 0.8); /* Темный стеклянный фон */
   backdrop-filter: blur(10px); /* Размытие */
-  border-radius: 20px; /* Скругление под уменьшенный размер */
-  padding: 3px; /* Уменьшенные внутренние отступы */
+  border-radius: 18px; /* Скругление */
+  padding: 2px; /* Уменьшенные внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Легкая тень */
-  margin: 15px auto; /* Центрирование */
+  margin: 10px auto; /* Уменьшенные внешние отступы */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
 
@@ -492,7 +492,7 @@ h1 {
   text-align: center;
   font-size: 12px; /* Уменьшенный шрифт */
   font-weight: 500; /* Более легкий вес шрифта */
-  line-height: 30px; /* Выравнивание текста по центру */
+  line-height: 28px; /* Выравнивание текста по центру */
   cursor: pointer;
   color: #fff;
   z-index: 2; /* Над подсветкой */
@@ -504,11 +504,11 @@ h1 {
 .toggle-highlight {
   position: absolute;
   width: 50%; /* Половина ширины переключателя */
-  height: calc(100% - 6px); /* Учитываем уменьшенные отступы */
+  height: calc(100% - 4px); /* Учитываем уменьшенные отступы */
   background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
-  border-radius: 18px; /* Скругление под уменьшенный размер */
+  border-radius: 16px; /* Скругление под уменьшенный размер */
   z-index: 1;
-  top: 3px; /* Учитываем внутренний отступ */
+  top: 2px; /* Учитываем внутренний отступ */
   left: 0;
   transform: translateX(0); /* Начальное положение */
   transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
