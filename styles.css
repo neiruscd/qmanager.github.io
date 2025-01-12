@@ -506,25 +506,25 @@ h1 {
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 6px); /* Уменьшаем ширину, чтобы создать отступы */
-  height: calc(100% - 8px); /* Уменьшаем высоту для внутренних отступов */
-  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
-  border-radius: 16px; /* Закругление */
+  width: calc(50% - 6px); /* Уменьшаем ширину с учетом отступов */
+  height: calc(100% - 8px); /* Учитываем внутренние отступы сверху и снизу */
+  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Градиент */
+  border-radius: 16px;
   z-index: 1;
-  top: 4px; /* Отступ сверху */
-  left: 3px; /* Отступ слева */
-  transform: translateX(0);
+  top: 4px; /* Равномерный отступ сверху */
+  left: 3px; /* Начальный отступ слева */
+  transform: translateX(0); /* Начальная позиция */
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0);
+  transform: translateX(0); /* Положение для "Категории" */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 6px)); /* Учитываем уменьшенную ширину и отступы */
+  transform: translateX(calc(100% - 12px)); /* Учитываем общий отступ в 6px слева и справа */
 }
 
 /* Активный цвет текста */
