@@ -5,7 +5,8 @@ body {
   display: flex;
   flex-direction: column;
   background: #000; /* Базовый черный фон */
-  overflow: hidden; /* Обрезаем содержимое, выходящее за границы экрана */
+  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
   position: relative; /* Для позиционирования вспышек */
   color: #fff;
   box-sizing: border-box; /* Учитываем padding и border в размерах элементов */
