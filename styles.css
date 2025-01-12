@@ -469,14 +469,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 340px; /* Увеличенная ширина */
-  height: 40px; /* Увеличенная высота */
+  width: 340px; /* Ширина переключателя */
+  height: 36px; /* Высота переключателя */
   background: rgba(20, 20, 20, 0.9); /* Темный стеклянный фон */
   backdrop-filter: blur(12px); /* Размытие */
   border-radius: 20px; /* Скругленные углы */
   padding: 3px; /* Внутренние отступы */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.1); /* Эффект стекла */
   margin: 15px auto; /* Центрирование */
   overflow: hidden; /* Скрытие выходящих элементов */
 }
@@ -490,48 +489,44 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 14px; /* Чуть увеличенный шрифт */
+  font-size: 13px;
   font-weight: 500;
-  line-height: 34px; /* Выравнивание текста */
+  line-height: 32px;
   cursor: pointer;
   color: #ddd;
-  z-index: 2; /* Над подсветкой */
+  z-index: 2;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px; /* Добавление отступов внутри текста */
   transition: color 0.3s ease;
-  white-space: nowrap; /* Убираем перенос текста */
-  overflow: hidden; /* Скрытие текста, если не помещается */
-  text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
 }
 
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 8px); /* Учитываем отступы внутри подсветки */
-  height: calc(100% - 8px); /* Учитываем вертикальные отступы */
-  background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
+  width: calc(50% - 6px); /* Половина ширины переключателя минус отступы */
+  height: calc(100% - 6px); /* Высота с учетом отступов */
+  background: rgba(72, 118, 255, 0.9); /* Синий фон активной кнопки */
   border-radius: 16px;
-  z-index: 1;
-  top: 4px; /* Отступ сверху */
-  left: 4px; /* Начальное положение */
+  top: 3px;
+  left: 3px; /* Отступ от черной окантовки */
   transform: translateX(0);
-  transition: transform 0.3s ease, background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(4px); /* Для "Категории" */
+  transform: translateX(3px); /* Сдвиг для "Категории" */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 8px)); /* Для "Новинки и Обновления" */
+  transform: translateX(calc(100% + 3px)); /* Сдвиг для "Новинки и Обновления" */
 }
 
 /* Активный цвет текста */
-#categories-toggle:checked + .toggle-label {
-  color: #000;
-}
-
+#categories-toggle:checked + .toggle-label,
 #labels-toggle:checked + .toggle-label {
-  color: #000;
+  color: #000; /* Черный цвет текста для активной кнопки */
 }
