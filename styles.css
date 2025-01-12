@@ -193,16 +193,17 @@ h1 {
 .glass-container {
   display: flex;
   align-items: center; /* Центрируем содержимое по вертикали */
-  padding: 15px; /* Увеличиваем внутренний отступ */
-  border-radius: 16px; /* Более выраженные закругления */
-  background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(50, 50, 50, 0.9)); /* Темный градиентный фон */
-  backdrop-filter: blur(12px); /* Размытие для эффекта стекла */
-  -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.1); /* Глубокая тень + внутренняя подсветка */
-  margin-bottom: 15px; /* Отступы между карточками */
-  justify-content: space-between; /* Отодвигаем элементы друг от друга */
+  padding: 12px; /* Внутренние отступы */
+  border-radius: 12px; /* Скруглённые углы */
+  background: rgba(30, 30, 30, 0.6); /* Прозрачный серый фон */
+  backdrop-filter: blur(10px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  margin-bottom: 12px; /* Отступ между карточками */
+  justify-content: space-between; /* Равномерное размещение внутри */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
   color: rgba(255, 255, 255, 0.9); /* Светлый текст */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анимация при наведении */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анимация */
 }
 
 /* Эффект при наведении */
