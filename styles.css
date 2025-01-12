@@ -3,15 +3,15 @@ body {
   margin: 0;
   background: radial-gradient(
       circle at 50% 50%,
-      rgba(0, 0, 0, 0.95) 60%,
-      rgba(15, 30, 60, 0.8) 100%
+      rgba(0, 10, 30, 0.95) 60%, /* Глубокий темно-синий центр */
+      rgba(10, 20, 50, 0.85) 100% /* Нежный градиент к краям */
     ),
-    #000; /* Глубокий черный фон с градиентом */
+    #000; /* Базовый черный фон */
   backdrop-filter: blur(10px); /* Эффект размытия */
   -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  background-size: 150% 150%; /* Умеренный размер фона */
-  animation: gradientAnimation 12s ease infinite alternate; /* Анимация */
-  color: #fff;
+  background-size: 150% 150%; /* Умеренный размер градиента */
+  animation: gradientAnimation 12s ease infinite alternate; /* Анимация движения */
+  color: #fff; /* Белый текст */
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
@@ -21,10 +21,18 @@ body {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 60% 60%;
+    background-position: 55% 55%;
   }
   100% {
-    background-position: 70% 70%;
+    background-position: 60% 60%;
+  }
+}
+
+/* Медиа-запрос для адаптации на телефонах */
+@media (max-width: 768px) {
+  body {
+    background-size: 200% 200%; /* Увеличенный размер градиента для плавного эффекта */
+    animation: gradientAnimation 15s ease infinite alternate; /* Более плавная анимация */
   }
 }
 
