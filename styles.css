@@ -70,6 +70,7 @@ header, main, .app-list, .header, .switch-container {
   animation: glowEffect 30s infinite alternate;
   filter: blur(50px);
   pointer-events: none;
+  z-index: 5; /* Меньше, чем header */
 }
 
 .glow-1 {
@@ -131,7 +132,7 @@ header {
   position: sticky; /* Header фиксируется вверху */
   top: 0; /* Фиксация к верхнему краю */
   z-index: 10; /* Над всеми элементами */
-  overflow: hidden; /* Убираем любые лишние элементы */
+  overflow: visible; /* Отключаем скрытие содержимого */
   box-sizing: border-box; /* Учитываем padding и border */
 }
 
@@ -155,9 +156,9 @@ h1 {
   border-radius: 20px;
   background: rgba(30, 30, 30, 0.7);
   transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 20; /* Всегда активна */
-  position: relative; /* В контексте */
-  max-width: fit-content; /* Обрезка лишней ширины */
+  z-index: 20; /* Всегда поверх других элементов */
+  position: relative; /* Убираем проблемы с наложением */
+  max-width: fit-content; /* Минимальная ширина */
 }
 
 .donate-link:hover {
