@@ -131,6 +131,7 @@ header {
   position: sticky; /* Header фиксируется вверху */
   top: 0; /* Фиксация к верхнему краю */
   z-index: 10; /* Над всеми элементами */
+  overflow: visible; /* Убираем любые ограничения */
 }
 
 h1 {
@@ -155,6 +156,7 @@ h1 {
   transition: background 0.3s ease, transform 0.2s ease;
   z-index: 20; /* Всегда активна */
   position: relative; /* В контексте */
+  pointer-events: auto; /* Гарантируем кликабельность */
 }
 
 .donate-link:hover {
