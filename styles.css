@@ -107,6 +107,15 @@ header {
   animation-delay: 20s;
 }
 
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
+  .glow {
+    width: 200px;
+    height: 200px;
+    filter: blur(30px);
+  }
+}
+
 h1 {
   font-size: 18px;
   font-weight: bold;
@@ -135,15 +144,6 @@ h1 {
   background: rgba(50, 50, 50, 0.8);
   transform: scale(1.05);
   color: #fff;
-}
-
-/* Адаптация для телефонов */
-@media (max-width: 768px) {
-  .glow {
-    width: 200px;
-    height: 200px;
-    filter: blur(30px);
-  }
 }
 
 .header-search {
