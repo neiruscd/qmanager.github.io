@@ -469,14 +469,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px; /* Ширина переключателя */
-  background: rgba(30, 30, 30, 0.8); /* Стеклянный фон */
+  width: 240px; /* Уменьшенная ширина */
+  height: 35px; /* Уменьшенная высота */
+  background: rgba(30, 30, 30, 0.9); /* Более темный стеклянный фон */
   backdrop-filter: blur(10px); /* Размытие */
-  border-radius: 25px;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая граница */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  margin: 15px auto; /* Центрируем */
+  border-radius: 20px; /* Скругление под уменьшенный размер */
+  padding: 3px; /* Уменьшенные внутренние отступы */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Легкая тень */
+  margin: 15px auto; /* Центрирование */
+  overflow: hidden; /* Скрытие выходящих элементов */
 }
 
 /* Радио-кнопки скрыты */
@@ -488,12 +490,12 @@ h1 {
 .toggle-label {
   flex: 1;
   text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 0;
+  font-size: 12px; /* Уменьшенный шрифт */
+  font-weight: 500; /* Более легкий вес шрифта */
+  line-height: 30px; /* Выравнивание текста по центру */
   cursor: pointer;
   color: #fff;
-  z-index: 2; /* Чтобы быть поверх подсветки */
+  z-index: 2; /* Над подсветкой */
   position: relative;
   transition: color 0.3s ease; /* Плавный переход цвета текста */
 }
@@ -501,15 +503,15 @@ h1 {
 /* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: 50%; /* Половина контейнера */
-  height: calc(100% - 10px); /* Учитываем отступы */
+  width: 50%; /* Половина ширины переключателя */
+  height: calc(100% - 6px); /* Учитываем уменьшенные отступы */
   background: linear-gradient(145deg, rgba(100, 149, 237, 0.8), rgba(72, 118, 255, 0.7)); /* Градиент */
-  border-radius: 20px;
+  border-radius: 18px; /* Скругление под уменьшенный размер */
   z-index: 1;
-  top: 5px;
+  top: 3px; /* Учитываем внутренний отступ */
   left: 0;
   transform: translateX(0); /* Начальное положение */
-  transition: transform 0.4s ease, background 0.3s ease; /* Плавное перемещение и смена фона */
+  transition: transform 0.3s ease, background 0.3s ease; /* Плавная анимация */
 }
 
 /* Анимация при переключении */
