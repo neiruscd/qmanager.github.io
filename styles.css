@@ -43,7 +43,7 @@ body {
   width: 300px; /* Размер вспышки */
   height: 300px;
   border-radius: 50%; /* Круглая форма */
-  animation: glowEffect 10s infinite alternate; /* Плавная анимация */
+  animation: glowEffect 30s infinite alternate; /* Очень медленная анимация */
   filter: blur(50px); /* Размытие */
   pointer-events: none; /* Вспышки не влияют на взаимодействие */
 }
@@ -57,13 +57,13 @@ body {
 .glow-2 {
   top: 50%;
   left: 70%;
-  animation-delay: 3s;
+  animation-delay: 10s;
 }
 
 .glow-3 {
   top: 80%;
   left: 20%;
-  animation-delay: 6s;
+  animation-delay: 20s;
 }
 
 /* Медиа-запрос для адаптации на телефонах */
@@ -74,6 +74,7 @@ body {
     filter: blur(30px); /* Уменьшаем размытие */
   }
 }
+
 
 .header {
   display: flex;
