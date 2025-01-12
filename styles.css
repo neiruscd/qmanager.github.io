@@ -2,15 +2,15 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Высота экрана */
+  min-height: 100vh; /* Минимальная высота экрана */
   display: flex;
   flex-direction: column;
-  background: #000;
+  background: #000; /* Черный базовый фон */
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-  overflow-y: auto; /* Включаем только вертикальную прокрутку */
-  position: relative;
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+  position: relative; /* Для вспышек и других эффектов */
   color: #fff;
+  box-sizing: border-box; /* Учитываем padding и border в размерах */
 }
 
 /* Универсальный сброс для всех элементов */
@@ -121,13 +121,16 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px; /* Уменьшаем расстояние между элементами */
-  background: rgba(30, 30, 30, 0.7); /* Тёмный фон с большей прозрачностью */
+  background: rgba(30, 30, 30, 0.7); /* Темный фон с большей прозрачностью */
   padding: 15px 20px; /* Внутренние отступы */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Линия под шапкой с меньшей заметностью */
-  backdrop-filter: blur(12px); /* Более сильное размытие */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Линия под шапкой */
+  backdrop-filter: blur(12px); /* Сильное размытие */
   -webkit-backdrop-filter: blur(12px); /* Для Safari */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень для создания эффекта объема */
-  transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+  width: 100%; /* Полная ширина */
+  position: sticky; /* Header фиксируется вверху */
+  top: 0; /* Фиксация к верхнему краю */
+  z-index: 10; /* Над всеми элементами */
 }
 
 h1 {
@@ -135,14 +138,14 @@ h1 {
   font-weight: bold;
   color: #fff;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Лёгкая тень для текста */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень для текста */
   display: flex;
-  align-items: center; /* Для добавления иконки */
+  align-items: center; /* Для иконки */
   gap: 10px; /* Отступ между иконкой и текстом */
 }
 
 .donate-link {
-  color: #4caf50; /* Зелёный цвет для акцента */
+  color: #4caf50; /* Зеленый акцент */
   text-decoration: none;
   font-size: 12px;
   padding: 8px 12px;
@@ -150,11 +153,13 @@ h1 {
   border-radius: 20px;
   background: rgba(30, 30, 30, 0.7);
   transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 20; /* Всегда активна */
+  position: relative; /* В контексте */
 }
 
 .donate-link:hover {
   background: rgba(50, 50, 50, 0.8);
-  transform: scale(1.05); /* Лёгкое увеличение при наведении */
+  transform: scale(1.05); /* Легкое увеличение */
   color: #fff;
 }
 
