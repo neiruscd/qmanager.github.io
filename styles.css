@@ -158,14 +158,10 @@ h1 {
 }
 
 .header-search {
-  padding: 10px;
-  background: rgba(30, 30, 30, 0.5); /* Фон */
-  border-radius: 15px; /* Скругление */
-}
-
-.header-search:hover {
-  background: rgba(50, 50, 50, 0.7); /* Более яркий фон при наведении */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Усиление тени */
+  display: flex;
+  gap: 10px; /* Расстояние между элементами */
+  align-items: center; /* Центрируем элементы по вертикали */
+  flex-wrap: wrap; /* Разрешаем перенос элементов, если экран узкий */
 }
 
 #search-bar {
