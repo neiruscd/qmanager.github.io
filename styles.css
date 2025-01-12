@@ -1,21 +1,23 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  min-height: 100vh; /* Минимальная высота равна высоте экрана */
+  display: flex;
+  flex-direction: column; /* Для работы с содержимым */
   background: radial-gradient(
       circle at 50% 50%,
-      rgba(0, 10, 30, 0.95) 60%, /* Глубокий темно-синий центр */
-      rgba(10, 20, 50, 0.85) 100% /* Нежный градиент к краям */
+      rgba(0, 10, 30, 0.95) 60%, /* Темно-синий центр */
+      rgba(10, 20, 50, 0.85) 100% /* Градиент к краям */
     ),
     #000; /* Базовый черный фон */
-  backdrop-filter: blur(10px); /* Эффект размытия */
-  -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  background-size: 150% 150%; /* Умеренный размер градиента */
-  animation: gradientAnimation 12s ease infinite alternate; /* Анимация движения */
-  color: #fff; /* Белый текст */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-size: 150% 150%;
+  animation: gradientAnimation 12s ease infinite alternate;
+  color: #fff;
   overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
-/* Анимация для фона */
 @keyframes gradientAnimation {
   0% {
     background-position: 50% 50%;
