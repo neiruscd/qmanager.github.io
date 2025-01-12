@@ -503,16 +503,15 @@ h1 {
   text-overflow: ellipsis; /* Многоточие, если текст слишком длинный */
 }
 
-/* Подсветка активной кнопки */
 .toggle-highlight {
   position: absolute;
-  width: calc(50% - 6px); /* Учитываем небольшие отступы по бокам */
-  height: calc(100% - 6px); /* Учитываем отступы сверху и снизу */
+  width: calc(50% - 4px); /* Уменьшил отступы для лучшего покрытия */
+  height: calc(100% - 4px); /* Уменьшил вертикальные отступы */
   background: linear-gradient(145deg, rgba(72, 118, 255, 0.9), rgba(100, 149, 237, 0.9)); /* Приятный градиент */
-  border-radius: 16px; /* Скругление */
+  border-radius: 14px; /* Уменьшил радиус */
   z-index: 1;
-  top: 3px; /* Отступ сверху */
-  left: 3px; /* Стартовая позиция для первой кнопки */
+  top: 2px; /* Уменьшил верхний отступ */
+  left: 2px; /* Уменьшил левый отступ */
   transform: translateX(0);
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 8px rgba(72, 118, 255, 0.4), 0 2px 6px rgba(255, 255, 255, 0.2);
@@ -520,11 +519,11 @@ h1 {
 
 /* Анимация при переключении */
 #categories-toggle:checked ~ .toggle-highlight {
-  transform: translateX(0); /* Для "Категории" подсветка слева */
+  transform: translateX(0); /* Начальная позиция для "Категории" */
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(calc(100% - 12px)); /* Учитываем left + отступы для второй кнопки */
+  transform: translateX(calc(100% - 8px)); /* Уменьшил ширину для второй кнопки */
 }
 
 /* Активный цвет текста */
