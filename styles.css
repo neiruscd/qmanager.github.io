@@ -163,6 +163,18 @@ h1 {
   gap: 10px; /* Расстояние между элементами */
   align-items: center; /* Центрируем элементы по вертикали */
   flex-wrap: wrap; /* Разрешаем перенос элементов, если экран узкий */
+  background: rgba(30, 30, 30, 0.5); /* Полупрозрачный фон */
+  backdrop-filter: blur(8px); /* Размытие */
+  -webkit-backdrop-filter: blur(8px); /* Для Safari */
+  padding: 10px; /* Внутренние отступы */
+  border-radius: 15px; /* Скруглённые углы */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+.header-search:hover {
+  background: rgba(50, 50, 50, 0.7); /* Более яркий фон при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Усиление тени */
 }
 
 #search-bar {
