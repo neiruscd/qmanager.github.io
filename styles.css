@@ -5,9 +5,10 @@ body {
   display: flex;
   flex-direction: column;
   background: #000; /* Базовый черный фон */
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  overflow: hidden; /* Обрезаем содержимое, выходящее за границы экрана */
   position: relative; /* Для позиционирования вспышек */
   color: #fff;
+  box-sizing: border-box; /* Учитываем padding и border в размерах элементов */
 }
 
 @keyframes glowEffect {
@@ -40,38 +41,39 @@ body {
 
 .glow {
   position: absolute;
-  width: 300px; /* Размер вспышки */
-  height: 300px;
+  width: 400px; /* Размер вспышки */
+  height: 400px;
   border-radius: 50%; /* Круглая форма */
   animation: glowEffect 30s infinite alternate; /* Очень медленная анимация */
   filter: blur(50px); /* Размытие */
   pointer-events: none; /* Вспышки не влияют на взаимодействие */
+  box-sizing: border-box; /* Учитываем размеры */
 }
 
 .glow-1 {
-  top: 20%;
-  left: 30%;
+  top: -20%; /* Располагаем частично за экраном сверху */
+  left: -30%; /* Располагаем за экраном слева */
   animation-delay: 0s; /* Разные тайминги */
 }
 
 .glow-2 {
-  top: 50%;
-  left: 70%;
+  top: 40%;
+  left: 120%; /* Располагаем за экраном справа */
   animation-delay: 10s;
 }
 
 .glow-3 {
-  top: 80%;
-  left: 20%;
+  top: 120%; /* Располагаем за экраном снизу */
+  left: 50%;
   animation-delay: 20s;
 }
 
 /* Медиа-запрос для адаптации на телефонах */
 @media (max-width: 768px) {
   .glow {
-    width: 200px;
-    height: 200px;
-    filter: blur(30px); /* Уменьшаем размытие */
+    width: 300px; /* Меньший размер вспышки */
+    height: 300px;
+    filter: blur(40px); /* Уменьшаем размытие */
   }
 }
 
