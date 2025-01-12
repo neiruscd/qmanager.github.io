@@ -195,13 +195,13 @@ h1 {
   align-items: center; /* Центрируем содержимое по вертикали */
   padding: 12px; /* Внутренние отступы */
   border-radius: 12px; /* Скруглённые углы */
-  background: rgba(30, 30, 30, 0.6); /* Прозрачный серый фон */
-  backdrop-filter: blur(10px); /* Эффект стекла */
-  -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  background: rgba(20, 20, 20, 0.6); /* Более прозрачный серый фон */
+  backdrop-filter: blur(12px); /* Эффект стекла */
+  -webkit-backdrop-filter: blur(12px); /* Для Safari */
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2), 0 6px 12px rgba(0, 0, 0, 0.4); /* Углубляем тени */
   margin-bottom: 12px; /* Отступ между карточками */
   justify-content: space-between; /* Равномерное размещение внутри */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная граница */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Полупрозрачная граница */
   color: rgba(255, 255, 255, 0.9); /* Светлый текст */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анимация */
 }
