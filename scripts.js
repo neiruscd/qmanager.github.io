@@ -6,8 +6,28 @@ fetch('apps.json')
     const categoryElements = document.querySelectorAll('.category');
     const resetButton = document.getElementById('reset-filters');
     const searchBar = document.getElementById('search-bar');
+    const toggleCategories = document.getElementById('toggle-categories');
+    const toggleLabels = document.getElementById('toggle-labels');
+    let currentLabel = null; // Переменная для фильтрации по лейблу
     let currentType = 'all';
     let currentCategory = 'all';
+
+    toggleCategories.addEventListener('click', () => {
+    toggleCategories.classList.add('active');
+    toggleLabels.classList.remove('active');
+    currentCategory = 'all'; // Оставляем только категорию
+    currentLabel = null; // Убираем фильтр по лейблу
+    displayApps();
+    });
+
+    toggleLabels.addEventListener('click', () => {
+    toggleLabels.classList.add('active');
+    toggleCategories.classList.remove('active');
+    currentCategory = 'all'; // Убираем категорию
+    currentLabel = 'new,update'; // Устанавливаем фильтр по лейблу
+    displayApps();
+    });
+
 
     function displayApps() {
       const searchTerm = searchBar.value.toLowerCase();
@@ -16,13 +36,17 @@ fetch('apps.json')
 const filteredApps = data.filter(app => {
   const matchesType = currentType === 'all' || app.type === currentType;
 
-  // Проверяем, входит ли категория в список категорий приложения
+  // Проверка на совпадение категории
   const matchesCategory =
     currentCategory === 'all' || app.category.split(',').includes(currentCategory);
 
+  // Проверка на совпадение лейбла
+  const matchesLabel =
+    !currentLabel || currentLabel.split(',').includes(app.label);
+
   const matchesSearch = app.name.toLowerCase().includes(searchTerm);
 
-  return matchesType && matchesCategory && matchesSearch;
+  return matchesType && matchesCategory && matchesLabel && matchesSearch;
 });
 
       if (filteredApps.length === 0) {
