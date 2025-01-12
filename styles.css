@@ -2,28 +2,29 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0.95) 70%,
-      rgba(10, 20, 60, 0.7) 100%
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0.95) 60%,
+      rgba(15, 30, 60, 0.8) 100%
     ),
-    #000; /* Основной темный фон */
-  backdrop-filter: blur(12px); /* Размытие */
-  -webkit-backdrop-filter: blur(12px);
-  background-size: 200% 200%; /* Увеличенная область для плавной анимации */
-  animation: gradientShift 10s infinite ease-in-out; /* Плавное смещение цветов */
+    #000; /* Глубокий черный фон с градиентом */
+  backdrop-filter: blur(10px); /* Эффект размытия */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  background-size: 200% 200%; /* Увеличенный размер фона */
+  animation: gradientAnimation 15s infinite alternate; /* Анимация */
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
-@keyframes gradientShift {
+/* Анимация плавного движения фона */
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
 
