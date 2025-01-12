@@ -518,5 +518,14 @@ h1 {
 }
 
 #labels-toggle:checked ~ .toggle-highlight {
-  transform: translateX(100%); /* Положение справа */
+  transform: translateX(100%); /* Положение для "Новинки и Обновления" */
+}
+
+/* Активный цвет текста */
+#categories-toggle:checked + .toggle-label {
+  color: #000; /* Темный текст для активной кнопки */
+}
+
+#labels-toggle:checked + .toggle-label {
+  color: #000; /* Темный текст для активной кнопки */
 }
