@@ -12,47 +12,57 @@ fetch('apps.json')
     let currentType = 'all';
     let currentCategory = 'all';
 
-   categoriesToggle.addEventListener('change', () => {
-     if (categoriesToggle.checked) {
-       currentCategory = 'all'; // Показываем все категории
-       currentLabel = null; // Сбрасываем лейблы
-       displayApps();
-       }
-     });
-
-    labelsToggle.addEventListener('change', () => {
-     if (labelsToggle.checked) {
-      currentCategory = 'all'; // Убираем категории
-      currentLabel = 'new,update'; // Показываем новинки и обновления
-    displayApps();
-    }
+    // Обработчик для переключения категорий
+    categoriesToggle.addEventListener('change', () => {
+      if (categoriesToggle.checked) {
+        currentCategory = 'all'; // Показываем все категории
+        currentLabel = null; // Сбрасываем лейблы
+        displayApps();
+      }
     });
 
+    // Обработчик для переключения лейблов
+    labelsToggle.addEventListener('change', () => {
+      if (labelsToggle.checked) {
+        currentCategory = 'all'; // Убираем категории
+        currentLabel = 'new,update'; // Показываем новинки и обновления
+        displayApps();
+      }
+    });
 
     function displayApps() {
       const searchTerm = searchBar.value.toLowerCase();
       appList.innerHTML = '';
 
-const filteredApps = data.filter(app => {
-  const matchesType = currentType === 'all' || app.type === currentType;
+      // Фильтрация приложений
+      const filteredApps = data.filter(app => {
+        const matchesType = currentType === 'all' || app.type === currentType;
 
-  // Проверка на совпадение категории
-  const matchesCategory =
-    currentCategory === 'all' || app.category.split(',').includes(currentCategory);
+        // Проверка на совпадение категории
+        const matchesCategory =
+          currentCategory === 'all' || app.category.split(',').includes(currentCategory);
 
-  // Проверка на совпадение лейбла
-  const matchesLabel =
-    !currentLabel || currentLabel.split(',').includes(app.label);
+        // Проверка на совпадение лейбла
+        const matchesLabel =
+          !currentLabel || currentLabel.split(',').includes(app.label);
 
-  const matchesSearch = app.name.toLowerCase().includes(searchTerm);
+        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
 
-  return matchesType && matchesCategory && matchesLabel && matchesSearch;
-});
+        return matchesType && matchesCategory && matchesLabel && matchesSearch;
+      });
 
+      // Если список пуст, показываем сообщение
       if (filteredApps.length === 0) {
         appList.innerHTML = '<p>Приложений не найдено</p>';
         return;
       }
+
+      // Сортировка по дате 'lastUpdated' (новые сверху)
+      const sortedApps = filteredApps.sort((a, b) => {
+        const dateA = new Date(a.lastUpdated || 0); // Если нет даты, считаем как 0
+        const dateB = new Date(b.lastUpdated || 0);
+        return dateB - dateA; // Новые сверху
+      });
 
       filteredApps.forEach(app => {
         const appDiv = document.createElement('div');
