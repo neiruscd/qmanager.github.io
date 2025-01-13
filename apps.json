@@ -172,7 +172,7 @@
     "version": "v5.8",
     "description": "Приложение-Менеджер версий Spotify Mod от xC3FFF0E, для удобного управления и обновления модификаций. \nFree Premium",
     "icon": "https://raw.githubusercontent.com/neiruscd/QManager/main/site/IMG_3650.png",
-    "downloadLink": "https://github.com/xManager-App/xManager/releases/latest/download/xManager.apk",
+    "downloadLink": "https://raw.githubusercontent.com/neiruscd/qmanager.github.io/refs/heads/main/appsicon/xManager.png",
     "type": "apk",
     "category": "Music,Tools",
     "label": "",
