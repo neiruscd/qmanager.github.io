@@ -30,39 +30,39 @@ fetch('apps.json')
       }
     });
 
-    function displayApps() {
-      const searchTerm = searchBar.value.toLowerCase();
-      appList.innerHTML = '';
+function displayApps() {
+  const searchTerm = searchBar.value.toLowerCase();
+  appList.innerHTML = '';
 
-      // Фильтрация приложений
-      const filteredApps = data.filter(app => {
-        const matchesType = currentType === 'all' || app.type === currentType;
+  // Фильтрация приложений
+  const filteredApps = data.filter(app => {
+    const matchesType = currentType === 'all' || app.type === currentType;
 
-        // Проверка на совпадение категории
-        const matchesCategory =
-          currentCategory === 'all' || app.category.split(',').includes(currentCategory);
+    // Проверка на совпадение категории
+    const matchesCategory =
+      currentCategory === 'all' || app.category.split(',').includes(currentCategory);
 
-        // Проверка на совпадение лейбла
-        const matchesLabel =
-          !currentLabel || currentLabel.split(',').includes(app.label);
+    // Проверка на совпадение лейбла
+    const matchesLabel =
+      !currentLabel || currentLabel.split(',').includes(app.label);
 
-        const matchesSearch = app.name.toLowerCase().includes(searchTerm);
+    const matchesSearch = app.name.toLowerCase().includes(searchTerm);
 
-        return matchesType && matchesCategory && matchesLabel && matchesSearch;
-      });
+    return matchesType && matchesCategory && matchesLabel && matchesSearch;
+  });
 
-      // Если список пуст, показываем сообщение
-      if (filteredApps.length === 0) {
-        appList.innerHTML = '<p>Приложений не найдено</p>';
-        return;
-      }
+  // Если список пуст, показываем сообщение
+  if (filteredApps.length === 0) {
+    appList.innerHTML = '<p>Приложений не найдено</p>';
+    return;
+  }
 
-      // Сортировка по дате 'lastUpdated' (новые сверху)
-      const sortedApps = filteredApps.sort((a, b) => {
-        const dateA = new Date(a.lastUpdated || 0); // Если нет даты, считаем как 0
-        const dateB = new Date(b.lastUpdated || 0);
-        return dateB - dateA; // Новые сверху
-      });
+  // Сортировка по дате 'lastUpdated' (новые сверху)
+  const sortedApps = filteredApps.sort((a, b) => {
+    const dateA = new Date(a.lastUpdated || '1970-01-01T00:00:00Z'); // Дефолтное значение
+    const dateB = new Date(b.lastUpdated || '1970-01-01T00:00:00Z');
+    return dateB - dateA; // Новые сверху
+  });
 
       filteredApps.forEach(app => {
         const appDiv = document.createElement('div');
