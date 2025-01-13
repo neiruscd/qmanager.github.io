@@ -149,6 +149,10 @@ fetch('apps.json')
         appList.appendChild(appDiv);
       });
     }
+        // Отображаем приложения при первой загрузке
+    displayApps();
+  })
+  .catch(error => console.error('Ошибка загрузки приложений:', error));
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
