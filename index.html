@@ -6,6 +6,8 @@
   <title>PhenixxStore – Перенаправление</title>
   <!-- Автоматическое перенаправление через 5 секунд -->
   <meta http-equiv="refresh" content="5; url=https://phenixx.fun">
+  <!-- Подключение современного шрифта -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     /* Универсальный сброс */
     * {
@@ -13,10 +15,11 @@
       padding: 0;
       box-sizing: border-box;
     }
-    /* Основной стиль body */
+    
+    /* Фон страницы – стильный градиент */
     body {
-      font-family: 'Nunito Sans', sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #2c3e50);
       color: #fff;
       height: 100vh;
       display: flex;
@@ -25,54 +28,78 @@
       text-align: center;
       padding: 20px;
     }
-    /* Контейнер заглушки */
+    
+    /* Контейнер заглушки с эффектом стекла */
     .container {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
       padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
       animation: fadeIn 1s ease-out both;
     }
+    
     /* Заголовок */
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-    /* Текст сообщений */
+    
+    /* Основной текст */
     p {
-      font-size: 1.2em;
-      margin-bottom: 1em;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
+    
     /* Ссылка */
     a {
       color: #8ab4f8;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
+    
     a:hover {
       text-decoration: underline;
     }
+    
+    /* Счетчик обратного отсчета */
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    
     /* Анимация появления */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>PhenixxStore</h1>
+    <p>Вы будете автоматически перенаправлены на настоящий сайт</p>
     <p>
-      Вы будете автоматически перенаправлены на настоящий сайт 
-      <a href="https://phenixx.fun">phenixx.fun</a> через 5 секунд.
+      <a href="https://phenixx.fun">phenixx.fun</a> через 
+      <span class="countdown" id="countdown">5</span> секунд.
     </p>
     <p>Если перенаправление не произошло, нажмите на ссылку выше.</p>
   </div>
+  
+  <script>
+    // Скрипт для обратного отсчета
+    let seconds = 5;
+    const countdownElement = document.getElementById('countdown');
+    const countdownInterval = setInterval(() => {
+      seconds--;
+      countdownElement.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
